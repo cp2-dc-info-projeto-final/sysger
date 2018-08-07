@@ -14,3 +14,13 @@ Obs: Não terá o mapa do rastreamento do automóvel nem aparelho celular, porqu
 - Será determinado no dia do contrato, uma data para a impressão do boleto para pagamento, juntamente com o dia que deverá ser efetuado o pagamento (não podendo passar do dia 20 do respetivo mês). EM caso de petição de troca da data de pagamento e impressão do boleto, o cliente necessitará se apresentar à sede da empresa.
 - Em caso de atraso de mensalidade, o software irá notificar ao email do cliente, além de mudar o status de pago para pendente;
 - Banco de Dados.
+
+## Recomendações do Stack Holter
+
+O Stack Holter concordou com a maioria das informações concedidas pelos programadores, sentindo falta da presença de algumas funcionalidades do sistema, dessa forma, é viável acrescentar os seguintes tópicos:
+
+- Criar uma aba para o cliente consultar seu status de pagamento pelo  CPF/CNPJ;
+- O administrador acessa pelo login ;
+- Adicionar o acesso do cliente a 2ª via do boleto pelo CPF/CNPJ;
+- Criar um novo email para o envio dos boletos;
+- Informações básicas do cliente (Nome, CPF, Data de nascimento, Email, Telefone e etc);
