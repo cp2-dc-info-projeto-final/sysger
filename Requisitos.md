@@ -22,3 +22,7 @@ Após a entrada do administrador terá uma tela para o cadastro dos dados dos cl
 - Endereço;
 - Quantidade de veículos que o cliente tem segurado pela empresa;
 - Quantidade de celulares que o cliente tem segurado pela empresa.
+
+### RF 04
+
+Após o cadastro terá uma tela com os dados dos clientes já cadastrados para o administrador com o status de pagamento(em dia, pendente) e informações do contrato.
