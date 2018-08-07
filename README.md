@@ -23,4 +23,4 @@ O Stack Holter concordou com a maioria das informações concedidas pelos progra
 - O administrador acessa pelo login ;
 - Adicionar o acesso do cliente a 2ª via do boleto pelo CPF/CNPJ;
 - Criar um novo email para o envio dos boletos;
-- Informações básicas do cliente (Nome, CPF, Data de nascimento, Email, Telefone e etc);
+- Informações básicas do cliente (Nome, CPF/CNPJ, Data de nascimento, Email, Telefone e etc);
