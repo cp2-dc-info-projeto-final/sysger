@@ -15,9 +15,9 @@ Obs: Não terá o mapa do rastreamento do automóvel nem aparelho celular, porqu
 - Em caso de atraso de mensalidade, o software irá notificar ao email do cliente, além de mudar o status de pago para pendente;
 - Banco de Dados.
 
-## Recomendações do Stack Holter
+## Recomendações do Stakeholter
 
-O Stack Holter concordou com a maioria das informações concedidas pelos programadores, sentindo falta da presença de algumas funcionalidades do sistema, dessa forma, é viável acrescentar os seguintes tópicos:
+O Stakeholter concordou com a maioria das informações concedidas pelos programadores, sentindo falta da presença de algumas funcionalidades do sistema, dessa forma, é viável acrescentar os seguintes tópicos:
 
 - Criar uma aba para o cliente consultar seu status de pagamento pelo  CPF/CNPJ;
 - O administrador acessa pelo login ;
