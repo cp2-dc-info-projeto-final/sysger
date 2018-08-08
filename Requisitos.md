@@ -8,7 +8,7 @@ Entrada com login para o administrador cadastrar os dados dos clientes com os qu
 
 ### RF 02
 
-Entrada com CPF(pessoa física) ou CNPJ(pessoa jurídica) para o cliente ter acesso à sua situação do pagamento de mensalidade e solicitação de 2a via do boleto.
+Entrada com CPF(pessoa física) ou CNPJ(pessoa jurídica) para o cliente ter acesso à sua situação do pagamento de mensalidade.
 
 ### RF 03
 
@@ -30,3 +30,7 @@ Após o cadastro terá uma tela com os dados dos clientes já cadastrados para o
 ### RF 05
 
 Com o acesso do administrador, terá uma tela para o mesmo enviar os boletos através do email aos clientes.
+
+### RF 06
+
+Com acesso do cliente, terá uma tela com a possibilidade da solicitação de 2a via do boleto, caso seja necessário.
