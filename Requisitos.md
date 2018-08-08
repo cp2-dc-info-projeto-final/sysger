@@ -26,3 +26,7 @@ Após a entrada do administrador terá uma tela para o cadastro dos dados dos cl
 ### RF 04
 
 Após o cadastro terá uma tela com os dados dos clientes já cadastrados para o administrador com o status de pagamento(em dia, pendente) e informações do contrato.
+
+### RF 05
+
+Com o acesso do administrador, terá uma tela para o mesmo enviar os boletos através do email aos clientes.
