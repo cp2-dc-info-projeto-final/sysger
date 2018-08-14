@@ -35,6 +35,15 @@ Com o acesso do administrador, terá uma tela para o mesmo enviar os boletos atr
 
 Com acesso do cliente, terá uma tela com a possibilidade da solicitação de 2a via do boleto, caso seja necessário.
 
+### RF 07
+
+Cadastro de administrador(Gerente) com os seguintes dados:
+
+- Nome
+- CPF
+- Email
+- Senha
+
 ## Requisitos Não Funcionais
 
 ### RNF 01
