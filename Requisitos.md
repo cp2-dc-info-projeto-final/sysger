@@ -22,6 +22,7 @@ Após a entrada do administrador terá uma tela para o cadastro dos dados dos cl
 - Endereço;
 - Quantidade de veículos que o cliente tem segurado pela empresa;
 - Quantidade de celulares que o cliente tem segurado pela empresa.
+- Valor de cada serviço prestado.
 
 ### RF 04
 
