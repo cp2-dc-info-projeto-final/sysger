@@ -31,7 +31,7 @@
 
 - Fluxo principal:
 1. É escolhido o Gerente que irá ter acesso geral ao programa.
-2. Irá ser disbonibilizado a ele um login estabelecido com os desenvolvedores.
+2. Irá ser disponibilizado a ele um login estabelecido com os desenvolvedores.
 
 ## CDU 04- Autenticar
 
