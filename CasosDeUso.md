@@ -32,3 +32,12 @@
 - Fluxo principal:
 1. É escolhido o Gerente que irá ter acesso geral ao programa.
 2. Irá ser disbonibilizado a ele um login estabelecido com os desenvolvedores.
+
+## CDU 04- Autenticar
+
+- Atores: Gerente, Subgerente, Cliente
+
+- Pré-Condições: O usuário precisa necessariamente estar cadastrado.
+
+- Fluxo principal:
+1. O acesso será feito pelo CPF ou CNPJ que foi cadastrado e com uma senha gerada pelo usuário que o cadastrou. 
