@@ -22,3 +22,13 @@
 2. Os Subgerentes escolhidos disponibilizam seus dados para serem cadastrados.
 3. Os Gerentes cadastram os novos Subgerentes que terão o acesso para poderem cadastrar e/ou modificar os dados do Cliente.
 4. O Sistema armazena os dados do novo Subgerente cadastrado em seu Banco de Dados.
+
+## CDU 03- Acesso Gerente
+
+- Atores: Gerente
+
+- Pré-Condições: ------
+
+- Fluxo principal:
+1. É escolhido o Gerente que irá ter acesso geral ao programa.
+2. Irá ser disbonibilizado a ele um login estabelecido com os desenvolvedores.
