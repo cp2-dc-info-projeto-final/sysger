@@ -1,6 +1,6 @@
 # Diagrama de Casos de Uso
 
-## CDU 04 - Pesquisar Clientes
+## CDU 05 - Pesquisar Clientes
 
 Atores: Gerente e Subgerente
 
@@ -12,7 +12,7 @@ Fluxo Principal:
   2. Gerente e Subgerente pesquisa o cliente desejado pelo seu nome.
   3. Sistema lista os dados do determinado cliente.
 
-## CDU 05 - Verificar status
+## CDU 06 - Verificar status
 
 Atores: Gerente, Subgerente e Cliente
 
@@ -23,3 +23,15 @@ Fluxo Principal:
   1. Cliente acessa a sessão da verificação de seu status de pagamento.
   2. O Sistema mostrará o histórico de pagamento de mensalidade podendo solicitar a segunda via do boleto das mensalidades pendentes e/ou do mês atual que será baixado em seu computador.
   3. Gerente e Subgerente verificará o status de pagamento dos clientes.
+
+## CDU 07 - Emitir Boleto
+
+Atores: Gerente e Subgerente
+
+Pré-Condições: O usuário deve estar logado em sua conta de administrador.
+
+Fluxo Principal:
+
+  1. Gerente e Subgerente seleciona o mês que deseja visualizar o status de pagamento.
+  2. O Sistema mostra a lista da situação da mensalidade de todos os clientes e se a emissão de boleto já foi feita.
+  3. O Sistema irá emitir os boletos selecionados e enviará para o email do cliente selecionado.
