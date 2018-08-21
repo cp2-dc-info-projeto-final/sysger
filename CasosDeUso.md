@@ -3,9 +3,9 @@
 # Sumário
 
 - [CDU 01 - Cadastrar Cliente](#cdu-01---cadastrar-cliente)
-- CDU 02- Cadastrar Subgerente
-- CDU 03- Acesso Gerente
-- CDU 04- Autenticar
+- CDU 02 - Cadastrar Subgerente
+- CDU 03 - Acesso Gerente
+- CDU 04 - Autenticar
 - CDU 05 - Pesquisar Clientes
 - CDU 06 - Verificar status
 - CDU 07 - Emitir Boleto
@@ -17,7 +17,7 @@
 - Pré-Condições: -------
 
 - Fluxo principal:
-1. Cliente informa ao Gerente ou Subgerente os seus dados pessoais presencialmente ou por e-mail.
+1. Cliente informa ao Gerente ou Subgerente os seus dados pessoais e os dados dos serviços presencialmente, ou por e-mail.
 
     - Nome;
     - CPF/CNPJ;
@@ -25,6 +25,9 @@
     - Email;
     - Telefone;
     - Endereço;
+    - Quantidade de veículos que o cliente tem segurado pela empresa;
+    - Quantidade de celulares que o cliente tem segurado pela empresa;
+    - Valor de cada serviço prestado;
 
 2. Gerente e subgerente recebe os dados do Cliente e os insere no sistema.
 3. Sistema armazena os dados do cliente em seu Banco de Dados.
@@ -51,6 +54,7 @@
 
 - Fluxo principal:
 1. O acesso será feito pelo CPF ou CNPJ que foi cadastrado e com uma senha gerada pelo usuário que o cadastrou.
+2. Sistema valida o acesso.
 
 ## CDU 04 - Pesquisar Clientes
 
