@@ -2,7 +2,7 @@
 
 # Sumário
 
-- CDU 01- Cadastrar Cliente
+- [CDU 01 - Cadastrar Cliente](#cdu-01---cadastrar-cliente)
 - CDU 02- Cadastrar Subgerente
 - CDU 03- Acesso Gerente
 - CDU 04- Autenticar
@@ -10,7 +10,7 @@
 - CDU 06 - Verificar status
 - CDU 07 - Emitir Boleto
 
-## CDU 01- Cadastrar Cliente
+## CDU 01 - Cadastrar Cliente
 
 - Atores: Cliente, Gerente, Subgerente
 
@@ -50,7 +50,7 @@
 - Pré-Condições: O usuário precisa necessariamente estar cadastrado.
 
 - Fluxo principal:
-1. O acesso será feito pelo CPF ou CNPJ que foi cadastrado e com uma senha gerada pelo usuário que o cadastrou. 
+1. O acesso será feito pelo CPF ou CNPJ que foi cadastrado e com uma senha gerada pelo usuário que o cadastrou.
 
 ## CDU 05 - Pesquisar Clientes
 
