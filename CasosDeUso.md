@@ -17,7 +17,15 @@
 - Pré-Condições: -------
 
 - Fluxo principal:
-1. Cliente informa ao Gerente ou Subgerente os seus dados pessoais (ex.: presencialmente, por e-mail).
+1. Cliente informa ao Gerente ou Subgerente os seus dados pessoais presencialmente ou por e-mail.
+
+    - Nome;
+    - CPF/CNPJ;
+    - Data de Nascimento;
+    - Email;
+    - Telefone;
+    - Endereço;
+
 2. Gerente e subgerente recebe os dados do Cliente e os insere no sistema.
 3. Sistema armazena os dados do cliente em seu Banco de Dados.
 
@@ -33,17 +41,9 @@
 3. Os Gerentes cadastram os novos Subgerentes que terão o acesso para poderem cadastrar e/ou modificar os dados do Cliente.
 4. O Sistema armazena os dados do novo Subgerente cadastrado em seu Banco de Dados.
 
-## CDU 03- Acesso Gerente
 
-- Atores: Gerente
 
-- Pré-Condições: ------
-
-- Fluxo principal:
-1. É escolhido o Gerente que irá ter acesso geral ao programa.
-2. Irá ser disponibilizado a ele um login estabelecido com os desenvolvedores.
-
-## CDU 04- Autenticar
+## CDU 03- Autenticar
 
 - Atores: Gerente, Subgerente, Cliente
 
@@ -52,7 +52,7 @@
 - Fluxo principal:
 1. O acesso será feito pelo CPF ou CNPJ que foi cadastrado e com uma senha gerada pelo usuário que o cadastrou.
 
-## CDU 05 - Pesquisar Clientes
+## CDU 04 - Pesquisar Clientes
 
 Atores: Gerente e Subgerente
 
@@ -64,7 +64,7 @@ Fluxo Principal:
   2. Gerente e Subgerente pesquisa o cliente desejado pelo seu nome.
   3. Sistema lista os dados do determinado cliente.
 
-## CDU 06 - Verificar status
+## CDU 05 - Verificar status
 
 Atores: Gerente, Subgerente e Cliente
 
@@ -76,7 +76,7 @@ Fluxo Principal:
   2. O Sistema mostrará o histórico de pagamento de mensalidade podendo solicitar a segunda via do boleto das mensalidades pendentes e/ou do mês atual que será baixado em seu computador.
   3. Gerente e Subgerente verificará o status de pagamento dos clientes.
 
-## CDU 07 - Emitir Boleto
+## CDU 06 - Emitir Boleto
 
 Atores: Gerente e Subgerente
 
