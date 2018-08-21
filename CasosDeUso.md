@@ -3,18 +3,17 @@
 # Sumário
 
 - [CDU 01 - Cadastrar Cliente](#cdu-01---cadastrar-cliente)
-- CDU 02 - Cadastrar Subgerente
-- CDU 03 - Acesso Gerente
-- CDU 04 - Autenticar
-- CDU 05 - Pesquisar Clientes
-- CDU 06 - Verificar status
-- CDU 07 - Emitir Boleto
+- [CDU 02 - Cadastrar Subgerente](#cdu-02---cadastrar-subgerente)
+- [CDU 03- Autenticar](#cdu-03---autenticar)
+- [CDU 04 - Pesquisar Clientes](#cdu-04---pesquisar-clientes)
+- [CDU 05 - Verificar status](#cdu-05---verificar-status)
+- [CDU 06 - Emitir Boleto](#cdu-06---emitir-boleto)
 
 ## CDU 01 - Cadastrar Cliente
 
-- Atores: Cliente, Gerente, Subgerente
+**Atores:** Cliente, Gerente, Subgerente
 
-- Pré-Condições: -------
+**Pré-Condições:** -------
 
 - Fluxo principal:
 1. Cliente informa ao Gerente ou Subgerente os seus dados pessoais e os dados dos serviços presencialmente, ou por e-mail.
@@ -34,35 +33,33 @@
 
 ## CDU 02- Cadastrar Subgerente
 
-- Atores: Gerente, Subgerente
+**Atores:** Gerente, Subgerente
 
-- Pré-Condições: -------
+**Pré-Condições:** -------
 
-- Fluxo principal:
+**Fluxo principal:**
 1. Os Subgerentes que serão escolhidos para ter acesso ao cadastro do cliente.
 2. Os Subgerentes escolhidos disponibilizam seus dados para serem cadastrados.
 3. Os Gerentes cadastram os novos Subgerentes que terão o acesso para poderem cadastrar e/ou modificar os dados do Cliente.
 4. O Sistema armazena os dados do novo Subgerente cadastrado em seu Banco de Dados.
 
-
-
 ## CDU 03- Autenticar
 
-- Atores: Gerente, Subgerente, Cliente
+**Atores:** Gerente, Subgerente, Cliente
 
-- Pré-Condições: O usuário precisa necessariamente estar cadastrado.
+**Pré-Condições:** O usuário precisa necessariamente estar cadastrado.
 
-- Fluxo principal:
+**Fluxo principal:**
 1. O acesso será feito pelo CPF ou CNPJ que foi cadastrado e com uma senha gerada pelo usuário que o cadastrou.
 2. Sistema valida o acesso.
 
 ## CDU 04 - Pesquisar Clientes
 
-Atores: Gerente e Subgerente
+**Atores:** Gerente e Subgerente
 
-Pré-Condições: O usuário deverá estar logado em sua conta de administrador.
+**Pré-Condições:** O usuário deverá estar logado em sua conta de administrador.
 
-Fluxo Principal:
+**Fluxo Principal:**
 
   1. Gerente e Subgerente acessa a listagem de clientes vinculados à empresa.
   2. Gerente e Subgerente pesquisa o cliente desejado pelo seu nome.
@@ -70,11 +67,11 @@ Fluxo Principal:
 
 ## CDU 05 - Verificar status
 
-Atores: Gerente, Subgerente e Cliente
+**Atores:** Gerente, Subgerente e Cliente
 
-Pré-Condições: Os usuários deverão estar logados em suas respectivas contas.
+**Pré-Condições:** Os usuários deverão estar logados em suas respectivas contas.
 
-Fluxo Principal:
+**Fluxo Principal:**
 
   1. Cliente acessa a sessão da verificação de seu status de pagamento.
   2. O Sistema mostrará o histórico de pagamento de mensalidade podendo solicitar a segunda via do boleto das mensalidades pendentes e/ou do mês atual que será baixado em seu computador.
@@ -82,11 +79,11 @@ Fluxo Principal:
 
 ## CDU 06 - Emitir Boleto
 
-Atores: Gerente e Subgerente
+**Atores:** Gerente e Subgerente
 
-Pré-Condições: O usuário deve estar logado em sua conta de administrador.
+**Pré-Condições:** O usuário deve estar logado em sua conta de administrador.
 
-Fluxo Principal:
+**Fluxo Principal:**
 
   1. Gerente e Subgerente seleciona o mês que deseja visualizar o status de pagamento.
   2. O Sistema mostra a lista da situação da mensalidade de todos os clientes e se a emissão de boleto já foi feita.
