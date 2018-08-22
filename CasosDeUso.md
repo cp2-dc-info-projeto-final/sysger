@@ -39,7 +39,14 @@
 
 **Fluxo principal:**
 1. Os Subgerentes que serão escolhidos para ter acesso ao cadastro do cliente.
-2. Os Subgerentes escolhidos disponibilizam seus dados para serem cadastrados.
+2. Os Subgerentes escolhidos disponibilizam os seguintes dados para serem cadastrados:
+    - Nome;
+    - CPF/CNPJ;
+    - Data de Nascimento;
+    - Email;
+    - Telefone;
+    - Endereço;
+    
 3. Os Gerentes cadastram os novos Subgerentes que terão o acesso para poderem cadastrar e/ou modificar os dados do Cliente.
 4. O Sistema armazena os dados do novo Subgerente cadastrado em seu Banco de Dados.
 
