@@ -26,9 +26,8 @@
     - Endereço;
     - Quantidade de veículos que o cliente tem segurado pela empresa;
     - Quantidade de celulares que o cliente tem segurado pela empresa;
-    - Valor de cada serviço prestado;
 
-2. Gerente e subgerente recebe os dados do Cliente e os insere no sistema.
+2. Gerente e subgerente recebe os dados do Cliente e os insere no sistema juntamente com o valor total dos serviços prestados.
 3. Sistema armazena os dados do cliente em seu Banco de Dados.
 
 ## CDU 02- Cadastrar Subgerente
@@ -46,7 +45,7 @@
     - Email;
     - Telefone;
     - Endereço;
-    
+
 3. Os Gerentes cadastram os novos Subgerentes que terão o acesso para poderem cadastrar e/ou modificar os dados do Cliente.
 4. O Sistema armazena os dados do novo Subgerente cadastrado em seu Banco de Dados.
 
