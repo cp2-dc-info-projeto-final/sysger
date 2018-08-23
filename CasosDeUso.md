@@ -15,7 +15,7 @@
 
 **Pré-Condições:** -------
 
-- Fluxo principal:
+**Fluxo principal:**
 1. Cliente informa ao Gerente ou Subgerente os seus dados pessoais e os dados dos serviços presencialmente, ou por e-mail.
 
     - Nome;
