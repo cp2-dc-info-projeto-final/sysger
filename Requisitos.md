@@ -51,7 +51,7 @@ Cadastro de administrador(Gerente - Subgerente) com os seguintes dados:
 ## Requisitos Não Funcionais
 
 ### RNF 01
- O sistema deve ter um banco de dados desenvolvido SGBD SqlServer.
+ O sistema deve ter um banco de dados desenvolvido em MySql.
 ### RNF 02
 O sistema deve ser desenvolvido em linguagem de programação C#.
 ### RNF 03
