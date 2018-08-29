@@ -62,3 +62,5 @@ O software deve ser operado no sistema operacional Windows.
 O sistema deve ter um sistema para gerar boletos bancários.
 ### RNF 06
 O sistema deve ser preparado para fazer sincronização dos dados incluídos/alterados/excluídos quando no uso do banco de dados local.
+### RNF 07
+O sistema deve ser desenvolvido em PHP.
