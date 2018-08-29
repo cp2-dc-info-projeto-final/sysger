@@ -38,12 +38,15 @@ Com acesso do cliente, terá uma tela com a possibilidade da solicitação de 2a
 
 ### RF 07
 
-Cadastro de administrador(Gerente) com os seguintes dados:
+Cadastro de administrador(Gerente - Subgerente) com os seguintes dados:
 
 - Nome
 - CPF
 - Email
 - Senha
+- Data de Nascimento
+- Telefone
+- Endereço
 
 ## Requisitos Não Funcionais
 
