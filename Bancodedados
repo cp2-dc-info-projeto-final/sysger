@@ -1,0 +1,12 @@
+CREATE TABLE Gerenciamento (
+idGerenciamento
+nome varchar,
+email varchar,
+cpf int,
+senha varchar,
+datanasc date,
+telefone int,
+endereço string,
+gerente boolean,
+subgerente booean
+);
