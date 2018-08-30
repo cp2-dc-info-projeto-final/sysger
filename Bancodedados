@@ -1,5 +1,5 @@
 CREATE TABLE Gerenciamento (
-idGerenciamento
+idGerenciamento int,
 nome varchar,
 email varchar,
 cpf int,
