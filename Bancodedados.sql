@@ -1,3 +1,17 @@
+CREATE TABLE Pessoa_Física (
+
+		id_PF INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+		cnpj INT(14) NOT NULL,
+		PRIMARY KEY(Id_PF)
+		);
+
+CREATE TABLE Pessoa_Jurídica (
+
+		id_PJ INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+		cpf INT(11) NOT NULL,
+		PRIMARY KEY(Id_PJ)
+		);
+
 CREATE TABLE Cliente (
 
 		idCliente INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -12,20 +26,32 @@ CREATE TABLE Cliente (
 		FOREIGN KEY (Id_PJ) REFERENCES Pessoa Jurídica(Id_PJ)
 
 		);
+CREATE TABLE Pagamento (
 
-CREATE TABLE Pessoa Física (
+				idPagamento INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+				data DATE,
+				VALOR DOUBLE,
+				PRIMARY KEY(IdPagamento)
 
-		id_PF INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
-		cnpj INT(14) NOT NULL,
-		PRIMARY KEY(Id_PF)
-		);
+				);
 
-CREATE TABLE Pessoa Jurídica (
+CREATE TABLE Gerenciamento (
 
-		id_PJ INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
-		cpf INT(11) NOT NULL,
-		PRIMARY KEY(Id_PJ)
-		);
+				idGerenciamento INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+				nome VARCHAR(30) NOT NULL,
+				senha VARCHAR(30) NOT NULL,
+				endereço VARCHAR(500),
+				telefone INT(30),
+				dataNasc DATE,
+				email VARCHAR(100),
+				cpf INT(11),
+				gerente BOOLEAN,
+				subgerente BOOLEAN,
+				PRIMARY KEY(IdGerenciamento)
+
+				);
+
+
 
 CREATE TABLE Serviço (
 
@@ -61,31 +87,5 @@ CREATE TABLE Veículo (
 		PRIMARY KEY(IdVeículo),
 		FOREIGN KEY (Id_Serviço) REFERENCES Serviço(Id_Serviço)
 
-
-		);
-
-
-CREATE TABLE Pagamento (
-
-		idPagamento INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
-		data DATE,
-		VALOR DOUBLE,
-		PRIMARY KEY(IdPagamento)
-
-		);
-
-CREATE TABLE Gerenciamento (
-
-		idGerenciamento INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
-		nome VARCHAR(30) NOT NULL,
-		senha VARCHAR(30) NOT NULL,
-		endereço VARCHAR(500),
-		telefone INT(30),
-		dataNasc DATE,
-		email VARCHAR(100),
-		cpf INT(11),
-		gerente BOOLEAN,
-		subgerente BOOLEAN,
-		PRIMARY KEY(IdGerenciamento)
 
 		);
