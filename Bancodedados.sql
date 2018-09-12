@@ -80,7 +80,7 @@ CREATE TABLE Celular (
 		idCelular INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		numero VARCHAR(30) NOT NULL,
 		email VARCHAR(100),
-    IdServico INT NOT NULL,
+    IdServico INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdCelular),
 		FOREIGN KEY (IdServico) REFERENCES Servico(IdServico)
 
@@ -94,7 +94,7 @@ CREATE TABLE Veiculo (
 		cor VARCHAR(30),
 		ano DATE,
 		numRastreador INT(100),
-    IdServico INT NOT NULL,
+    IdServico INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdVeiculo),
 		FOREIGN KEY (IdServico) REFERENCES Servico(IdServico)
 
