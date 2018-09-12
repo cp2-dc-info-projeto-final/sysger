@@ -12,19 +12,48 @@ function FazerLigação()
 	return $bd;
 }
 
-function PermitirLogin()
+function PermitirLoginPessoaF()
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->query('SELECT * FROM Cliente');
+	$resultados = $bd->query('SELECT cpf FROM Pessoa_Fisica');
 
 	return $resultados;
 
-	if($resultados = $_REQUEST)
-	{
+	if(empty($resultados)){
+		$resultados = $bd->query('SELECT cpf FROM Gerenciamento');
+		return $resultados;
 	}
-	if{
 
+}
+
+function PermitirLoginPessoaJ()
+{
+	$bd = FazerLigação();
+
+	$resultados = $bd->query('SELECT cnpj FROM Pessoa_Juridica');
+
+	return $resultados;
+
+	if(empty($resultados)){
+		$resultados = $bd->query('SELECT cnpj FROM Gerenciamento');
+		return $resultados;
 	}
+
+}
+
+function Senha()
+{
+	$bd = FazerLigação();
+
+	$resultados = $bd->query('SELECT senha FROM Cliente');
+
+	return $resultados;
+
+	if(empty($resultados)){
+		$resultados = $bd->query('SELECT senha FROM Gerenciamento');
+		return $resultados;
+	}
+
 }
 ?>
