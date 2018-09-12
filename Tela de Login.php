@@ -34,12 +34,6 @@ function PermitirLoginPessoaJ()
 	$resultados = $bd->query('SELECT cnpj FROM Pessoa_Juridica');
 
 	return $resultados;
-
-	if(empty($resultados)){
-		$resultados = $bd->query('SELECT cnpj FROM Gerenciamento');
-		return $resultados;
-	}
-
 }
 
 function Senha()
