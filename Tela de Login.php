@@ -31,7 +31,7 @@ function PermitirLoginPessoaJ()
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->query('SELECT cnpj FROM Pessoa_Juridica');
+	$resultados = $bd->prepare('SELECT cnpj FROM Pessoa_Juridica WHERE cnpj = ');
 
 	return $resultados;
 }
