@@ -1,42 +1,37 @@
 <?php
-	require_once('../Tabelas/dadosClientes.php');
+	require_once('.php');
 
 	$erro = null;
 
 	$request = array_map('trim', $_REQUEST);
 	$request = filter_var_array(
 	               $request,
-	               [ 'email' => FILTER_VALIDATE_EMAIL,
+	               [ 'CPF/CNPJ' => FILTER_DEFAULT,
 	                 'senha' => FILTER_DEFAULT ]
 	           );
 
-	$email = $request['email'];
+	$CPF = $request['CPF/CNPJ'];
 	$senha = $request['senha'];
 
-	if ($email == false)
+	if ($CPF == false)
 	{
-		$erro = "E-Mail não informado";
+		$erro = "CPF/CNPJ não informado";
 	}
-	else if (array_key_exists($email, $dadosClientes) == false)
+	else if (array_key_exists($CPF, $dadosClientes) == false)
 	{
-		$erro = "Nenhum cliente encontrado para este E-Mail";
+		$erro = "Nenhum cliente encontrado para este CPF/CNPJ";
 	}
 	else if ($senha == false)
 	{
 		$erro = "Senha não informada";
 	}
-	// PENDENTE: Validar senha do usuário
-	//else if($request['senha'] == $dadosClientes[$email]['senha'])
-	else if(password_verify($request['senha'], $dadosClientes[$email]['senha']))
+	else if(password_verify($request['senha'], $dadosClientes[$CPF]['senha']))
 	{
 		session_start();
-		$_SESSION['emailUsuarioLogado'] = $request['email'];
-		header('Location: ../pedidos.php');
-		// PENDENTE: Redirecionar o usuário para a página de pedidos
+		$_SESSION['emailUsuarioLogado'] = $request['CPF'];
+		header('Location: .php');
 		exit();
 	}
-
-
 	else
 	{
 		$erro = "Senha inválida";
@@ -46,5 +41,5 @@
 
 	$_SESSION['erros'] = $erro;
 
-	header('Location: ../index.php');
+	header('Location: ../Tela de Login.php');
 ?>
