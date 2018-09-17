@@ -1,25 +1,35 @@
 <?php
-	require_once('.php');
+	require_once('Tela de Login.php');
 
 	$erro = null;
 
 	$request = array_map('trim', $_REQUEST);
 	$request = filter_var_array(
 	               $request,
-	               [ 'CPF/CNPJ' => FILTER_DEFAULT,
+	               [ 'CPF' => FILTER_DEFAULT,
+								 		'CNPJ' => FILTER_DEFAULT,
 	                 'senha' => FILTER_DEFAULT ]
 	           );
 
-	$CPF = $request['CPF/CNPJ'];
+	$CPF = $request['CPF'];
+	$CNPJ = $request['CNPJ'];
 	$senha = $request['senha'];
 
 	if ($CPF == false)
 	{
-		$erro = "CPF/CNPJ não informado";
+		$erro = "CPF não informado";
 	}
-	else if (array_key_exists($CPF, $dadosClientes) == false)
+	else if (array_key_exists($CPF, ) == false)
 	{
-		$erro = "Nenhum cliente encontrado para este CPF/CNPJ";
+		$erro = "Nenhum cliente encontrado para este CPF";
+	}
+	else if ($CNPJ == false)
+	{
+		$erro = "CNPJ não informado";
+	}
+	else if (array_key_exists($CNPJ, ) == false)
+	{
+		$erro = "Nenhum cliente encontrado para este CNPJ";
 	}
 	else if ($senha == false)
 	{
