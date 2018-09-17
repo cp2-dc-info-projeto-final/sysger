@@ -1,47 +1,4 @@
 <?php
-    require_once('Tela de Login.php')
-    $erros = [];
-
-	  $request = array_map('trim', $_REQUEST);
-    $request = filter_var_array(
-		$request,
-		[
-      'CPF'=> FILTER_DEFAULT,
-      'CNPJ'=> FILTER_DEFAULT,
-      'Senha'=> FILTER_DEFAULT
-    ]
-   );
-
-   $cpf = $request['CPF'];
-   if($cpf == false){
-      $erros[] = "CPF vazio";
-   }
-   else if (strlen($cpf) == 11){
-      PermitirLoginPessoaF($request);
-   }
-
-   $cnpj = $request['CNPJ'];
-   if($cnpj == false){
-      $erros[] = "CNPJ vazio";
-   }
-   else if (strlen($cnpj) == 14){
-      PermitirLoginPessoaJ($request);
-   }
-
-   $senha = $request['Senha'];
-   if($senha == false){
-      $erros[] = "Senha inválida";
-   }
-   else if (strlen($senha) > 6 || strlen($senha) < 12){
-      PermitirLoginPessoaF($request);
-   }
-
-?>
-
-
-Funções
-
-<?php
 
 function FazerLigação()
 {
@@ -59,12 +16,12 @@ function PermitirLoginPessoaF()
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->query('SELECT cpf FROM Pessoa_Fisica');
+	$resultados = $bd->query('SELECT cpf FROM Pessoa_Fisica Where cpf == $request['CPF']');
 
 	return $resultados;
 
 	if(empty($resultados)){
-		$resultados = $bd->query('SELECT cpf FROM Gerenciamento');
+		$resultados = $bd->query('SELECT cpf FROM Gerenciamento Where cpf == $request['CPF']');
 		return $resultados;
 	}
 
@@ -74,7 +31,7 @@ function PermitirLoginPessoaJ()
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->prepare('SELECT cnpj FROM Pessoa_Juridica WHERE cnpj = ');
+	$resultados = $bd->prepare('SELECT cnpj FROM Pessoa_Juridica WHERE cnpj = $request['CNPJ'] ');
 
 	return $resultados;
 }
@@ -83,12 +40,12 @@ function Senha()
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->query('SELECT senha FROM Cliente');
+	$resultados = $bd->query('SELECT senha FROM Cliente Where senha == $request['senha']');
 
 	return $resultados;
 
 	if(empty($resultados)){
-		$resultados = $bd->query('SELECT senha FROM Gerenciamento');
+		$resultados = $bd->query('SELECT senha FROM Gerenciamento Where senha == $request['senha']');
 		return $resultados;
 	}
 
