@@ -17,7 +17,7 @@ CREATE TABLE Pessoa_Fisica (
 		cnpj INT(14) NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
 		PRIMARY KEY(Id_PF),
-    FOREIGN KEY (Id_PF) REFERENCES Cliente(IdCliente)
+   		 FOREIGN KEY (Id_PF) REFERENCES Cliente(IdCliente)
 
 		);
 
@@ -27,7 +27,7 @@ CREATE TABLE Pessoa_Juridica (
 		cpf INT(11) NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
 		PRIMARY KEY(Id_PJ),
-   	FOREIGN KEY (Id_PJ) REFERENCES Cliente(IdCliente)
+   		FOREIGN KEY (Id_PJ) REFERENCES Cliente(IdCliente)
 
 		);
 
