@@ -1,3 +1,20 @@
+<?php
+	session_start();
+
+	if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	{
+		header('Location: .php');
+		exit();
+	}
+
+	$erro = null;
+
+	if(array_key_exists('erros', $_SESSION))
+	{
+		$erro = $_SESSION['erros'];
+		unset($_SESSION['erros']);
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,7 +42,7 @@
         display: inline-block;
         font-size: 16px;
         }
-      .verde{
+      .azul{
 				background-color: #A9D0F5;
 				padding-left: 65px;
 				padding-right: 68px;
@@ -37,10 +54,16 @@
     <div>
 		    <h1> Tela de Login</h1>
 
-		      <form action= "" method= "POST">
+				<?php if($erro != null){ ?>
+					<div class= "alert alert-warning">
+						<p> ERRO: <?= $erro ?> </p>
+					</div>
+				<?php } ?>
+
+		      <form action= "Controladores/Entrar.php" method= "POST">
 		          <label> CPF/CNPJ </label><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
-			        <label> Senha </label><input name="Senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
-              <input class="button verde" type= "button" value= "Entrar"/>
+			        <label> Senha </label><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
+              <input class="button azul" type= "submit" value= "Entrar"/>
 		      </form>
 
             <label>Esqueceu sua senha?</label>

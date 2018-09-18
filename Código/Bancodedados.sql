@@ -15,7 +15,7 @@ CREATE TABLE Pessoa_Fisica (
 
 		id_PF INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		cnpj INT(14) NOT NULL,
-   		 IdCliente INT UNSIGNED NOT NULL,
+    IdCliente INT UNSIGNED NOT NULL,
 		PRIMARY KEY(Id_PF),
    		 FOREIGN KEY (Id_PF) REFERENCES Cliente(IdCliente)
 
@@ -25,7 +25,7 @@ CREATE TABLE Pessoa_Juridica (
 
 		id_PJ INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		cpf INT(11) NOT NULL,
-    	IdCliente  INT UNSIGNED NOT NULL,
+    IdCliente INT UNSIGNED NOT NULL,
 		PRIMARY KEY(Id_PJ),
    		FOREIGN KEY (Id_PJ) REFERENCES Cliente(IdCliente)
 
@@ -65,9 +65,9 @@ CREATE TABLE Servico (
 		valor DOUBLE NOT NULL,
 		diaVenc INT(30) NOT NULL,
 		dataContrato DATE,
-    	IdPagamento INT UNSIGNED NOT NULL,
-   		IdCliente INT UNSIGNED NOT NULL,
-    	IdGerenciamento INT UNSIGNED NOT NULL,
+    IdPagamento INT UNSIGNED NOT NULL,
+    IdCliente INT UNSIGNED NOT NULL,
+    IdGerenciamento INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdServico),
 		FOREIGN KEY (IdPagamento) REFERENCES Pagamento(IdPagamento),
 		FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
