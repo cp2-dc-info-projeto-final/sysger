@@ -1,26 +1,25 @@
 <?php
-	include 'Controlador.php';
+	include '../Controlador.php';
 
 	$erro = null;
 
 	$request = array_map('trim', $_REQUEST);
 	$request = filter_var_array(
 	               $request,
-	               [ 'CPF' => FILTER_DEFAULT,
-					'CNPJ' => FILTER_DEFAULT,
+	               [ 'CPF/CNPJ' => FILTER_DEFAULT,
+					'CPF/CNPJ' => FILTER_DEFAULT,
 	                 'senha' => FILTER_DEFAULT ]
 	           );
 
-	$CPF = $request['CPF'];
-	$CNPJ = $request['CNPJ'];
+	$CPFCNPJ = $request['CPF/CNPJ'];
 	$senha = $request['senha'];
 
-	if ($CPF == false)
+	if ($CPFCNPJ == false)
 	{
 		$erro = "CPF não informado";
 	}
 
-	else if ($CNPJ == false)
+	else if ($CPFCNPJ == false)
 	{
 		$erro = "CNPJ não informado";
 	}
@@ -29,11 +28,11 @@
 	{
 		$erro = "Senha não informada";
 	}
-	else if()
+	else if(PermitirLoginPessoaF($CPFCNPJ, $senha))
 	{
 		session_start();
-		$_SESSION['emailUsuarioLogado'] = $request['CPF'];
-		header('Location: .php');
+		$_SESSION['emailUsuarioLogado'] = $CPFCNPJ;
+		header('Location: Subgerente.html');
 		exit();
 	}
 	else
@@ -45,5 +44,5 @@
 
 	$_SESSION['erros'] = $erro;
 
-	header('Location: ../Tela de Login.php');
+	header('Location: ../login.php');
 ?>

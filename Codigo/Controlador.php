@@ -16,15 +16,20 @@ function PermitirLoginPessoaF($CPF, $senha)
 {
 	$bd = FazerLigação();
 
-	$sql = $bd->query('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
+ 	if (	$sql = $bd->prepare('SELECT cnpj,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CNPJ = :cpf'))
+	{
 
-	$sql->bindValue(':cpf', $CPF);
+		$sql->bindParam(':cpf', $CPF);
 
-	while ($row = $sql->fetch_assoc()) {
-        printf("%s (%s)\n", $row["cpf"], $row["senha"]);
-    }
+		$sql->execute();
 
-	return $resultados;
+	  $sql->fetch();
+
+		echo("%s (%s)\n", $row["cpf"], $row["senha"]);
+
+  }
+
+	return 1;
 
 }
 
