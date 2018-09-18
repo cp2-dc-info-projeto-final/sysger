@@ -25,9 +25,9 @@
       h1 {Color: black; padding-left: 50px;}
       body { background-color: #0A0A2A; }
       div { background-color: #F8E0F7;
-				margin-left: 600px;
-				margin-top: 200px;
-				margin-right: 650px;
+				margin-left: 500px;
+				margin-top: 150px;
+				margin-right: 500px;
 				margin-bottom: 10px;
 				padding: 20px;
 				border { background-color: black;}}
@@ -61,8 +61,8 @@
 				<?php } ?>
 
 		      <form action= "Controladores/Entrar.php" method= "POST">
-		          <label> CPF/CNPJ </label><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
-			        <label> Senha </label><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
+		          <label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
+			        <label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
               <input class="button azul" type= "submit" value= "Entrar"/>
 		      </form>
 
