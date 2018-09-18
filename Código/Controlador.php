@@ -12,18 +12,21 @@ function FazerLigação()
 	return $bd;
 }
 
-function PermitirLoginPessoaF()
+function PermitirLoginPessoaF($CPF, $senha)
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->query('SELECT cpf FROM Pessoa_Fisica Where cpf == $request['CPF']');
-
-	return $resultados;
+	$resultados = $bd->query('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
+	
+	$resultados->bindValue(':cpf', $CPF);
 
 	if(empty($resultados)){
-		$resultados = $bd->query('SELECT cpf FROM Gerenciamento Where cpf == $request['CPF']');
-		return $resultados;
+		$resultados = $bd->execute('SELECT cpf,senha FROM Gerenciamento Where cpf = :cpf');
+		
+		$resultados->bindValue(':cpf', $CPF);
 	}
+	
+	return $resultados;
 
 }
 
@@ -31,23 +34,11 @@ function PermitirLoginPessoaJ()
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->prepare('SELECT cnpj FROM Pessoa_Juridica WHERE cnpj = $request['CNPJ'] ');
+	$resultados = $bd->query('SELECT cnpj,senha FROM Pessoa_Juridica  JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ WHERE cnpj = :cnpj ');
+	
+	$resultados->bindValue(':cnpj', $CNPJ);
 
 	return $resultados;
 }
 
-function Senha()
-{
-	$bd = FazerLigação();
-
-	$resultados = $bd->query('SELECT senha FROM Cliente Where senha == $request['senha']');
-
-	return $resultados;
-
-	if(empty($resultados)){
-		$resultados = $bd->query('SELECT senha FROM Gerenciamento Where senha == $request['senha']');
-		return $resultados;
-	}
-
-}
 ?>
