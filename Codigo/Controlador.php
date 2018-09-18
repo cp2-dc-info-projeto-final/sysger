@@ -16,7 +16,7 @@ function PermitirLoginPessoaF($CPF, $senha)
 {
 	$bd = FazerLigação();
 
- 	if (	$sql = $bd->prepare('SELECT cnpj,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CNPJ = :cpf'))
+ 	if (	$sql = $bd->prepare('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf'))
 	{
 
 		$sql->bindParam(':cpf', $CPF);
@@ -33,15 +33,26 @@ function PermitirLoginPessoaF($CPF, $senha)
 
 }
 
-function PermitirLoginPessoaJ()
+function PermitirLoginPessoaJ($CNPJ, $senha)
 {
 	$bd = FazerLigação();
 
-	$resultados = $bd->query('SELECT cnpj,senha FROM Pessoa_Juridica  JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ WHERE cnpj = :cnpj ');
+	if (	$sql = $bd->prepare('SELECT cnpj,senha FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CNPJ = :cnpj'))
+	{
 
-	$resultados->bindValue(':cnpj', $CNPJ);
+		$sql->bindParam(':cnpj', $CNPJ);
 
-	return $resultados;
+		$sql->execute();
+
+		$sql->fetch();
+
+		echo("%s (%s)\n", $row["cpf"], $row["senha"]);
+
+	}
+
+	return 0;
+
+}
 }
 
 ?>

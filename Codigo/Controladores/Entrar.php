@@ -7,19 +7,22 @@
 	$request = filter_var_array(
 	               $request,
 	               [ 'CPF/CNPJ' => FILTER_DEFAULT,
-					'CPF/CNPJ' => FILTER_DEFAULT,
-	                 'senha' => FILTER_DEFAULT ]
+								   'senha' => FILTER_DEFAULT ]
 	           );
-
-	$CPFCNPJ = $request['CPF/CNPJ'];
+	if (strlen($request['CPF/CNPJ']) == 11){
+		$CPF = $request['CPF/CNPJ'];
+	}
+	else if (strlen($request['CPF/CNPJ']) == 14){
+		$CNPJ = $request['CPF/CNPJ'];
+	}
 	$senha = $request['senha'];
 
-	if ($CPFCNPJ == false)
+	if ($CPF == false)
 	{
 		$erro = "CPF não informado";
 	}
 
-	else if ($CPFCNPJ == false)
+	else if ($CNPJ == false)
 	{
 		$erro = "CNPJ não informado";
 	}
@@ -28,10 +31,17 @@
 	{
 		$erro = "Senha não informada";
 	}
-	else if(PermitirLoginPessoaF($CPFCNPJ, $senha))
+	else if(PermitirLoginPessoaF($CPF, $senha))
 	{
 		session_start();
-		$_SESSION['emailUsuarioLogado'] = $CPFCNPJ;
+		$_SESSION['emailUsuarioLogado'] = $CPF;
+		header('Location: Subgerente.html');
+		exit();
+	}
+	else if(PermitirLoginPessoaJ($CNPJ, $senha))
+	{
+		session_start();
+		$_SESSION['emailUsuarioLogado'] = $CNPJ;
 		header('Location: Subgerente.html');
 		exit();
 	}
