@@ -19,7 +19,7 @@
 	{
 		$erro = "CPF não informado";
 	}
-	 
+
 	else if ($CNPJ == false)
 	{
 		$erro = "CNPJ não informado";
@@ -29,7 +29,7 @@
 	{
 		$erro = "Senha não informada";
 	}
-	else if())
+	else if()
 	{
 		session_start();
 		$_SESSION['emailUsuarioLogado'] = $request['CPF'];
