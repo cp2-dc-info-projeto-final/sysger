@@ -40,9 +40,9 @@
 		$erro = "Senha inválida";
 	}
 
-	session_start();
+	//session_start();
 
-	$_SESSION['erros'] = $erro;
+	//$_SESSION['erros'] = $erro;
 
-	header('Location: ../login.php');
+	//header('Location: ../login.php');
 ?>
