@@ -4,7 +4,7 @@ CREATE TABLE Cliente (
 		nome VARCHAR(30) NOT NULL,
 		senha VARCHAR(30) NOT NULL,
 		endereço VARCHAR(500),
-		telefone INT(30),
+		telefone INT,
 		dataNasc DATE,
 		email VARCHAR(100),
 		PRIMARY KEY(IdCliente)
@@ -14,20 +14,20 @@ CREATE TABLE Cliente (
 CREATE TABLE Pessoa_Fisica (
 
 		id_PF INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		cnpj INT(14) NOT NULL,
+		cpf INT NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
 		PRIMARY KEY(Id_PF),
-   		 FOREIGN KEY (Id_PF) REFERENCES Cliente(IdCliente)
+   	FOREIGN KEY (Id_PF) REFERENCES Cliente(IdCliente)
 
 		);
 
 CREATE TABLE Pessoa_Juridica (
 
 		id_PJ INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		cpf INT(11) NOT NULL,
+		cnpj INT NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
 		PRIMARY KEY(Id_PJ),
-   		FOREIGN KEY (Id_PJ) REFERENCES Cliente(IdCliente)
+   	FOREIGN KEY (Id_PJ) REFERENCES Cliente(IdCliente)
 
 		);
 
@@ -47,10 +47,10 @@ CREATE TABLE Gerenciamento (
 				nome VARCHAR(30) NOT NULL,
 				senha VARCHAR(30) NOT NULL,
 				endereço VARCHAR(500),
-				telefone INT(30),
+				telefone INT,
 				dataNasc DATE,
 				email VARCHAR(100),
-				cpf INT(11),
+				cpf INT,
 				gerente BOOLEAN,
 				subgerente BOOLEAN,
 				PRIMARY KEY(IdGerenciamento)
@@ -63,7 +63,7 @@ CREATE TABLE Servico (
 
 		idServico INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		valor DOUBLE NOT NULL,
-		diaVenc INT(30) NOT NULL,
+		diaVenc INT NOT NULL,
 		dataContrato DATE,
     IdPagamento INT UNSIGNED NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE Veiculo (
 		placa VARCHAR(30),
 		cor VARCHAR(30),
 		ano DATE,
-		numRastreador INT(100),
+		numRastreador INT,
     IdServico INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdVeiculo),
 		FOREIGN KEY (IdServico) REFERENCES Servico(IdServico)
