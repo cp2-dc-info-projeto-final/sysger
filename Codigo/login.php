@@ -3,7 +3,7 @@
 
 	if(array_key_exists('emailUsuarioLogado', $_SESSION))
 	{
-		header('Location: .php');
+		header('Location: gerente.php');
 		exit();
 	}
 

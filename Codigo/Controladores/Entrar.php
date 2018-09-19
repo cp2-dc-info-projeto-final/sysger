@@ -24,6 +24,7 @@
 	else if (strlen($códigoPessoa) == 14)
 	{
 		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa, $senha);
+		$destino = "Cliente.htlm";
 	}
 	else
 	{
@@ -39,7 +40,7 @@
 	{
 		session_start();
 		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
-		header('Location: ../gerente.php');
+		header("Location: ../$destino");
 		exit();
 	}
 	else {
