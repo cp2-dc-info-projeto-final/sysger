@@ -1,12 +1,12 @@
 <?php
-	//session_start();
+	session_start();
 
-	//if(array_key_exists('emailUsuarioLogado', $_SESSION))
-//	{
-	//	header('Location: gerente.php');
-	//	exit();
-//	}
-  unset($_SESSION['emailUsuarioLogado']);
+	if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	{
+		header('Location: gerente.php');
+		exit();
+	}
+
 	
 	$erro = null;
 
