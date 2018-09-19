@@ -6,7 +6,7 @@
 		header('Location: .php');
 		exit();
 	}
-
+  
 	$erro = null;
 
 	if(array_key_exists('erros', $_SESSION))
