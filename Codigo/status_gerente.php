@@ -19,11 +19,9 @@
 	</head>
 	<body>
     <div>
-		    <h1> Cliente </h1>
+		    <h1> Status do Gerente </h1>
 
-		      <form action= "" method= "POST">
-		        <input type= "button" value= "STATUS"/><br><br><br>
-              <input type= "button" value= "Sair"/>
+
 		      </form>
 
 
