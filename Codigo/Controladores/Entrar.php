@@ -9,50 +9,46 @@
 	               [ 'CPF/CNPJ' => FILTER_DEFAULT,
 								   'senha' => FILTER_DEFAULT ]
 	           );
-	if (strlen($request['CPF/CNPJ']) == 11){
-		$CPF = $request['CPF/CNPJ'];
-	}
-	else if (strlen($request['CPF/CNPJ']) == 14){
-		$CNPJ = $request['CPF/CNPJ'];
-	}
-	$senha = $request['senha'];
 
-	if ($CPF == false)
+	$codigoPessoa = $request['CPF/CNPJ'];
+	if ( $codigoPessoa == false )
 	{
-		$erro = "CPF não informado";
+		$erro = "CPF ou CNPJ inválido ou não informado";
 	}
 
-	else if ($CNPJ == false)
-	{
-		$erro = "CNPJ não informado";
-	}
 
-	else if ($senha == false)
+	if (strlen($codigoPessoa) == 11)
 	{
-		$erro = "Senha não informada";
+		$usuario = BuscaUsuarioPorCPF($codigoPessoa, $senha);
 	}
-	else if(PermitirLoginPessoaF($CPF, $senha))
+	else if (strlen($códigoPessoa) == 14)
 	{
-		session_start();
-		$_SESSION['emailUsuarioLogado'] = $CPF;
-		header('Location: Subgerente.html');
-		exit();
-	}
-	else if(PermitirLoginPessoaJ($CNPJ, $senha))
-	{
-		session_start();
-		$_SESSION['emailUsuarioLogado'] = $CNPJ;
-		header('Location: Subgerente.html');
-		exit();
+		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa, $senha);
 	}
 	else
 	{
-		$erro = "Senha inválida";
+		$erro = "CPF ou CNPJ inválido";
 	}
 
-	//session_start();
+	$senha = $request['senha'];
+	if ($senha == false)
+	{
+		$erro = "Senha não informada";
+	}
+	else if ($usuario != null && password_verify($senha, $usuario['senha']))
+	{
+		session_start();
+		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
+		header('Location: Subgerente.html');
+		exit();
+	}
+	else {
+		$erro = "Não foi possível logar";
+	}
 
-	//$_SESSION['erros'] = $erro;
+	session_start();
 
-	//header('Location: ../login.php');
+	$_SESSION['erros'] = $erro;
+
+	header('Location: ../login.php');
 ?>
