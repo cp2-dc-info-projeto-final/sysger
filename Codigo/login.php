@@ -6,7 +6,7 @@
 		header('Location: .php');
 		exit();
 	}
-  
+
 	$erro = null;
 
 	if(array_key_exists('erros', $_SESSION))
@@ -55,7 +55,7 @@
 		    <h1> Tela de Login</h1>
 
 				<?php if($erro != null){ ?>
-					<div class= "alert alert-warning">
+					<div>
 						<p> ERRO: <?= $erro ?> </p>
 					</div>
 				<?php } ?>
