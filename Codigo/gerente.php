@@ -19,15 +19,12 @@
 	</head>
 	<body>
     <div>
-		    <h1> SubGerente </h1>
+		    <h1> Gerente </h1>
 
-		      <form action= "" method= "POST">
-						<input type= "button" value= "Cadastro Cliente"/><br><br>
-						<input type= "button" value= "Cliente Cadastrado"/><br><br>
-						<input type= "button" value= "STATUS"/><br><br><br><br>
+				<a href="Lista_sub.php">Lista de Subgerentes</a>
+				<a href="Lista_cliente.php">Lista de Clientes</a>
+				<a href="status_gerente.php">Status</a>
 
-              <input type= "button" value= "Sair"/>
-		      </form>
 
 
     </div>

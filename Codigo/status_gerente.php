@@ -19,12 +19,9 @@
 	</head>
 	<body>
     <div>
-		    <h1> Status </h1>
+		    <h1> Status do Gerente </h1>
 
-		      <form action= "" method= "POST">
-						<input type= "button" value= "Pesquisar"/><br><br><br>
 
-              <input type= "button" value= "2ªVia"/>
 		      </form>
 
 
