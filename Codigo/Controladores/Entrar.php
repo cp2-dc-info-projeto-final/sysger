@@ -39,12 +39,12 @@
 	{
 		session_start();
 		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
-		header('Location: gerente.php');
+		header('Location: ../gerente.php');
 		exit();
 	}
-	//else {
-		//$erro = "Não foi possível logar";
-	//}
+	else {
+		$erro = "Não foi possível logar";
+	}
 
 	session_start();
 

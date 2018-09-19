@@ -2,7 +2,7 @@ CREATE TABLE Cliente (
 
 		idCliente INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		nome VARCHAR(30) NOT NULL,
-		senha VARCHAR(30) NOT NULL,
+		senha VARCHAR(60) NOT NULL,
 		endereço VARCHAR(500),
 		telefone INT,
 		dataNasc DATE,
@@ -98,3 +98,5 @@ CREATE TABLE Veiculo (
 
 
 		);
+
+-- INSERT INTO usuario VALUES (... '$2y$10$Vx/Eic0LMhAwnSMloA7k/uX3ePvicj/QLzsW.pfadPNkI5EJLSKg2');
