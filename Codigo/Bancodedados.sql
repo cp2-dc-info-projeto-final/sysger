@@ -2,7 +2,7 @@ CREATE TABLE Cliente (
 
 		idCliente INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		nome VARCHAR(30) NOT NULL,
-		senha VARCHAR(30) NOT NULL,
+		senha VARCHAR(60) NOT NULL,
 		endereço VARCHAR(500),
 		telefone INT,
 		dataNasc DATE,
@@ -14,7 +14,7 @@ CREATE TABLE Cliente (
 CREATE TABLE Pessoa_Fisica (
 
 		id_PF INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		cpf INT NOT NULL,
+		cpf VARCHAR(100) NOT NULL,
     PRIMARY KEY(Id_PF),
    	FOREIGN KEY (Id_PF) REFERENCES Cliente(IdCliente)
 
@@ -23,7 +23,7 @@ CREATE TABLE Pessoa_Fisica (
 CREATE TABLE Pessoa_Juridica (
 
 		id_PJ INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		cnpj INT NOT NULL,
+		cnpj VARCHAR(100) NOT NULL,
     PRIMARY KEY(Id_PJ),
    	FOREIGN KEY (Id_PJ) REFERENCES Cliente(IdCliente)
 
@@ -98,3 +98,5 @@ CREATE TABLE Veiculo (
 
 
 		);
+
+-- INSERT INTO usuario VALUES (... '$2y$10$Vx/Eic0LMhAwnSMloA7k/uX3ePvicj/QLzsW.pfadPNkI5EJLSKg2');

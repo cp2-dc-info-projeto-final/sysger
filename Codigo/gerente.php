@@ -22,8 +22,7 @@
 		    <h1> Gerente </h1>
 
 				<a href="Lista_sub.php">Lista de Subgerentes</a>
-
-				<a href="url">Lista de Clientes</a>
+				<a href="">Lista de Clientes</a>
 				<a href="url">Status</a>
 
 

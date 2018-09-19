@@ -39,7 +39,7 @@
 	{
 		session_start();
 		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
-		header('Location: Subgerente.html');
+		header('Location: ../gerente.php');
 		exit();
 	}
 	else {
