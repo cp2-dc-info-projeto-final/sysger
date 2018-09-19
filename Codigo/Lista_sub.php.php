@@ -15,30 +15,14 @@
 				padding: 20px;
 				border { background-color: black;}}
       form{padding: 50px; padding-top: 10px;}
-       {
-      background-color: #4CAF50;
-        border: none;
-        color: green;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        }
-      .verde{
-
-      }
 		</style>
 	</head>
 	<body>
     <div>
-		    <h1> STATUS </h1>
-
-		      <form action= "" method= "POST">
-						<input class="button verde" type= "button" value= "pesquisar"/>
+		   
 
 
-		      </form>
+
 
 
     </div>

@@ -19,12 +19,11 @@
 	</head>
 	<body>
     <div>
-		    <h1> Status </h1>
+		    <h1> Cliente </h1>
 
 		      <form action= "" method= "POST">
-						<input type= "button" value= "Pesquisar"/><br><br><br>
-
-              <input type= "button" value= "2ªVia"/>
+		        <input type= "button" value= "STATUS"/><br><br><br>
+              <input type= "button" value= "Sair"/>
 		      </form>
 
 
