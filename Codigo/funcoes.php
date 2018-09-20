@@ -32,7 +32,7 @@ function BuscaGerente($CPF, $senha)
 {
 	$bd = FazerLigação();
 
- 	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT cpf,senha FROM Gerenciamento Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 

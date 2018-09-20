@@ -11,21 +11,22 @@
 	           );
 
 	$codigoPessoa = $request['CPF/CNPJ'];
-	if ( $codigoPessoa == false )
+	$senha = $request['senha'];
+	
+	if ($codigoPessoa == false )
 	{
 		$erro = "CPF ou CNPJ inválido ou não informado";
 	}
-
 
 	if (strlen($codigoPessoa) == 11)
 	{
 		$usuario = BuscaUsuarioPorCPF($codigoPessoa, $senha);
 	}
-	else
+	else if ($usuario = null)
 	{
 		$usuario = BuscaGerente($codigoPessoa, $senha);
 	}
-	if (strlen($códigoPessoa) == 14)
+	else if (strlen($codigoPessoa) == 14)
 	{
 		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa, $senha);
 		$destino = "gerente.php";
@@ -35,7 +36,6 @@
 		$erro = "CPF ou CNPJ inválido";
 	}
 
-	$senha = $request['senha'];
 	if ($senha == false)
 	{
 		$erro = "Senha não informada";
@@ -51,10 +51,10 @@
 		$erro = "Não foi possível logar";
 	}
 
-	//session_start();
+	session_start();
 
-	//$_SESSION['erros'] = $erro;
+	$_SESSION['erros'] = $erro;
 
-	//header('Location: ../login.php');
+	header('Location: ../login.php');
 
 ?>

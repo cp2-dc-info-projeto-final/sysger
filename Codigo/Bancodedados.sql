@@ -48,7 +48,7 @@ CREATE TABLE Gerenciamento (
 				telefone INT,
 				dataNasc DATE,
 				email VARCHAR(100),
-				cpf INT,
+				cpf VARCHAR(100) NOT NULL,
 				gerente BOOLEAN,
 				subgerente BOOLEAN,
 				PRIMARY KEY(IdGerenciamento)
