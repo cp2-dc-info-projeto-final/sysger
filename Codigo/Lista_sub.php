@@ -20,11 +20,14 @@
 	<body>
     <div>
 		    <h1> Lista de Subgerentes </h1>
+				<form action="Controladores/Lista_sub" method="POST">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisa">
 				<input type= "button" value= "Buscar"/><br><br><br>
+				<input type = "">
+			</form>
 
 
-
+				chamar função que exibirá o resultdo do select
 
 
 
