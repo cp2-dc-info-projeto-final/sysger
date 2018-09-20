@@ -20,8 +20,7 @@
 	<body>
     <div>
 		    <h1> Status do Gerente </h1>
-
-
+                        
 		      </form>
 
 

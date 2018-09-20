@@ -19,7 +19,10 @@
 	</head>
 	<body>
     <div>
-		    <h1> oi </h1>
+		    <h1> Lista de Subgerentes </h1>
+				<input name= "Pesquisa" type= "text" placeholder="Pequisa">
+				<input type= "button" value= "Buscar"/><br><br><br>
+
 
 
 
