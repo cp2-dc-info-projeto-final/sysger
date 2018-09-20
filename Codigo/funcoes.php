@@ -76,4 +76,5 @@ $bd = FazerLigação();
 $buscarCliente = $bd->query('SELECT nome FROM Cliente');
  return $buscarCliente;
 }
+
 ?>
