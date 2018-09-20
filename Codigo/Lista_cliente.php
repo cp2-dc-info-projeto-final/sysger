@@ -20,12 +20,18 @@
 	<body>
     <div>
 		    <h1> Lista de Clientes </h1>
-				<form action="Controladores/Lista_sub" method="POST">
+				<form action="Controladores/Lista_cliente" method="POST">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisa"></input>
 				<input type= "button" value= "Buscar"/><br><br><br></input>
-				<input type = "">
+				<input type = "textare">
 			</form>
+<?php
+			if ($buscarCliente==true)
+  {
+    BuscarCliente($buscarCliente);
+  }
 
+?>
 <form action="Cadastro" method ="POST">
   <input type="submit" value = "Cadastrar"></input>
 </form>
