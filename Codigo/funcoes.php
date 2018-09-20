@@ -28,6 +28,22 @@ function BuscaUsuarioPorCPF($CPF, $senha)
 	return null;
 }
 
+function BuscaGerente($CPF, $senha)
+{
+	$bd = FazerLigação();
+
+ 	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
+
+	$sql->bindParam(':cpf', $CPF);
+
+	if ($sql->execute())
+	{
+	  return $sql->fetch();
+  }
+
+	return null;
+}
+
 function BuscaUsuarioPorCNPJ($CNPJ, $senha)
 {
 	$bd = FazerLigação();

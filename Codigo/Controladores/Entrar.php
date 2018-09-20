@@ -1,5 +1,5 @@
 <?php
-	include '../Controlador.php';
+	include '../funcoes.php';
 
 	$erro = null;
 
@@ -21,10 +21,14 @@
 	{
 		$usuario = BuscaUsuarioPorCPF($codigoPessoa, $senha);
 	}
+	else
+	{
+		$usuario = BuscaGerente($codigoPessoa, $senha);
+	}
 	else if (strlen($códigoPessoa) == 14)
 	{
 		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa, $senha);
-		$destino = "Cliente.htlm";
+		$destino = "Cliente.html";
 	}
 	else
 	{
