@@ -3,5 +3,5 @@
 
   unset($_SESSION['emailUsuarioLogado']);
 
-  header('Location: ../Tela de Login.php');
+  header('Location: ../login.php');
 ?>
