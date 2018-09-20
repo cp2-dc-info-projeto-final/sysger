@@ -25,10 +25,10 @@
 	{
 		$usuario = BuscaGerente($codigoPessoa, $senha);
 	}
-	else if (strlen($códigoPessoa) == 14)
+	if (strlen($códigoPessoa) == 14)
 	{
 		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa, $senha);
-		$destino = "Cliente.html";
+		$destino = "gerente.php";
 	}
 	else
 	{
@@ -51,9 +51,10 @@
 		$erro = "Não foi possível logar";
 	}
 
-	session_start();
+	//session_start();
 
-	$_SESSION['erros'] = $erro;
+	//$_SESSION['erros'] = $erro;
 
-	header('Location: ../login.php');
+	//header('Location: ../login.php');
+
 ?>
