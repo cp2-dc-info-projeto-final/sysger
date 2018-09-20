@@ -65,7 +65,7 @@ function BuscarSubgerente($buscarsubgerente)
 {
 
 $bd = FazerLigação();
-$buscarsubgenrente = $bd->query('SELECT subgerente FROM gerenciamento');
+$buscarsubgenrente = $bd->query('SELECT nome FROM gerenciamento');
  return $buscarsubgenrente;
 }
 
@@ -73,7 +73,7 @@ function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigação();
-$buscarCliente = $bd->query('SELECT gerente FROM gerenciamento');
+$buscarCliente = $bd->query('SELECT nome FROM Cliente');
  return $buscarCliente;
 }
 ?>
