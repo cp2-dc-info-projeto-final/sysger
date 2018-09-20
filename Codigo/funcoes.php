@@ -32,7 +32,7 @@ function BuscaGerente($CPF, $senha)
 {
 	$bd = FazerLigação();
 
- 	$sql = $bd->prepare('SELECT cpf,senha FROM Gerenciamento Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -61,4 +61,19 @@ function BuscaUsuarioPorCNPJ($CNPJ, $senha)
 
 }
 
+function BuscarSubgerente($buscarsubgerente)
+{
+
+$bd = FazerLigação();
+$buscarsubgenrente = $bd->query('SELECT subgerente FROM gerenciamento');
+ return $buscarsubgenrente;
+}
+
+function BuscarCliente($buscarCliente)
+{
+
+$bd = FazerLigação();
+$buscarCliente = $bd->query('SELECT gerente FROM gerenciamento');
+ return $buscarCliente;
+}
 ?>
