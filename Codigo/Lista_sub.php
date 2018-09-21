@@ -1,3 +1,9 @@
+<?php
+
+
+verificar o que tem no get conectando no banco
+ ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,7 +26,7 @@
 	<body>
     <div>
 		    <h1> Lista de Subgerentes </h1>
-				<form action="Controladores/Lista_sub" method="POST">
+				<form action="Lista_sub.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisa">
 				<input type= "button" value="Buscar"/><br><br><br>
 			</form>
@@ -30,7 +36,6 @@
 
 			</td>
 
--->
 
 
 

@@ -61,11 +61,11 @@ function BuscaUsuarioPorCNPJ($CNPJ, $senha)
 
 }
 
-function BuscarSubgerente($buscarsubgerente)
+function BuscarSubgerente($nome)
 {
 
 $bd = FazerLigação();
-$sql = $bd->query('SELECT nome FROM gerenciamento WHERE nome = :nome AND subgerente = 1 AND gerente = 0' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome = :nome AND subgerente = 1 AND gerente = 0' );
 
 $sql->bindParam(':nome', $nome);
 
@@ -83,7 +83,7 @@ function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigação();
-$sql = $bd->query('SELECT nome FROM Cliente WHERE nome = :nome');
+$sql = $bd->query('SELECT * FROM Cliente WHERE nome = :nome');
 
 $sql->bindParam(':nome', $nome);
 

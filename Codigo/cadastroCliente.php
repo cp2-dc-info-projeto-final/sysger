@@ -78,11 +78,13 @@ require_once ('');
 		}
 	}
 
-	foreach($erros as $msg) {
+	foreach($erros as $msg)
+	{
 		echo "<p>$msg</p>";
 	}
 
-	if (empty($erros)) {
+	if (empty($erros))
+	{
 	CadastrarCliente($request);
 	}
 
