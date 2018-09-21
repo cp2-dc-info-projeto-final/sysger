@@ -12,7 +12,7 @@
 
 	$codigoPessoa = $request['CPF/CNPJ'];
 	$senha = $request['senha'];
-	
+
 	if ($codigoPessoa == false )
 	{
 		$erro = "CPF ou CNPJ inválido ou não informado";
@@ -20,11 +20,16 @@
 
 	if (strlen($codigoPessoa) == 11)
 	{
+		$usuario = null;
+
 		$usuario = BuscaUsuarioPorCPF($codigoPessoa, $senha);
-	}
-	else if ($usuario = null)
-	{
-		$usuario = BuscaGerente($codigoPessoa, $senha);
+		$destino = "Cliente.html";
+
+		if ($usuario == null)
+		{
+			$usuario = BuscaGerente($codigoPessoa, $senha);
+			$destino = "status_gerente.php";
+		}
 	}
 	else if (strlen($codigoPessoa) == 14)
 	{
