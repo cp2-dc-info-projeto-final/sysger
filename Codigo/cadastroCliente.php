@@ -1,5 +1,5 @@
 <?php
-require_once ('../../Modelo/tabelausuario.php');
+require_once ('');
 	$erros = [];
 
 	$request = array_map('trim', $_REQUEST);
@@ -12,8 +12,7 @@ require_once ('../../Modelo/tabelausuario.php');
       'cpf' => FILTER_DEFAULT,
 			'senha' => FILTER_DEFAULT,
 			'dataNasc' =>  FILTER_DEFAULT,
-			'gerente' => FILTER_VALIDATE_BOOLEAN,
-			'subgerente' => FILTER_VALIDATE_BOOLEAN
+
 		]
 	);
 
@@ -84,7 +83,7 @@ require_once ('../../Modelo/tabelausuario.php');
 	}
 
 	if (empty($erros)) {
-	CadastrarSubgerente($request);
+	CadastrarCliente($request);
 	}
 
 ?>

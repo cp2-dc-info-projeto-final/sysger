@@ -23,10 +23,14 @@
 				<form action="Controladores/Lista_sub" method="POST">
 				<input name= "Pesquisa" type="text" placeholder="Pequisa">
 				<input type= "button" value="Buscar"/><br><br><br>
-				<input type = "Listbox" value="Subgerentes"><p>chamar função que exibirá o resultdo do select</p
 			</form>
 
+			<td>
 
+
+			</td>
+
+-->
 
 
 

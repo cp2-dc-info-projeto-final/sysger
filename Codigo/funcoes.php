@@ -65,16 +65,36 @@ function BuscarSubgerente($buscarsubgerente)
 {
 
 $bd = FazerLigação();
-$buscarsubgenrente = $bd->query('SELECT nome FROM gerenciamento');
- return $buscarsubgenrente;
+$sql = $bd->query('SELECT nome FROM gerenciamento WHERE nome = :nome AND subgerente = 1 AND gerente = 0' );
+
+$sql->bindParam(':nome', $nome);
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
 }
+
+return null;
+
+}
+
 
 function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigação();
-$buscarCliente = $bd->query('SELECT nome FROM Cliente');
- return $buscarCliente;
+$sql = $bd->query('SELECT nome FROM Cliente WHERE nome = :nome');
+
+$sql->bindParam(':nome', $nome);
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
 }
+
+return null;
+
+}
+
 
 ?>

@@ -23,7 +23,6 @@
 				<form action="Controladores/Lista_cliente" method="POST">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisa"></input>
 				<input type= "button" value= "Buscar"/><br><br><br></input>
-				<input type = "textare">
 			</form>
 <?php
 			if ($buscarCliente==true)
