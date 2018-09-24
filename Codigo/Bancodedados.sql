@@ -44,7 +44,7 @@ CREATE TABLE Gerenciamento (
 				idGerenciamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
 				nome VARCHAR(30) NOT NULL,
 				senha VARCHAR(60) NOT NULL,
-				endereço VARCHAR(500),
+				endereco VARCHAR(500),
 				telefone INT,
 				dataNasc DATE,
 				email VARCHAR(100),
