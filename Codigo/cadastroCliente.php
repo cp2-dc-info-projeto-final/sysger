@@ -31,7 +31,7 @@
 		$erros[] = "Email vazio";
 	}
 	else if (empty(BuscaUsuarioPorEmail($request['email'])) == false) {
-		$erros[] = "Já existe um usuário cadastrado com esse email";
+		$erros[] = "Já existe um cliente cadastrado com esse email";
 	}
 
   $cpf = $request['cpf'];
@@ -39,7 +39,7 @@
 		$erros[] = "Cpf vazio";
 	}
 	else if (empty(BuscaUsuarioPorCPF($request['cpf'])) == false) {
-		$erros[] = "Já existe um usuário cadastrado com esse cpf";
+		$erros[] = "Já existe um cliente cadastrado com esse cpf";
 	}
 
 
