@@ -1,7 +1,10 @@
 <?php
 
+require_once ('../funcoes.php');
+empty($_GET);
+//verificar o que tem no get conectando no banco
 
-verificar o que tem no get conectando no banco
+
  ?>
 
 <!DOCTYPE html>
@@ -30,11 +33,55 @@ verificar o que tem no get conectando no banco
 				<input name= "Pesquisa" type="text" placeholder="Pequisa">
 				<input type= "button" value="Buscar"/><br><br><br>
 			</form>
+      <?
+          function BuscarSubgerente($nome, $telefone, $email)
 
-			<td>
+          {
+          echo '<table>';
+
+          echo '<tr>';
+
+          echo '<td>Nome</td>';
+
+          echo '<td>Telefone</td>';
+
+          echo '<td>E-mail</td>';
+
+          echo '</tr>';
+
+        }
+
+        while($request = mysql_fetch_assoc($bd)){
+
+            echo '<tr>';
+
+            echo '<td>'.$request["nome"].'</td>';
+
+            echo '<td>'.$request["telefone"].'</td>';
+
+            echo '<td>'.$request["email"].'</td>';
+
+            echo '</tr>';
+
+              }
+
+              echo '</table>';
+
+              }
 
 
-			</td>
+?>
+
+    <!--  <table border="1">
+            <tr>
+            <td>linha 1, célula 1</td>
+            <td>linha 1, célula 2</td>
+            </tr>
+            <tr>
+            <td>linha 2, célula 1</td>
+            <td>linha 2, célula 2</td>
+            </tr>
+      </table>-->
 
 
 
