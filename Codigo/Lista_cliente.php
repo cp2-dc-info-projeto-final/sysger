@@ -1,3 +1,7 @@
+<?php
+require_once ('../funcoes.php');
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,10 +29,24 @@
 				<input type= "button" value= "Buscar"/><br><br><br></input>
 			</form>
 <?php
-			if ($buscarCliente==true)
-  {
-    BuscarCliente($buscarCliente);
-  }
+function BuscarCliente($nome, $telefone, $email, $CPF)
+
+						{
+						echo '<table>';
+
+						echo '<tr>';
+
+						echo '<td>Nome</td>';
+
+						echo '<td>Telefone</td>';
+
+						echo '<td>E-mail</td>';
+
+						echo '<td> CPF </td>';
+
+						echo '</tr>';
+
+						}
 
 ?>
 <form action="Cadastro" method ="POST">
