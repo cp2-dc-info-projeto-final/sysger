@@ -96,5 +96,26 @@ return null;
 
 }
 
+function InsereUsuario($dadosNovoUsuario)
+{
+	$bd = FazerLigação();
+
+	$nome = $dadosNovoUsuario['nome'];
+
+	$sql = $bd->prepare('INSERT INTO usuarios (nome, sobrenome, email, senha, dataNasc, cpf)
+	VALUES (:nome, :sobrenome, :email, :senha, :dataNasc, :cpf);');
+
+	var_dump($dadosNovoUsuario);
+
+	$sql->bindValue(':nome', $nome);
+	$sql->bindValue(':sobrenome', $dadosNovoUsuario['sobrenome']);
+	$sql->bindValue(':email', $dadosNovoUsuario['email']);
+	$sql->bindValue(':senha', $dadosNovoUsuario['senha']);
+	$sql->bindValue(':dataNasc', $dadosNovoUsuario['dataNasc']);
+	$sql->bindValue(':cpf', $dadosNovoUsuario['cpf']);
+
+	$sql->execute();
+}
+
 
 ?>

@@ -82,7 +82,6 @@ require_once ('');
 	{
 		echo "<p>$msg</p>";
 	}
-
 	if (empty($erros))
 	{
 	CadastrarCliente($request);
