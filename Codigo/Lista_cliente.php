@@ -1,5 +1,6 @@
 <?php
 require_once ('../funcoes.php');
+$request = array_map('trim', $_REQUEST);
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,12 @@ require_once ('../funcoes.php');
 function BuscarCliente($nome, $telefone, $email, $CPF)
 
 						{
-						echo '<table>';
+
+						$bd = FazerLigação();
+
+						echo '<h4>Listagem dos Clientes:</h4>';
+
+	          echo '<table border='1' bgcolor= #87CEFA>';
 
 						echo '<tr>';
 
@@ -47,9 +53,27 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 						echo '</tr>';
 
 						}
+						while($request = mysql_fetch_assoc($bd)){
+
+		            echo '<tr>';
+
+		            echo '<td>'.$request["nome"].'</td>';
+
+		            echo '<td>'.$request["telefone"].'</td>';
+
+		            echo '<td>'.$request["email"].'</td>';
+
+		            echo '</tr>';
+
+		              }
+
+		              echo '</table>';
+
+		              }
 
 ?>
 <form action="Cadastro" method ="POST">
+	<input type="submit" name="Cadastar" id="Cadastrar" value="Cadastrar" onclick="window.open(this.getAttribute('cadastroCliente.php.php?id=<?php echo "$resultadoanuncio[CODIGOANUNCIO]";?>'), '_blank');"  />
   <input type="submit" value = "Cadastrar"></input>
 </form>
 
