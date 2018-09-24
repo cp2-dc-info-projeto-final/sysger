@@ -3,6 +3,7 @@
 require_once ('../funcoes.php');
 empty($_GET);
 //verificar o que tem no get conectando no banco
+$request = array_map('trim', $_REQUEST);
 
 
  ?>
@@ -37,7 +38,12 @@ empty($_GET);
           function BuscarSubgerente($nome, $telefone, $email)
 
           {
-          echo '<table>';
+
+          $bd = FazerLigação();
+
+          echo '<h4>Listagem dos Subgerentes:</h4>';
+          
+          echo '<table border='1' bgcolor= #87CEFA>';
 
           echo '<tr>';
 
