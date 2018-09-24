@@ -96,23 +96,23 @@ return null;
 
 }
 
-function InsereUsuario($dadosNovoUsuario)
+function InsereCliente($dadosNovoCliente)
 {
 	$bd = FazerLigação();
 
-	$nome = $dadosNovoUsuario['nome'];
+	$nome = $dadosNovoCliente['nome'];
 
-	$sql = $bd->prepare('INSERT INTO usuarios (nome, sobrenome, email, senha, dataNasc, cpf)
+	$sql = $bd->prepare('INSERT INTO cliente (nome, sobrenome, email, senha, dataNasc, cpf)
 	VALUES (:nome, :sobrenome, :email, :senha, :dataNasc, :cpf);');
 
-	var_dump($dadosNovoUsuario);
+	var_dump($dadosNovoCliente);
 
 	$sql->bindValue(':nome', $nome);
-	$sql->bindValue(':sobrenome', $dadosNovoUsuario['sobrenome']);
-	$sql->bindValue(':email', $dadosNovoUsuario['email']);
-	$sql->bindValue(':senha', $dadosNovoUsuario['senha']);
-	$sql->bindValue(':dataNasc', $dadosNovoUsuario['dataNasc']);
-	$sql->bindValue(':cpf', $dadosNovoUsuario['cpf']);
+	$sql->bindValue(':sobrenome', $dadosNovoCliente['sobrenome']);
+	$sql->bindValue(':email', $dadosNovoCliente['email']);
+	$sql->bindValue(':senha', $dadosNovoCliente['senha']);
+	$sql->bindValue(':dataNasc', $dadosNovoCliente['dataNasc']);
+	$sql->bindValue(':cpf', $dadosNovoCliente['cpf']);
 
 	$sql->execute();
 }
