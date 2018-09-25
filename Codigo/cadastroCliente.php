@@ -1,5 +1,5 @@
 <?php
-	require_once ('../funcoes.php');
+	include '../funcoes.php';
 	$erros = [];
 
 	$request = array_map('trim', $_REQUEST);
