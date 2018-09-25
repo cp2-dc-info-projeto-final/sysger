@@ -44,7 +44,7 @@
 				<?php } ?>-->
 
         <form action="cadastroCliente.php" method="POST">
-					
+
               <label>Nome:<input name="nome" type="text" minlength="3" maxlength="35" required placeholder="Nome"/><br/><br/>
               <label>E-mail:<input name="email" type="email" required placeholder="E-Mail"/><br/><br/>
             	<label>Senha: <input name="senha" type="password" minlength="6" maxlength="12" required placeholder="Senha"/><br/><br/>

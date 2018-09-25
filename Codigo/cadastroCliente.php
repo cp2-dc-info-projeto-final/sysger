@@ -25,7 +25,6 @@
 		$erros[] = "Nome deve ter no mínimo 3 e no máximo 35 caracteres";
 	}
 
-
 	$email = $request['email'];
 	if($email == false){
 		$erros[] = "Email vazio";
@@ -41,9 +40,6 @@
 	else if (empty(BuscaUsuarioPorCPF($request['cpf'])) == false) {
 		$erros[] = "Já existe um cliente cadastrado com esse cpf";
 	}
-
-	
-
 
 	$senha = $request['senha'];
 	if($senha == false){
@@ -72,6 +68,14 @@
 		if($anoscorridos < 16){
 			$erros[] = "É necessário ter mais de 16 anos";
 		}
+	}
+	$telefone = $request['telefone'];
+	if($telefone == false){
+		$erros[] = "Telefone vazio";
+	}
+	$endereco = $request['endereco'];
+	if($endereco == false){
+		$erros[] = "Endereco vazio";
 	}
 
 	foreach($erros as $msg)
