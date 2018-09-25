@@ -30,7 +30,6 @@ $request = array_map('trim', $_REQUEST);
 				<input type= "button" value= "Buscar"/><br><br><br></input>
 			</form>
 
-
 <?php
 function BuscarCliente($nome, $telefone, $email, $CPF)
 
@@ -74,21 +73,33 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 		             </table>
 
-		              }
+							 }
 
 
 								<?php
-$table = $dom->createElement('table');
+$tabela = $dom->createElement('Lista');
 $domAttribute = $dom->createAttribute('id');
-$domAttribute->value = 'my_table';
+$domAttribute->value = '';
 
 $tr = $dom->createElement('tr');
-$table->appendChild($tr);
+$tabela->appendChild($tr);
 
-$td = $dom->createElement('td', 'Label');
+$td = $dom->createElement('td', 'Nome');
 $tr->appendChild($td);
 
-$td = $dom->createElement('td', 'Value');
+$td = $dom->createElement('td', 'Email');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'senha');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'endereço');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'telefone');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td','cpf');
 $tr->appendChild($td);
 
 $table->appendChild($domAttribute);
@@ -107,7 +118,7 @@ $dom->appendChild($table);
 
 ?>
 
-<a href ="cadastroCliente.php">Cadastrar Novos Cliente</a>
+<a href ="cadastroCliente.php">Cadastrar Novos Clientes</a>
 
 
     </div>
