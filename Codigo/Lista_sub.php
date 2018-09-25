@@ -45,7 +45,7 @@ $request = array_map('trim', $_REQUEST);
 
             <h4>Listagem dos Subgerentes:</h4>
 
-            <table border='1' bgcolor= '#BEBEBE>'
+            <table border='1' bgcolor= '#BEBEBE'>
             <tr>
 
             <td>Nome</td>
