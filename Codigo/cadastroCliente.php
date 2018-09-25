@@ -76,8 +76,8 @@
 		$data = DateTime::createFromFormat('Y-m-d', $datanasc);
 		$hoje = new DateTime();
 		$diferença = $data -> diff ($hoje);
-		if($anoscorridos < 16){
-			$erros[] = "É necessário ter mais de 16 anos";
+		if($anoscorridos < 18){
+			$erros[] = "É necessário ter mais de 18 anos";
 		}
 	}
 	$telefone = $request['telefone'];
