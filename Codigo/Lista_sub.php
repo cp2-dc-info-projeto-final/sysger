@@ -34,69 +34,55 @@ $request = array_map('trim', $_REQUEST);
 				<input name= "Pesquisa" type="text" placeholder="Pequisa">
 				<input type= "button" value="Buscar"/><br><br><br>
 			</form>
-      <?
+
+      <?php
           function BuscarSubgerente($nome, $telefone, $email, $cpf)
 
           {
 
             {
 
-            $bd = FazerLigação();
+						$bd = FazerLigação();
 
-            <h4>Listagem dos Subgerentes:</h4>
+						$tabelahtml = "<h4>Listagem dos Subgerentes:</h4>";
 
-            <table border='1' bgcolor= '#BEBEBE'>
-            <tr>
+	          $tabelahtml = $tabelahtml."<table border='1' bgcolor= '#BEBEBE'>";
 
-            <td>Nome</td>
+						<tr>
 
-            <td>Telefone</td>
+						$tabelahtml = $tabelahtml.<td>'Nome'</td>
 
-            <td>E-mail</td>
+						$tabelahtml	= $tabelahtml.<td>'Telefone'</td>
 
-            <td>CPF</td>
+						$tabelahtml = $tabelahtml.<td>'E-mail'</td>
 
-            </tr>
+						$tabelahtml = $tabelahtml.<td>'CPF'</td>
 
-            }
-            while($request = mysql_fetch_assoc($bd)){
+						</tr>
 
-                <tr>
+						}
+						while($request = mysql_fetch_assoc($nome, $telefone, $email, $cpf)){
 
-               <td>'.$request["nome"].'</td>
+		            <tr>
 
-               <td>'.$request["telefone"].'</td>
+		          $tabelahtml = $tabelahtml.<td>'.$request['nome'].'</td>
 
-               <td>'.$request["email"].'</td>
+		          $tabelahtml = $tabelahtml.<td>'.$request['telefone'].'</td>
 
-              <td>'.$request["cpf"].'</td>
+		          $tabelahtml = $tabelahtml.<td>'.$request['email'].'</td>
 
-               </tr>
+							$tabelahtml = $tabelahtml.<td>'.$request['cpf'].'</td>
 
-                  }
+		           </tr>
 
-                 </table>
+		              }
 
-                  }
+		             </table>
 
+							 }
 
 
 ?>
-
-    <!--  <table border="1">
-            <tr>
-            <td>linha 1, célula 1</td>
-            <td>linha 1, célula 2</td>
-            </tr>
-            <tr>
-            <td>linha 2, célula 1</td>
-            <td>linha 2, célula 2</td>
-            </tr>
-      </table>-->
-
-
-
-
     </div>
 
 	</body>
