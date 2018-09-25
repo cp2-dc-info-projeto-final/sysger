@@ -37,9 +37,9 @@
     <div>
 		    <h1> Cadastrar Cliente</h1>
 
-				<!--<?php if($erro != null) { ?>
+				<!--<?php if($erros != null) { ?>
 					<div>
-						<p> ERRO: <?= $erro ?> </p>
+						<p> ERRO: <?= $erros ?> </p>
 					</div>
 				<?php } ?>-->
 
