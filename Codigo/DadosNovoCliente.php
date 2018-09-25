@@ -44,13 +44,13 @@
 				<?php } ?>-->
 
         <form action="cadastroCliente.php" method="POST">
-					
-              <label>Nome:<input name="nome" type="text" minlength="3" maxlength="35" required placeholder="Nome"/><br/><br/>
-              <label>E-mail:<input name="email" type="email" required placeholder="E-Mail"/><br/><br/>
-            	<label>Senha: <input name="senha" type="password" minlength="6" maxlength="12" required placeholder="Senha"/><br/><br/>
-              <label>Cpf:<input name="cpf" type="text" minlength="11" maxlength="11" required placeholder="CPF"/><br/><br/>
-						  <label>Telefone:<input name="telefone" type="telefone" required placeholder="Telefone"/><br/><br/>
-						  <label>Endereço:<input name="endereco" type="endereco" required placeholder="Endereço"/><br/><br/>
+
+              <label>Nome:<input name="nome" type="text" minlength="3" maxlength="35" required/><br/><br/>
+              <label>E-mail:<input name="email" type="email" required/><br/><br/>
+            	<label>Senha: <input name="senha" type="password" minlength="6" maxlength="12" required /><br/><br/>
+              <label>Cpf:<input name="cpf" type="text" minlength="11" maxlength="11" required/><br/><br/>
+						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
+						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
 
             <input type="submit" value="Cadastrar"/>
