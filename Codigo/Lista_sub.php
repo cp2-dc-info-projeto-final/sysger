@@ -35,45 +35,50 @@ $request = array_map('trim', $_REQUEST);
 				<input type= "button" value="Buscar"/><br><br><br>
 			</form>
       <?
-          function BuscarSubgerente($nome, $telefone, $email)
+          function BuscarSubgerente($nome, $telefone, $email, $cpf)
 
           {
 
-          $bd = FazerLigação();
+            {
 
-          echo '<h4>Listagem dos Subgerentes:</h4>';
+            $bd = FazerLigação();
 
-          echo '<table border='1' bgcolor= #87CEFA>';
+            <h4>Listagem dos Subgerentes:</h4>
 
-          echo '<tr>';
+            <table border='1' bgcolor= '#BEBEBE>'
+            <tr>
 
-          echo '<td>Nome</td>';
+            <td>Nome</td>
 
-          echo '<td>Telefone</td>';
+            <td>Telefone</td>
 
-          echo '<td>E-mail</td>';
+            <td>E-mail</td>
 
-          echo '</tr>';
+            <td>CPF</td>
 
-        }
+            </tr>
 
-        while($request = mysql_fetch_assoc($bd)){
+            }
+            while($request = mysql_fetch_assoc($bd)){
 
-            echo '<tr>';
+                <tr>
 
-            echo '<td>'.$request["nome"].'</td>';
+               <td>'.$request["nome"].'</td>
 
-            echo '<td>'.$request["telefone"].'</td>';
+               <td>'.$request["telefone"].'</td>
 
-            echo '<td>'.$request["email"].'</td>';
+               <td>'.$request["email"].'</td>
 
-            echo '</tr>';
+              <td>'.$request["cpf"].'</td>
 
-              }
+               </tr>
 
-              echo '</table>';
+                  }
 
-              }
+                 </table>
+
+                  }
+
 
 
 ?>
