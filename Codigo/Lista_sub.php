@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../funcoes.php');
+include '../funcoes.php';
 empty($_GET);
 //verificar o que tem no get conectando no banco
 $request = array_map('trim', $_REQUEST);
@@ -42,7 +42,7 @@ $request = array_map('trim', $_REQUEST);
           $bd = FazerLigação();
 
           echo '<h4>Listagem dos Subgerentes:</h4>';
-          
+
           echo '<table border='1' bgcolor= #87CEFA>';
 
           echo '<tr>';

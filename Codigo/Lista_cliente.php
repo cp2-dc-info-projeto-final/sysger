@@ -1,5 +1,5 @@
 <?php
-require_once ('../funcoes.php');
+include '../funcoes.php';
 $request = array_map('trim', $_REQUEST);
 ?>
 
@@ -36,40 +36,39 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 						$bd = FazerLigação();
 
-						echo '<h4>Listagem dos Clientes:</h4>';
+						<h4>Listagem dos Clientes:</h4>
 
-	          echo '<table border='1' bgcolor= #87CEFA>';
+	          <table border='1' bgcolor= '##BEBEBE>'
+						<tr>
 
-						echo '<tr>';
+						<td>Nome</td>
 
-						echo '<td>Nome</td>';
+						<td>Telefone</td>
 
-						echo '<td>Telefone</td>';
+						<td>E-mail</td>
 
-						echo '<td>E-mail</td>';
+						<td>CPF</td>
 
-						echo '<td> CPF </td>';
-
-						echo '</tr>';
+						</tr>
 
 						}
 						while($request = mysql_fetch_assoc($bd)){
 
-		            echo '<tr>';
+		            <tr>
 
-		            echo '<td>'.$request["nome"].'</td>';
+		           <td>'.$request["nome"].'</td>
 
-		            echo '<td>'.$request["telefone"].'</td>';
+		           <td>'.$request["telefone"].'</td>
 
-		            echo '<td>'.$request["email"].'</td>';
+		           <td>'.$request["email"].'</td>
 
-								 echo '<td>'.$request["cpf"].'</td>';
+							<td>'.$request["cpf"].'</td>
 
-		            echo '</tr>';
+		           </tr>
 
 		              }
 
-		              echo '</table>';
+		             </table>
 
 		              }
 
