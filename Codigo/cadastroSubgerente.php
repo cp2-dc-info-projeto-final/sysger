@@ -38,7 +38,7 @@
 		$erros[] = "Cpf vazio";
 	}
 	else if (empty(BuscaUsuarioPorCPF($cpf)) == false) {
-		$erros[] = "Já existe um cliente cadastrado com esse cpf";
+		$erros[] = "Já existe um subgerente cadastrado com esse cpf";
 	}
 
 	$senha = $request['senha'];
