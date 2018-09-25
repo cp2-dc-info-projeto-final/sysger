@@ -1,5 +1,5 @@
 <?php
-	include '../funcoes.php';
+	include 'funcoes.php';
 	$erros = [];
 
 	$request = array_map('trim', $_REQUEST);
@@ -8,7 +8,7 @@
 		[
 			'nome' => FILTER_DEFAULT,
 			'email' => FILTER_VALIDATE_EMAIL,
-      'cpf' => FILTER_DEFAULT,
+      'cpf_cnpj' => FILTER_DEFAULT,
 			'senha' => FILTER_DEFAULT,
 			'dataNasc' =>  FILTER_DEFAULT,
 			'telefone' =>  FILTER_DEFAULT,
@@ -33,12 +33,15 @@
 		$erros[] = "Já existe um cliente cadastrado com esse email";
 	}
 
-  $cpf = $request['cpf'];
-	if($cpf == false){
+  $cpf_cnpj = $request['cpf_cnpj'];
+	if($cpf_cnpj == false){
 		$erros[] = "Cpf vazio";
 	}
-	else if (empty(BuscaUsuarioPorCPF($request['cpf'])) == false) {
+	else if (empty(BuscaUsuarioPorCPF($cpf_cnpj)) == false) {
 		$erros[] = "Já existe um cliente cadastrado com esse cpf";
+	}
+	else if (empty(BuscaUsuarioPorCNPJ($cpf_cnpj)) == false) {
+		$erros[] = "Já existe um cliente cadastrado com esse cnpj";
 	}
 
 	$senha = $request['senha'];

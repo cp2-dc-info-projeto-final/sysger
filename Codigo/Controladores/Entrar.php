@@ -22,18 +22,18 @@
 	{
 		$usuario = null;
 
-		$usuario = BuscaUsuarioPorCPF($codigoPessoa, $senha);
+		$usuario = BuscaUsuarioPorCPF($codigoPessoa);
 		$destino = "Cliente.html";
 
 		if ($usuario == null)
 		{
-			$usuario = BuscaGerente($codigoPessoa, $senha);
+			$usuario = BuscaGerente($codigoPessoa);
 			$destino = "status_gerente.php";
 		}
 	}
 	else if (strlen($codigoPessoa) == 14)
 	{
-		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa, $senha);
+		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa);
 		$destino = "gerente.php";
 	}
 	else

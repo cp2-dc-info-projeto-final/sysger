@@ -12,7 +12,7 @@ function FazerLigação()
 	return $bd;
 }
 
-function BuscaUsuarioPorCPF($CPF, $senha)
+function BuscaUsuarioPorCPF($CPF)
 {
 	$bd = FazerLigação();
 
@@ -28,7 +28,7 @@ function BuscaUsuarioPorCPF($CPF, $senha)
 	return null;
 }
 
-function BuscaGerente($CPF, $senha)
+function BuscaGerente($CPF)
 {
 	$bd = FazerLigação();
 
@@ -44,7 +44,7 @@ function BuscaGerente($CPF, $senha)
 	return null;
 }
 
-function BuscaUsuarioPorCNPJ($CNPJ, $senha)
+function BuscaUsuarioPorCNPJ($CNPJ)
 {
 	$bd = FazerLigação();
 
@@ -102,20 +102,52 @@ function InsereCliente($dadosNovoCliente)
 
 	$nome = $dadosNovoCliente['nome'];
 
-	$sql = $bd->prepare('INSERT INTO cliente (nome, email,cpf, senha, dataNasc, telefone, endereco )
-	VALUES (:nome, :email,:cpf, :senha, :dataNasc,:telefone, :endereco);');
+	$sql = $bd->prepare('INSERT INTO cliente (nome, email, senha, dataNasc, telefone, endereco )
+	VALUES (:nome, :email, :senha, :dataNasc,:telefone, :endereco);');
 
 	var_dump($dadosNovoCliente);
 
 	$sql->bindValue(':nome', $nome);
 	$sql->bindValue(':email', $dadosNovoCliente['email']);
-	$sql->bindValue(':cpf', $dadosNovoCliente['cpf']);
 	$sql->bindValue(':senha', $dadosNovoCliente['senha']);
 	$sql->bindValue(':dataNasc', $dadosNovoCliente['dataNasc']);
 	$sql->bindValue(':telefone', $dadosNovoCliente['telefone']);
 	$sql->bindValue(':endereco', $dadosNovoCliente['endereco']);
 
+
+	$linhaCliente = BuscaUsuarioPorEmail($dadosNovoCliente['email']);
+	$idCliente = $linhaCliente['idCliente'];
+	if ( strlen($dadosNovoCliente['cpf_cnpj']) == 11 )
+	{
+		$sql = $bd->prepare('INSERT INTO pessoa_fisica (id_PF, cpf )
+		VALUES (:id_PF, :cpf);');
+
+		$sql->bindValue(':id_PF', $idCliente);
+		$sql->bindValue(':cpf', $dadosNovoCliente['cpf_cnpj']);
+	}
+	else if ( strlen($dadosNovoCliente['cpf_cnpj']) == 14 )
+	{
+		$sql = $bd->prepare('INSERT INTO pessoa_juridica (id_PJ, cnpj )
+		VALUES (:id_PJ, :cnpj);');
+
+		$sql->bindValue(':id_PJ', $idCliente);
+		$sql->bindValue(':cnpj', $dadosNovoCliente['cpf_cnpj']);
+	}
+
 	$sql->execute();
+}
+
+function BuscaUsuarioPorEmail($email)
+{
+	$bd = FazerLigação();
+
+	$sql = $bd->prepare('SELECT idCliente FROM cliente WHERE email = :email');
+
+	$sql->bindValue(':email', $email);
+
+	$sql->execute();
+
+	return $sql->fetch();
 }
 
 
