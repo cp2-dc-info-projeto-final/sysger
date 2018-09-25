@@ -102,17 +102,18 @@ function InsereCliente($dadosNovoCliente)
 
 	$nome = $dadosNovoCliente['nome'];
 
-	$sql = $bd->prepare('INSERT INTO cliente (nome, sobrenome, email, senha, dataNasc, cpf)
-	VALUES (:nome, :sobrenome, :email, :senha, :dataNasc, :cpf);');
+	$sql = $bd->prepare('INSERT INTO cliente (nome, email,cpf, senha, dataNasc, telefone, endereco )
+	VALUES (:nome, :email,:cpf, :senha, :dataNasc,:telefone, :endereco);');
 
 	var_dump($dadosNovoCliente);
 
 	$sql->bindValue(':nome', $nome);
-	$sql->bindValue(':sobrenome', $dadosNovoCliente['sobrenome']);
 	$sql->bindValue(':email', $dadosNovoCliente['email']);
+	$sql->bindValue(':cpf', $dadosNovoCliente['cpf']);
 	$sql->bindValue(':senha', $dadosNovoCliente['senha']);
 	$sql->bindValue(':dataNasc', $dadosNovoCliente['dataNasc']);
-	$sql->bindValue(':cpf', $dadosNovoCliente['cpf']);
+	$sql->bindValue(':telefone', $dadosNovoCliente['telefone']);
+	$sql->bindValue(':endereco', $dadosNovoCliente['endereco']);
 
 	$sql->execute();
 }
