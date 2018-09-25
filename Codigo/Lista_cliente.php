@@ -63,6 +63,8 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 		            echo '<td>'.$request["email"].'</td>';
 
+								 echo '<td>'.$request["cpf"].'</td>';
+
 		            echo '</tr>';
 
 		              }

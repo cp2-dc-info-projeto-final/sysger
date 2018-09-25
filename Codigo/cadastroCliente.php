@@ -42,6 +42,8 @@
 		$erros[] = "Já existe um cliente cadastrado com esse cpf";
 	}
 
+	
+
 
 	$senha = $request['senha'];
 	if($senha == false){
