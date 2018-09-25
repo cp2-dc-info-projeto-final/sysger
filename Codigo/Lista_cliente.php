@@ -32,37 +32,38 @@ $request = array_map('trim', $_REQUEST);
 <?php
 function BuscarCliente($nome, $telefone, $email, $CPF)
 
+									{
 						{
 
 						$bd = FazerLigação();
 
-						<h4>Listagem dos Clientes:</h4>
+						echo  "<h4>Listagem dos Clientes:</h4>"
 
-	          <table border='1' bgcolor= '##BEBEBE>'
+	           echo  "<table border='1' bgcolor= '#BEBEBE'>"
 						<tr>
 
-						<td>Nome</td>
+						<td>'Nome'</td>
 
-						<td>Telefone</td>
+						<td>'Telefone'</td>
 
-						<td>E-mail</td>
+						<td>'E-mail'</td>
 
 						<td>CPF</td>
 
 						</tr>
 
 						}
-						while($request = mysql_fetch_assoc($bd)){
+						while($request = mysql_fetch_assoc($nome, $telefone, $email, $cpf)){
 
 		            <tr>
 
-		           <td>'.$request["nome"].'</td>
+		           <td>'.$request['nome'].'</td>
 
-		           <td>'.$request["telefone"].'</td>
+		           <td>'.$request['telefone'].'</td>
 
-		           <td>'.$request["email"].'</td>
+		           <td>'.$request['email'].'</td>
 
-							<td>'.$request["cpf"].'</td>
+							<td>'.$request['cpf'].'</td>
 
 		           </tr>
 
