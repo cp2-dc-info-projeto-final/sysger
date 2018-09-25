@@ -150,5 +150,27 @@ function BuscaUsuarioPorEmail($email)
 	return $sql->fetch();
 }
 
+function InsereSubgerente($dadosNovoSub)
+{
+	$bd = FazerLigacao();
+
+	$nome = $dadosNovoSub['nome'];
+
+	$sql = $bd->prepare('INSERT INTO gerenciamento (nome, email, senha, dataNasc, telefone, endereco, cpf )
+	VALUES (:nome, :email, :senha, :dataNasc,:telefone, :endereco, :cpf);');
+
+	$sql->bindValue(':nome', $nome);
+	$sql->bindValue(':email', $dadosNovoSub['email']);
+	$sql->bindValue(':senha', $dadosNovoSub['senha']);
+	$sql->bindValue(':dataNasc', $dadosNovoSub['dataNasc']);
+	$sql->bindValue(':telefone', $dadosNovoSub['telefone']);
+	$sql->bindValue(':endereco', $dadosNovoSub['endereco']);
+	$sql->bindValue(':cpf', $dadosNovoSub['cpf']);
+
+	$sql->execute();
+
+}
+
+
 
 ?>
