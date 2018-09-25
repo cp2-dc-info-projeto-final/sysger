@@ -1,6 +1,6 @@
 <?php
 
-function FazerLigação()
+function FazerLigacao()
 {
 	$bd = new PDO('mysql:host=localhost;dbname=bancosysger;charset=utf8',
 	'bancosysger',
@@ -14,7 +14,7 @@ function FazerLigação()
 
 function BuscaUsuarioPorCPF($CPF)
 {
-	$bd = FazerLigação();
+	$bd = FazerLigacao();
 
  	$sql = $bd->prepare('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
 
@@ -30,7 +30,7 @@ function BuscaUsuarioPorCPF($CPF)
 
 function BuscaGerente($CPF)
 {
-	$bd = FazerLigação();
+	$bd = FazerLigacao();
 
  	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
 
@@ -46,7 +46,7 @@ function BuscaGerente($CPF)
 
 function BuscaUsuarioPorCNPJ($CNPJ)
 {
-	$bd = FazerLigação();
+	$bd = FazerLigacao();
 
 	$sql = $bd->prepare('SELECT cnpj,senha FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
 
@@ -64,7 +64,7 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 function BuscarSubgerente($nome)
 {
 
-$bd = FazerLigação();
+$bd = FazerLigacao();
 $sql = $bd->query('SELECT * FROM gerenciamento WHERE nome = :nome AND subgerente = 1 AND gerente = 0' );
 
 $sql->bindParam(':nome', $nome);
@@ -82,7 +82,7 @@ return null;
 function BuscarCliente($buscarCliente)
 {
 
-$bd = FazerLigação();
+$bd = FazerLigacao();
 $sql = $bd->query('SELECT * FROM Cliente WHERE nome = :nome');
 
 $sql->bindParam(':nome', $nome);
@@ -98,7 +98,7 @@ return null;
 
 function InsereCliente($dadosNovoCliente)
 {
-	$bd = FazerLigação();
+	$bd = FazerLigacao();
 
 	$nome = $dadosNovoCliente['nome'];
 
@@ -137,7 +137,7 @@ function InsereCliente($dadosNovoCliente)
 
 function BuscaUsuarioPorEmail($email)
 {
-	$bd = FazerLigação();
+	$bd = FazerLigacao();
 
 	$sql = $bd->prepare('SELECT idCliente FROM cliente WHERE email = :email');
 
