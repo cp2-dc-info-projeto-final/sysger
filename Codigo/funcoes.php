@@ -105,8 +105,6 @@ function InsereCliente($dadosNovoCliente)
 	$sql = $bd->prepare('INSERT INTO cliente (nome, email, senha, dataNasc, telefone, endereco )
 	VALUES (:nome, :email, :senha, :dataNasc,:telefone, :endereco);');
 
-	var_dump($dadosNovoCliente);
-
 	$sql->bindValue(':nome', $nome);
 	$sql->bindValue(':email', $dadosNovoCliente['email']);
 	$sql->bindValue(':senha', $dadosNovoCliente['senha']);
