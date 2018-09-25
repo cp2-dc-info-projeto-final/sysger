@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../funcoes.php');
+include '../funcoes.php';
 empty($_GET);
 //verificar o que tem no get conectando no banco
 $request = array_map('trim', $_REQUEST);
@@ -35,45 +35,50 @@ $request = array_map('trim', $_REQUEST);
 				<input type= "button" value="Buscar"/><br><br><br>
 			</form>
       <?
-          function BuscarSubgerente($nome, $telefone, $email)
+          function BuscarSubgerente($nome, $telefone, $email, $cpf)
 
           {
 
-          $bd = FazerLigação();
+            {
 
-          echo '<h4>Listagem dos Subgerentes:</h4>';
-          
-          echo '<table border='1' bgcolor= #87CEFA>';
+            $bd = FazerLigação();
 
-          echo '<tr>';
+            <h4>Listagem dos Subgerentes:</h4>
 
-          echo '<td>Nome</td>';
+            <table border='1' bgcolor= '#BEBEBE'>
+            <tr>
 
-          echo '<td>Telefone</td>';
+            <td>Nome</td>
 
-          echo '<td>E-mail</td>';
+            <td>Telefone</td>
 
-          echo '</tr>';
+            <td>E-mail</td>
 
-        }
+            <td>CPF</td>
 
-        while($request = mysql_fetch_assoc($bd)){
+            </tr>
 
-            echo '<tr>';
+            }
+            while($request = mysql_fetch_assoc($bd)){
 
-            echo '<td>'.$request["nome"].'</td>';
+                <tr>
 
-            echo '<td>'.$request["telefone"].'</td>';
+               <td>'.$request["nome"].'</td>
 
-            echo '<td>'.$request["email"].'</td>';
+               <td>'.$request["telefone"].'</td>
 
-            echo '</tr>';
+               <td>'.$request["email"].'</td>
 
-              }
+              <td>'.$request["cpf"].'</td>
 
-              echo '</table>';
+               </tr>
 
-              }
+                  }
+
+                 </table>
+
+                  }
+
 
 
 ?>

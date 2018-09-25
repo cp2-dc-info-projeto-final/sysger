@@ -8,7 +8,7 @@
 		[
 			'nome' => FILTER_DEFAULT,
 			'email' => FILTER_VALIDATE_EMAIL,
-      'cpf_cnpj' => FILTER_DEFAULT,
+      'cpf' => FILTER_DEFAULT,
 			'senha' => FILTER_DEFAULT,
 			'dataNasc' =>  FILTER_DEFAULT,
 			'telefone' =>  FILTER_DEFAULT,
@@ -54,14 +54,6 @@
 
 	else {
 		$request['senha'] = password_hash($senha, PASSWORD_DEFAULT);
-	}
-
-	$telefone = $request['telefone'];
-	if($telefone == false){
-		$erros[] = "Telefone vazio";
-	}
-	else if ($telefone < 8 || $telefone > 50 ){
-		$erros[] = "Telefone deve ter no mínimo 8 e no máximo 50 caracteres";
 	}
 
 	$datanasc = $request['dataNasc'];

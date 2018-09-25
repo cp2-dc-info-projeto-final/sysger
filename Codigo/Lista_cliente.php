@@ -1,5 +1,5 @@
 <?php
-require_once ('../funcoes.php');
+include '../funcoes.php';
 $request = array_map('trim', $_REQUEST);
 ?>
 
@@ -29,53 +29,96 @@ $request = array_map('trim', $_REQUEST);
 				<input name= "Pesquisa" type= "text" placeholder="Pequisa"></input>
 				<input type= "button" value= "Buscar"/><br><br><br></input>
 			</form>
+
 <?php
 function BuscarCliente($nome, $telefone, $email, $CPF)
 
+									{
 						{
 
 						$bd = FazerLigação();
 
-						echo '<h4>Listagem dos Clientes:</h4>';
+						 $tabelahtml = "<h4>Listagem dos Clientes:</h4>";
 
-	          echo '<table border='1' bgcolor= #87CEFA>';
+	          $tabelahtml = $tabelahtml."<table border='1' bgcolor= '#BEBEBE'>";
 
-						echo '<tr>';
+						<tr>
 
-						echo '<td>Nome</td>';
+						<td>'Nome'</td>
 
-						echo '<td>Telefone</td>';
+						<td>'Telefone'</td>
 
-						echo '<td>E-mail</td>';
+						<td>'E-mail'</td>
 
-						echo '<td> CPF </td>';
+						<td>CPF</td>
 
-						echo '</tr>';
+						</tr>
 
 						}
-						while($request = mysql_fetch_assoc($bd)){
+						while($request = mysql_fetch_assoc($nome, $telefone, $email, $cpf)){
 
-		            echo '<tr>';
+		            <tr>
 
-		            echo '<td>'.$request["nome"].'</td>';
+		           <td>'.$request['nome'].'</td>
 
-		            echo '<td>'.$request["telefone"].'</td>';
+		           <td>'.$request['telefone'].'</td>
 
-		            echo '<td>'.$request["email"].'</td>';
+		           <td>'.$request['email'].'</td>
 
-		            echo '</tr>';
+							<td>'.$request['cpf'].'</td>
 
-		              }
-
-		              echo '</table>';
+		           </tr>
 
 		              }
+
+		             </table>
+
+							 }
+
+
+								<?php
+$tabela = $dom->createElement('Lista');
+$domAttribute = $dom->createAttribute('id');
+$domAttribute->value = '';
+
+$tr = $dom->createElement('tr');
+$tabela->appendChild($tr);
+
+$td = $dom->createElement('td', 'Nome');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'Email');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'senha');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'endereço');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'telefone');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td','cpf');
+$tr->appendChild($td);
+
+$table->appendChild($domAttribute);
+$dom->appendChild($table);
+
+//The above code will output:
+<table id="my_table">
+<tbody>
+<tr>
+<td>Label</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+?>
 
 ?>
-<form action="Cadastro" method ="POST">
-	<input type="submit" name="Cadastar" id="Cadastrar" value="Cadastrar" onclick="window.open(this.getAttribute('cadastroCliente.php.php?id=<?php echo "$resultadoanuncio[CODIGOANUNCIO]";?>'), '_blank');"  />
-  <input type="submit" value = "Cadastrar"></input>
-</form>
+
+<a href ="cadastroCliente.php">Cadastrar Novos Clientes</a>
 
 
     </div>

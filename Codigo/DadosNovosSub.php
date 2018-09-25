@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 	<head>
 		<meta charset= "utf-8"/>
@@ -35,20 +35,20 @@
 	</head>
 	<body>
     <div>
-		    <h1> Cadastrar Cliente</h1>
+		    <h1> Cadastrar Subgerente </h1>
 
-				<!--<?php if($erros != null) { ?>
+				<!--<?php if($erro != null) { ?>
 					<div>
-						<p> ERRO: <?= $erros ?> </p>
+						<p> ERRO: <?= $erro ?> </p>
 					</div>
 				<?php } ?>-->
 
-        <form action="cadastroCliente.php" method="POST">
+        <form action="cadastroSubgerente.php" method="POST">
 
               <label>Nome:<input name="nome" type="text" minlength="3" maxlength="35" required/><br/><br/>
               <label>E-mail:<input name="email" type="email" required/><br/><br/>
             	<label>Senha: <input name="senha" type="password" minlength="6" maxlength="12" required /><br/><br/>
-              <label>CPF/CNPJ:<input name="cpf_cnpj" type="text" minlength="11" maxlength="14" required/><br/><br/>
+              <label>CPF:<input name="cpf" type="text" minlength="11" maxlength="11" required/><br/><br/>
 						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
