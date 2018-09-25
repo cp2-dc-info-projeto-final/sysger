@@ -29,6 +29,8 @@ $request = array_map('trim', $_REQUEST);
 				<input name= "Pesquisa" type= "text" placeholder="Pequisa"></input>
 				<input type= "button" value= "Buscar"/><br><br><br></input>
 			</form>
+
+
 <?php
 function BuscarCliente($nome, $telefone, $email, $CPF)
 
@@ -37,9 +39,10 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 						$bd = FazerLigação();
 
-						echo  "<h4>Listagem dos Clientes:</h4>"
+						 $tabelahtml = "<h4>Listagem dos Clientes:</h4>";
 
-	           echo  "<table border='1' bgcolor= '#BEBEBE'>"
+	          $tabelahtml = $tabelahtml."<table border='1' bgcolor= '#BEBEBE'>";
+
 						<tr>
 
 						<td>'Nome'</td>
@@ -73,11 +76,38 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 		              }
 
+
+								<?php
+$table = $dom->createElement('table');
+$domAttribute = $dom->createAttribute('id');
+$domAttribute->value = 'my_table';
+
+$tr = $dom->createElement('tr');
+$table->appendChild($tr);
+
+$td = $dom->createElement('td', 'Label');
+$tr->appendChild($td);
+
+$td = $dom->createElement('td', 'Value');
+$tr->appendChild($td);
+
+$table->appendChild($domAttribute);
+$dom->appendChild($table);
+
+//The above code will output:
+<table id="my_table">
+<tbody>
+<tr>
+<td>Label</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
 ?>
-<form action="Cadastro" method ="POST">
-	<input type="submit" name="Cadastar" id="Cadastrar" value="Cadastrar" onclick="window.open(this.getAttribute('cadastroCliente.php.php?id=<?php echo "$resultadoanuncio[CODIGOANUNCIO]";?>'), '_blank');"  />
-  <input type="submit" value = "Cadastrar"></input>
-</form>
+
+?>
+
+<a href ="cadastroCliente.php">Cadastrar Novos Cliente</a>
 
 
     </div>
