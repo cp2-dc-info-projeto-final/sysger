@@ -112,9 +112,11 @@ function InsereCliente($dadosNovoCliente)
 	$sql->bindValue(':telefone', $dadosNovoCliente['telefone']);
 	$sql->bindValue(':endereco', $dadosNovoCliente['endereco']);
 
+	$sql->execute();
 
 	$linhaCliente = BuscaUsuarioPorEmail($dadosNovoCliente['email']);
 	$idCliente = $linhaCliente['idCliente'];
+
 	if ( strlen($dadosNovoCliente['cpf_cnpj']) == 11 )
 	{
 		$sql = $bd->prepare('INSERT INTO pessoa_fisica (id_PF, cpf )
