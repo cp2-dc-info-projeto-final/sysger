@@ -80,7 +80,7 @@
 	}
 	if (empty($erros))
 	{
-	CadastrarCliente($request);
+	InsereCliente($request);
 	}
 
 ?>
