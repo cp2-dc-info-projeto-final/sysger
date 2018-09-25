@@ -38,19 +38,19 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 						$bd = FazerLigação();
 
-						 $tabelahtml = "<h4>Listagem dos Clientes:</h4>";
+						$tabelahtml = "<h4>Listagem dos Clientes:</h4>";
 
 	          $tabelahtml = $tabelahtml."<table border='1' bgcolor= '#BEBEBE'>";
 
 						<tr>
 
-						<td>'Nome'</td>
+						$tabelahtml = $tabelahtml.<td>'Nome'</td>
 
-						<td>'Telefone'</td>
+						$tabelahtml	= $tabelahtml.<td>'Telefone'</td>
 
-						<td>'E-mail'</td>
+						$tabelahtml = $tabelahtml.<td>'E-mail'</td>
 
-						<td>CPF</td>
+						$tabelahtml = $tabelahtml.<td>'CPF'</td>
 
 						</tr>
 
@@ -59,13 +59,13 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 
 		            <tr>
 
-		           <td>'.$request['nome'].'</td>
+		           $tabelahtml = $tabelahtml.<td>'.$request['nome'].'</td>
 
-		           <td>'.$request['telefone'].'</td>
+		           $tabelahtml = $tabelahtml.<td>'.$request['telefone'].'</td>
 
-		           <td>'.$request['email'].'</td>
+		           $tabelahtml = $tabelahtml.<td>'.$request['email'].'</td>
 
-							<td>'.$request['cpf'].'</td>
+							$tabelahtml = $tabelahtml.<td>'.$request['cpf'].'</td>
 
 		           </tr>
 
@@ -76,7 +76,7 @@ function BuscarCliente($nome, $telefone, $email, $CPF)
 							 }
 
 
-								<?php
+/*<?php
 $tabela = $dom->createElement('Lista');
 $domAttribute = $dom->createAttribute('id');
 $domAttribute->value = '';
@@ -105,6 +105,7 @@ $tr->appendChild($td);
 $table->appendChild($domAttribute);
 $dom->appendChild($table);
 
+
 //The above code will output:
 <table id="my_table">
 <tbody>
@@ -114,9 +115,8 @@ $dom->appendChild($table);
 </tr>
 </tbody>
 </table>
-?>
+?>*/
 
-?>
 
 <a href ="cadastroCliente.php">Cadastrar Novos Clientes</a>
 
