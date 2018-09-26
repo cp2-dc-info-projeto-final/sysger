@@ -1,5 +1,5 @@
 <?php
-	include 'funcoes.php';
+	include '../funcoes.php';
 	$erros = [];
 
 	$request = array_map('trim', $_REQUEST);
@@ -60,7 +60,7 @@
 	if($telefone == false){
 		$erros[] = "Telefone vazio";
 	}
-	else if ($telefone < 8 || $telefone > 50 ){
+	else if (strlen($telefone) < 8 || strlen($telefone) >15 ){
 		$erros[] = "Telefone deve ter no mínimo 8 e no máximo 50 caracteres";
 	}
 
@@ -89,13 +89,16 @@
 		$erros[] = "Endereco vazio";
 	}
 
-	foreach($erros as $msg)
-	{
-		echo "<p>$msg</p>";
-	}
+	session_start();
 	if (empty($erros))
 	{
-	InsereCliente($request);
+		InsereCliente($request);
+		$_SESSION['sucesso'] = "Cliente $nome cadastrado com sucesso";
 	}
+	else {
+		$_SESSION['erros'] = $erros;
+	}
+
+	header('Location: ../DadosNovoCliente.php');
 
 ?>

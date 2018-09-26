@@ -28,7 +28,7 @@
 		if ($usuario == null)
 		{
 			$usuario = BuscaGerente($codigoPessoa);
-			$destino = "status_gerente.php";
+			$destino = "gerente.php";
 		}
 	}
 	else if (strlen($codigoPessoa) == 14)

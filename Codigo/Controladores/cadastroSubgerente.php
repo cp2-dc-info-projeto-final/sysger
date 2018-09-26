@@ -73,18 +73,26 @@
 	if($telefone == false){
 		$erros[] = "Telefone vazio";
 	}
-	$endereco = $request['endereco'];
-	if($endereco == false){
-		$erros[] = "Endereco vazio";
+	else if (strlen($telefone) < 8 || strlen($telefone) >15 ){
+		$erros[] = "Telefone deve ter no mínimo 8 e no máximo 50 caracteres";
 	}
 
-	foreach($erros as $msg)
-	{
-		echo "<p>$msg</p>";
+	$endereco = $request['endereco'];
+	if($endereco == false){
+		$erros[] = "Endereço vazio";
 	}
+
+	session_start();
+
 	if (empty($erros))
 	{
-	InsereSubgerente($request);
+		InsereSubgerente($request);
+		$_SESSION['sucesso'] = "Subgerente $nome cadastrado com sucesso";
 	}
+	else {
+		$_SESSION['erros'] = $erros;
+	}
+
+	header('Location: ../DadosNovoSub.php');
 
 ?>
