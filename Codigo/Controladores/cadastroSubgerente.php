@@ -75,7 +75,7 @@
 	}
 	$endereco = $request['endereco'];
 	if($endereco == false){
-		$erros[] = "Endereco vazio";
+		$erros[] = "Endereço vazio";
 	}
 
 	session_start();
