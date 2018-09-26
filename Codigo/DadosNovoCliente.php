@@ -72,7 +72,7 @@
               <label>E-mail:<input name="email" type="email" required/><br/><br/>
             	<label>Senha: <input name="senha" type="password" minlength="6" maxlength="12" required /><br/><br/>
               <label>CPF/CNPJ:<input name="cpf_cnpj" type="text" minlength="11" maxlength="14" required/><br/><br/>
-						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
+						  <label>Telefone:<input name="telefone" type="telefone" minlength="8" maxlength="15" required/><br/><br/>
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
 
