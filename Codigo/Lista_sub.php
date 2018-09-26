@@ -1,8 +1,9 @@
 <?php
 
-include '../funcoes.php';
+include 'funcoes.php';
 empty($_GET);
 //verificar o que tem no get conectando no banco
+
 $request = array_map('trim', $_REQUEST);
 
 
@@ -37,49 +38,55 @@ $request = array_map('trim', $_REQUEST);
 
       <?php
 
+        if (empty($nome))
+            {
+                $subgerentes = ListaSubgerente();
+            }
+            else {
+                $subgerentes = BuscarSubgerente($nome);
+                }
 
-         if (BuscarSubgerente($nome, $telefone, $email, $cpf))
 
+
+         if ($subgerentes != null)
           {
 
             {
 
-						$bd = FazerLigação();
+						echo "<h4>Listagem dos Subgerentes:</h4>";
 
-						$tabelahtml = "<h4>Listagem dos Subgerentes:</h4>";
+	          echo "<table border='1' bgcolor= '#BC8F8F'>";
 
-	          $tabelahtml = $tabelahtml."<table border='1' bgcolor= '#BEBEBE'>";
+						echo '<tr>';
 
-						<tr>
+						$tabelahtml = $tabelahtml.'<td>Nome</td>';
 
-						$tabelahtml = $tabelahtml.<td>'Nome'</td>
+						$tabelahtml	= $tabelahtml.'<td>Telefone</td>';
 
-						$tabelahtml	= $tabelahtml.<td>'Telefone'</td>
+						$tabelahtml = $tabelahtml.'<td>E-mail</td>';
 
-						$tabelahtml = $tabelahtml.<td>'E-mail'</td>
+						$tabelahtml = $tabelahtml.'<td>CPF</td>';
 
-						$tabelahtml = $tabelahtml.<td>'CPF'</td>
-
-						</tr>
+						$tabelahtml = $tabelahtml.'</tr>';
 
 						}
-						while($request = mysql_fetch_assoc($nome, $telefone, $email, $cpf)){
+						foreach($subgerentes as $s){
 
-		            <tr>
+		          $tabelahtml = $tabelahtml.'<tr>';
 
-		          $tabelahtml = $tabelahtml.<td>'.$request['nome'].'</td>
+		          $tabelahtml = $tabelahtml.'<td>.$request[nome].</td>';
 
-		          $tabelahtml = $tabelahtml.<td>'.$request['telefone'].'</td>
+		          $tabelahtml = $tabelahtml.'<td>.$request[telefone].</td>';
 
-		          $tabelahtml = $tabelahtml.<td>'.$request['email'].'</td>
+		          $tabelahtml = $tabelahtml.'<td>.$request[email].</td>';
 
-							$tabelahtml = $tabelahtml.<td>'.$request['cpf'].'</td>
+							$tabelahtml = $tabelahtml.'<td>.$request[cpf].</td>';
 
-		           </tr>
+		          $tabelahtml = $tabelahtml.'</tr>';
 
 		              }
 
-		             </table>
+		          $tabelahtml = $tabelahtml. '</table>';
 
 							 }
 

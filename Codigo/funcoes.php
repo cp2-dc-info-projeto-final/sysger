@@ -61,6 +61,21 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 
 }
 
+function ListaSubgerente()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE subgerente = 1 AND gerente = 0' );
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
+
+}
+
 function BuscarSubgerente($nome)
 {
 
