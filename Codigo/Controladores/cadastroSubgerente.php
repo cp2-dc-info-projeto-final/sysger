@@ -73,6 +73,10 @@
 	if($telefone == false){
 		$erros[] = "Telefone vazio";
 	}
+	else if (strlen($telefone) < 8 || strlen($telefone) >15 ){
+		$erros[] = "Telefone deve ter no mínimo 8 e no máximo 50 caracteres";
+	}
+
 	$endereco = $request['endereco'];
 	if($endereco == false){
 		$erros[] = "Endereço vazio";
@@ -89,6 +93,6 @@
 		$_SESSION['erros'] = $erros;
 	}
 
-	header('Location: ../DadosNovosSub.php');
+	header('Location: ../DadosNovoSub.php');
 
 ?>

@@ -60,7 +60,7 @@
 	if($telefone == false){
 		$erros[] = "Telefone vazio";
 	}
-	else if (strlen($telefone)<= 8 || strlen($telefone) >15 ){
+	else if (strlen($telefone) < 8 || strlen($telefone) >15 ){
 		$erros[] = "Telefone deve ter no mínimo 8 e no máximo 50 caracteres";
 	}
 
