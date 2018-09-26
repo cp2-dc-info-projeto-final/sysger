@@ -37,7 +37,7 @@
 	if($cpf == false){
 		$erros[] = "Cpf vazio";
 	}
-	else if (empty(BuscaUsuarioPorCPF($cpf)) == false) {
+	else if (empty(BuscaGerente($cpf)) == false) {
 		$erros[] = "Já existe um subgerente cadastrado com esse cpf";
 	}
 

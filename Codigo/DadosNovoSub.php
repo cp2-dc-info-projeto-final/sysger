@@ -8,12 +8,18 @@
 	}
 
 	$erros = null;
+	$sucesso = null;
 
 	if(array_key_exists('erros', $_SESSION))
 	{
 		$erros = $_SESSION['erros'];
 		unset($_SESSION['erros']);
 	}
+	if(array_key_exists('sucesso', $_SESSION))
+		{
+			$sucesso = $_SESSION['sucesso'];
+			unset($_SESSION['sucesso']);
+		}
 ?>
 
 !DOCTYPE html>
