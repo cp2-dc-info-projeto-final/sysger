@@ -36,7 +36,9 @@ $request = array_map('trim', $_REQUEST);
 			</form>
 
       <?php
-          function BuscarSubgerente($nome, $telefone, $email, $cpf)
+
+
+         if (BuscarSubgerente($nome, $telefone, $email, $cpf))
 
           {
 
