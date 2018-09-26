@@ -78,13 +78,17 @@
 		$erros[] = "Endereco vazio";
 	}
 
-	foreach($erros as $msg)
-	{
-		echo "<p>$msg</p>";
-	}
+	session_start();
+
 	if (empty($erros))
 	{
-	InsereSubgerente($request);
+		InsereSubgerente($request);
+		$_SESSION['sucesso'] = "Subgerente $nome cadastrado com sucesso";
 	}
+	else {
+		$_SESSION['erros'] = $erros;
+	}
+
+	header('Location: ../DadosNovosSub.php');
 
 ?>

@@ -89,13 +89,15 @@
 		$erros[] = "Endereco vazio";
 	}
 
-	foreach($erros as $msg)
-	{
-		echo "<p>$msg</p>";
-	}
 	if (empty($erros))
 	{
 	InsereCliente($request);
+	$_SESSION['sucesso'] = "Cliente $nome cadastrado com sucesso";
 	}
+	else {
+		$_SESSION['erros'] = $erros;
+	}
+
+	header('Location: ../DadosNovoCliente.php');
 
 ?>

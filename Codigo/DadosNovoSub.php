@@ -1,3 +1,21 @@
+<?php
+	session_start();
+
+	if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	{
+		header('Location: ../gerente.php');
+		exit();
+	}
+
+	$erros = null;
+
+	if(array_key_exists('erros', $_SESSION))
+	{
+		$erros = $_SESSION['erros'];
+		unset($_SESSION['erros']);
+	}
+?>
+
 !DOCTYPE html>
 <html>
 	<head>
@@ -37,11 +55,16 @@
     <div>
 		    <h1> Cadastrar Subgerente </h1>
 
-				<!--<?php if($erro != null) { ?>
+				<?php if($erros != null) { ?>
 					<div>
-						<p> ERRO: <?= $erro ?> </p>
+						<p> ERRO:  </p>
+						<?php foreach($erros as $msg)
+						{
+							echo "<p>$msg</p>";
+						}
+						?>
 					</div>
-				<?php } ?>-->
+				<?php } ?>
 
         <form action="Controladores/cadastroSubgerente.php" method="POST">
 
