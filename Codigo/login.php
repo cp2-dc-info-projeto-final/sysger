@@ -25,9 +25,9 @@
       h1 {Color: black; padding-left: 50px;}
       body { background-color: #0A0A2A; }
       div { background-color: #F8E0F7;
-				margin-left: 500px;
+				margin-left: 600px;
 				margin-top: 150px;
-				margin-right: 500px;
+				margin-right: 650px;
 				margin-bottom: 10px;
 				padding: 20px;
 				border { background-color: black;}}
