@@ -43,7 +43,7 @@
 					</div>
 				<?php } ?>-->
 
-        <form action="cadastroSubgerente.php" method="POST">
+        <form action="Controladores/cadastroSubgerente.php" method="POST">
 
               <label>Nome:<input name="nome" type="text" minlength="3" maxlength="35" required/><br/><br/>
               <label>E-mail:<input name="email" type="email" required/><br/><br/>
