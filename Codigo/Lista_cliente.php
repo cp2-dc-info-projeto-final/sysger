@@ -31,7 +31,7 @@ $request = array_map('trim', $_REQUEST);
 			</form>
 
 <?php
-function BuscarCliente($nome, $telefone, $email, $CPF)
+				if (BuscarCliente($nome, $telefone, $email, $CPF))
 
 									{
 						{
