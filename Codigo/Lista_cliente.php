@@ -26,99 +26,68 @@ $request = array_map('trim', $_REQUEST);
     <div>
 		    <h1> Lista de Clientes </h1>
 				<form action="Controladores/Lista_cliente" method="POST">
-				<input name= "Pesquisa" type= "text" placeholder="Pequisa"></input>
+				<input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
 				<input type= "button" value= "Buscar"/><br><br><br></input>
 			</form>
 
 <?php
-				if (BuscarCliente($nome, $telefone, $email, $CPF))
+						if (empty($nome))
+								{
+										$clientes = ListaCliente();
+								}
+								else {
+										$clientes = BuscarCliente($nome);
+										}
 
+						 if ($clientes != null)
 									{
 						{
 
 						$bd = FazerLigação();
 
-						$tabelahtml = "<h4>Listagem dos Clientes:</h4>";
+						echo "<h4>Listagem dos Clientes:</h4>";
 
-	          $tabelahtml = $tabelahtml."<table border='1' bgcolor= '#BEBEBE'>";
+						echo "<h4>Listagem dos Clientes:</h4>";
 
-						<tr>
+	          echo "<table border='1' bgcolor= '#BC8F8F'>";
 
-						$tabelahtml = $tabelahtml.<td>'Nome'</td>
+						echo "<tr>";
 
-						$tabelahtml	= $tabelahtml.<td>'Telefone'</td>
+						$tabelahtml = $tabelahtml.'<td>Nome</td>';
 
-						$tabelahtml = $tabelahtml.<td>'E-mail'</td>
+						$tabelahtml	= $tabelahtml.'<td>Telefone</td>';
 
-						$tabelahtml = $tabelahtml.<td>'CPF'</td>
+						$tabelahtml = $tabelahtml.'<td>E-mail</td>';
 
-						</tr>
+						$tabelahtml = $tabelahtml.'<td>CPF</td>';
+
+						$tabelahtml = $tabelahtml.'</tr>';
 
 						}
-						while($request = mysql_fetch_assoc($nome, $telefone, $email, $cpf)){
+						foreach($clientes as $c){
 
-		            <tr>
+		          $tabelahtml = $tabelahtml.'<tr>';
 
-		           $tabelahtml = $tabelahtml.<td>'.$request['nome'].'</td>
+		          $tabelahtml = $tabelahtml.'<td>.$request[nome].</td>';
 
-		           $tabelahtml = $tabelahtml.<td>'.$request['telefone'].'</td>
+		          $tabelahtml = $tabelahtml.'<td>.$request[telefone].</td>';
 
-		           $tabelahtml = $tabelahtml.<td>'.$request['email'].'</td>
+		          $tabelahtml = $tabelahtml.'<td>.$request[email].</td>';
 
-							$tabelahtml = $tabelahtml.<td>'.$request['cpf'].'</td>
+							$tabelahtml = $tabelahtml.'<td>.$request[cpf].</td>';
 
-		           </tr>
+		          $tabelahtml = $tabelahtml.'</tr>';
 
 		              }
 
-		             </table>
+		          $tabelahtml = $tabelahtml. '</table>';
 
 							 }
 
 
-/*<?php
-$tabela = $dom->createElement('Lista');
-$domAttribute = $dom->createAttribute('id');
-$domAttribute->value = '';
+?>
 
-$tr = $dom->createElement('tr');
-$tabela->appendChild($tr);
-
-$td = $dom->createElement('td', 'Nome');
-$tr->appendChild($td);
-
-$td = $dom->createElement('td', 'Email');
-$tr->appendChild($td);
-
-$td = $dom->createElement('td', 'senha');
-$tr->appendChild($td);
-
-$td = $dom->createElement('td', 'endereço');
-$tr->appendChild($td);
-
-$td = $dom->createElement('td', 'telefone');
-$tr->appendChild($td);
-
-$td = $dom->createElement('td','cpf');
-$tr->appendChild($td);
-
-$table->appendChild($domAttribute);
-$dom->appendChild($table);
-
-
-//The above code will output:
-<table id="my_table">
-<tbody>
-<tr>
-<td>Label</td>
-<td>Value</td>
-</tr>
-</tbody>
-</table>
-?>*/
-
-
-<a href ="cadastroCliente.php">Cadastrar Novos Clientes</a>
+ <a href ="cadastroCliente.php">Cadastrar Novos Cliente</a>
 
 
     </div>
