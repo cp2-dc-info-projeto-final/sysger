@@ -186,6 +186,19 @@ function InsereSubgerente($dadosNovoSub)
 
 }
 
+function $usuarioLogadoEhGerente($gerente, $subgerente)
+{
+	$bd = FazerLigacao();
+
+ 	$sql = $bd->prepare('SELECT gerente FROM gerenciamento Where gerente = 1' );
+
+	if ($sql->execute())
+	{
+		return $sql->fetchall();
+	}
+
+	return null;
+}
 
 
 ?>

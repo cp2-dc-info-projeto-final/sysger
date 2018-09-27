@@ -1,3 +1,8 @@
+<?php
+session_start();
+	$usuario = $_SESSION['usuarioLogado'];
+	$usuarioLogadoEhGerente = $_SESSION['usuarioLogadoEhGerente'];
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,8 +25,9 @@
 	<body>
     <div>
 		    <h1> Gerente </h1>
-
+				<?php if ($usuarioLogadoEhGerente) { ?>
 				<a href="Lista_sub.php">Lista de Subgerentes</a>
+				<?php } ?>
 				<a href="Lista_cliente.php">Lista de Clientes</a>
 				<a href="status_gerente.php">Status</a>
 				<a href ="cadastroCliente.php">Cadastrar Novos Cliente</a>
