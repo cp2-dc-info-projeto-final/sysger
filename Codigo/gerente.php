@@ -1,4 +1,5 @@
 <?php
+include 'funcoes.php';
 session_start();
 	$usuario = $_SESSION['usuarioLogado'];
 	$usuarioLogadoEhGerente = $_SESSION['usuarioLogadoEhGerente'];
