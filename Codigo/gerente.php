@@ -1,5 +1,5 @@
 <?php
-include 'funcoes.php';
+include '../funcoes.php';
 session_start();
 	$usuario = $_SESSION['usuarioLogado'];
 	$usuarioLogadoEhGerente = $_SESSION['usuarioLogadoEhGerente'];
@@ -25,14 +25,14 @@ session_start();
 	</head>
 	<body>
     <div>
-		    <h1> Gerente </h1>
-				<?php if ($usuarioLogadoEhGerente) { ?>
-				<a href="Lista_sub.php">Lista de Subgerentes</a>
-				<?php } ?>
-				<a href="Lista_cliente.php">Lista de Clientes</a>
-				<a href="status_gerente.php">Status</a>
-				<a href ="cadastroCliente.php">Cadastrar Novos Cliente</a>
-				<a href ="controladores/Sair.php">Sair</a>
+		    <h1> Gerenciamento </h1>
+				<?php if ($usuarioLogadoEhSubgerente) { ?>
+				<a href="Lista_sub.php">Listagem de Subgerentes</a>
+			<?php } ?><br><br><br>
+				<a href="Lista_cliente.php">Listagem de Clientes</a><br><br><br>
+				<a href="status_gerente.php">Status dos clientes</a><br><br><br>
+				<a href ="cadastroCliente.php">Cadastrar novos cliente</a><br><br><br>
+				<a href ="controladores/Sair.php">SAIR</a>
 
 
 
