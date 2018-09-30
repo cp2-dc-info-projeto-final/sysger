@@ -8,7 +8,7 @@
 		$request,
 		[
 			'idServico' => FILTER_DEFAULT,
-			'IdCliente' => FILTER_VALIDATE_EMAIL,
+			'IdCliente' => FILTER_DEFAULT,
       'IdGerenciamento' => FILTER_DEFAULT,
 			'dataContrato' => FILTER_DEFAULT,
 			'diaVenc' =>  FILTER_DEFAULT,
