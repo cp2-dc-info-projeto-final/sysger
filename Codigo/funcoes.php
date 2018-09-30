@@ -67,8 +67,6 @@ function ListaSubgerente()
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT * FROM gerenciamento WHERE subgerente = 1 AND gerente = 0' );
 
-$sql->bindParam(':nome', $nome);
-
 if ($sql->execute())
 {
 	return $sql->fetchall();
@@ -82,7 +80,7 @@ function BuscarSubgerente($nome)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome = :nome AND subgerente = 1 AND gerente = 0' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND subgerente = 1 AND gerente = 0' );
 
 $sql->bindParam(':nome', $nome);
 
@@ -94,32 +92,30 @@ if ($sql->execute())
 return null;
 
 }
-
-function ListaCliente()
-{
-
-$bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente WHERE WHERE nome = :nome' );
-
-$sql->bindParam(':nome', $nome);
-
-if ($sql->execute())
-{
-	return $sql->fetchall();
-}
-
-return null;
-
-}
-
 
 function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente WHERE nome = :nome');
+$sql = $bd->query('SELECT * FROM cliente WHERE nome = :nome' );
 
 $sql->bindParam(':nome', $nome);
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
+
+}
+
+
+function ListaCliente()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT * FROM cliente');
 
 if ($sql->execute())
 {

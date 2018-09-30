@@ -1,5 +1,5 @@
 <?php
-include '../funcoes.php';
+require_once ('../funcoes.php');
 $request = array_map('trim', $_REQUEST);
 ?>
 
@@ -53,34 +53,33 @@ $request = array_map('trim', $_REQUEST);
 
 						echo "<tr>";
 
-						$tabelahtml = $tabelahtml.'<td>Nome</td>';
+						echo "<td>Nome</td>";
 
-						$tabelahtml	= $tabelahtml.'<td>Telefone</td>';
+						echo "<td>Telefone</td>";
 
-						$tabelahtml = $tabelahtml.'<td>E-mail</td>';
+						echo "<td>E-mail</td>";
 
-						$tabelahtml = $tabelahtml.'<td>CPF</td>';
+						echo "<td>CPF</td>";
 
-						$tabelahtml = $tabelahtml.'</tr>';
+				   	echo "</tr>";
 
 						}
 						foreach($clientes as $c){
 
-		          $tabelahtml = $tabelahtml.'<tr>';
+							echo "<tr>";
 
-		          $tabelahtml = $tabelahtml.'<td>.$request[nome].</td>';
+		          echo "<td>.$request['nome'].</td>";
 
-		          $tabelahtml = $tabelahtml.'<td>.$request[telefone].</td>';
+		          echo "<td>.$request['telefone'].</td>";
 
-		          $tabelahtml = $tabelahtml.'<td>.$request[email].</td>';
+		          echo "<td>.$request['email'].</td>";
 
-							$tabelahtml = $tabelahtml.'<td>.$request[cpf].</td>';
+							echo "<td>.$request['cpf'].</td>";
 
-		          $tabelahtml = $tabelahtml.'</tr>';
+		           echo "</tr>";
 
 		              }
-
-		          $tabelahtml = $tabelahtml. '</table>';
+                    echo "</table>";
 
 							 }
 
