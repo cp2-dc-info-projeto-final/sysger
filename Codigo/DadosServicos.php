@@ -37,9 +37,9 @@
 	</head>
 	<body>
     <div>
-		    <h1> Cadastrar Serviços </h1>
+		    <h1> Cadastrar Novos Serviços </h1>
 
-        <form action="cadastroServicos.php" method="POST">
+        <form action="Controladores/cadastroServicos.php" method="POST">
 
               <label>Serviço:
 								<select name="idServiço">
@@ -48,15 +48,30 @@
 								<option value="3">3</option>
 								<option value="4">4</option>
 							</select><br><br>
-
 							<label>ID do cliente:<input name="idCliente" type="text" minlength="1" maxlength="100" required/><br/><br/>
 							<label>ID do Gerenciador:<input name="idGerenciador" type="text" minlength="1" maxlength="100" required/><br/><br/>
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="text" type="double" required/><br/><br/>
 
-              <input type="submit" value="Cadastrar"/><br><br>
-							<input type="reset" value="Cancelar" />
+							<!--<form action= "Controladores/cadastroVeículo" method= "POST">
+						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/><br/><br/>
+						<label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" required/><br/><br/>
+						<label>Ano:<input name="ano" type="date" required/><br/><br/>
+						<label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" required/><br/><br/>
+						<label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" required/><br/><br/>
+
+						</form>-->
+
+						<!--<form action= "Controladores/cadastroCelular" method= "POST">
+					<label>Número do Celular:<input name="numero" type="text" minlength="8" maxlength="30" required/><br/><br/>
+					<label>Email:<input name="email" type="text" minlength="1" maxlength="100" required/><br/><br/>
+
+					</form>-->
+
+						 <input type="submit" value="Cadastrar"/><br><br>
+						 <input type="reset" value="Cancelar" /><br>
+
 
     </form>
         </div>
