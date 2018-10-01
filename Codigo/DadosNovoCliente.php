@@ -76,7 +76,12 @@
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
 
-            <input type="submit" value="Cadastrar"/>
+            <input type="submit" value="Cadastrar"/><br><br>
+						<input type="reset" value="Cancelar" /><br><br>
+
+						<a href ="DadosServicos.php">Cadastrar novos serviços</a><br><br><br>
+
+
 </form>
     </div>
 
