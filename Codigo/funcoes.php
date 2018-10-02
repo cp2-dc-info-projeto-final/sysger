@@ -59,7 +59,7 @@ function ListaSubgerente()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE subgerente = 1 AND gerente = 0' );
+$sql = $bd->query('SELECT * FROM gerenciamento' );
 
 if ($sql->execute())
 {
@@ -74,7 +74,7 @@ function BuscarSubgerente($pesquisa)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND subgerente = 1 AND gerente = 0 AND nome like :pesquisa' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome like :pesquisa' );
 
 $sql->bindParam('%:pesquisa%', $pesquisa);
 
