@@ -1,5 +1,5 @@
 <?php
-require_once ('../funcoes.php');
+require_once ('funcoes.php');
 //empty($_GET);
 //verificar o que tem no get conectando no banco
 
@@ -78,13 +78,13 @@ $request = filter_var_array(
 
 		          echo "<tr>";
 
-		          echo "<td>.$s['nome'].</td>";
+		          echo "<td>".$s['nome']."</td>";
 
-		          echo "<td>.$s['telefone'].</td>";
+		          echo "<td>".$s['telefone']."</td>";
 
-		          echo "<td>.$s['email'].</td>";
+		          echo "<td>".$s['email']."</td>";
 
-							echo "<td>.$s['cpf'].</td>";
+							echo "<td>".$s['cpf']."</td>";
 
 		           echo "</tr>";
 
