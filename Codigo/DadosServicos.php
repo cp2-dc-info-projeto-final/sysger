@@ -43,10 +43,8 @@
 
               <label>Serviço:
 								<select name="idServiço">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="veiculo">Veiculo</option>
+								<option value="celular">Celular</option>
 							</select><br><br>
 							<label>ID do cliente:<input name="idCliente" type="text" minlength="1" maxlength="100" required/><br/><br/>
 							<label>ID do Gerenciador:<input name="idGerenciador" type="text" minlength="1" maxlength="100" required/><br/><br/>
@@ -71,6 +69,9 @@
 
 						 <input type="submit" value="Cadastrar"/><br><br>
 						 <input type="reset" value="Cancelar" /><br>
+
+
+
 
 
     </form>
