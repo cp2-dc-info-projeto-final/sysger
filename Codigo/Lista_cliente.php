@@ -1,11 +1,12 @@
 <?php
-require_once ('../funcoes.php');
+require_once ('funcoes.php');
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
   $request,
   [
     'Pesquisa' => FILTER_DEFAULT
   ]
+);
 
 ?>
 
@@ -31,7 +32,7 @@ $request = filter_var_array(
 	<body>
     <div>
 		    <h1> Lista de Clientes </h1>
-				<form action="Controladores/Lista_cliente" method="POST">
+				<form action="Lista_cliente" method="GET">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
 				<input type= "button" value= "Buscar"/><br><br><br></input>
 			</form>
@@ -49,7 +50,6 @@ $request = filter_var_array(
 									{
 						{
 
-						$bd = FazerLigação();
 
 						echo "<h4>Listagem dos Clientes:</h4>";
 
@@ -67,32 +67,36 @@ $request = filter_var_array(
 
 						echo "<td>CPF</td>";
 
+            echo "<td>CNPJ</td>";
+
 				   	echo "</tr>";
 
-						}
-						foreach($clientes as $c){
+          }	foreach($clientes as $c)
+              {
 
-							echo "<tr>";
+  		          echo "<tr>";
 
-		          echo "<td>.$c['nome'].</td>";
+  		          echo "<td>".$c['nome']."</td>";
 
-		          echo "<td>.$c['telefone'].</td>";
+  		          echo "<td>".$c['telefone']."</td>";
 
-		          echo "<td>.$c['email'].</td>";
+  		          echo "<td>".$c['email']."</td>";
 
-							echo "<td>.$c['cpf'].</td>";
+  							echo "<td>".$c['cpf']."</td>";
 
-		           echo "</tr>";
+                echo "<td>".$c['cnpj']."</td>";
 
-		              }
-                    echo "</table>";
+  		           echo "</tr>";
 
-							 }
+  		              }
+                      echo "</table>";
+
+  							 }
 
 
 ?>
 
- <a href ="cadastroCliente.php">Cadastrar Novos Cliente</a>
+ <a href ="DadosNovoCliente.php">Cadastrar Novos Cliente</a>
 
 
     </div>
