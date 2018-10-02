@@ -29,7 +29,7 @@
 	if($email == false){
 		$erros[] = "Email vazio";
 	}
-	else if (empty(BuscaUsuarioPorEmail($request['email'])) == false) {
+	else if (empty(BuscaSubgerentePorEmail($email)) == false) {
 		$erros[] = "Já existe um subgerente cadastrado com esse email";
 	}
 
