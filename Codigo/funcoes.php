@@ -16,7 +16,7 @@ function BuscaUsuarioPorCPF($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT cpf,senha,id FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -32,7 +32,7 @@ function BuscaGerente($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT cpf,senha,id FROM gerenciamento Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -48,7 +48,7 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('SELECT cnpj,senha FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
+	$sql = $bd->prepare('SELECT cnpj,senha,id FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
 
 	$sql->bindParam(':cnpj', $CNPJ);
 

@@ -41,6 +41,7 @@
 		$erro = "CPF ou CNPJ inválido";
 	}
 
+
 	if ($senha == false)
 	{
 		$erro = "Senha não informada";
@@ -49,6 +50,7 @@
 	{
 		session_start();
 		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
+		$_SESSION['id'] = $usuario['id'];
 		header("Location: ../$destino");
 		exit();
 	}

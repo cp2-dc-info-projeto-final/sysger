@@ -1,8 +1,5 @@
 <?php
-include '../funcoes.php';
-session_start();
-	$usuario = $_SESSION['usuarioLogado'];
-	$usuarioLogadoEhGerente = $_SESSION['usuarioLogadoEhGerente'];
+$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,12 +18,13 @@ session_start();
 				padding: 20px;
 				border { background-color: black;}}
       form{padding: 50px; padding-top: 10px;}
-		</style>
+		</style>0,
+
 	</head>
 	<body>
     <div>
 		    <h1> Gerenciamento </h1>
-				<?php if ($usuarioLogadoEhSubgerente) { ?>
+				<?php if(usuarioEhSubgerente($id) == false ) { ?>
 				<a href="Lista_sub.php">Listagem de Subgerentes</a>
 			<?php } ?><br><br><br>
 				<a href="Lista_cliente.php">Listagem de Clientes</a><br><br><br>
