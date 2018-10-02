@@ -91,7 +91,7 @@ function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente WHERE nome = :nome' );
+$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome like :pesquisa' );
 
 $sql->bindParam(':nome', $nome);
 
