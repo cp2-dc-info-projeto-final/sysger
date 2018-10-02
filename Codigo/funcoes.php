@@ -239,8 +239,7 @@ function usuarioEhSubgerente(int $id) : boolean
         return true;
 
 }
-<<<<<<< HEAD
-=======
+
 
 function BuscaSubgerentePorEmail($email)
 {
@@ -254,6 +253,5 @@ function BuscaSubgerentePorEmail($email)
 
 	return $sql->fetch();
 }
->>>>>>> 8faaff57ad31e6b05e9674cb615e62caf7a9e900
 
 ?>
