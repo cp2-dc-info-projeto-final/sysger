@@ -39,15 +39,15 @@
     <div>
 		    <h1> Cadastrar Novos Serviços </h1>
 
-        <form action="Controladores/cadastroServicos.php" method="POST">
+        <form action="Controladores/cadastroServico.php" method="POST">
 
               <label>Serviço:
-								<select name="idServiço">
-								<option value="veiculo">Veiculo</option>
+								<select name="tiposervico">
+								<option value="veiculo">Veículo</option>
 								<option value="celular">Celular</option>
 							</select><br><br>
-							<label>ID do cliente:<input name="idCliente" type="text" minlength="1" maxlength="100" required/><br/><br/>
-							<label>ID do Gerenciador:<input name="idGerenciador" type="text" minlength="1" maxlength="100" required/><br/><br/>
+							<label>Cpf/Cnpj do cliente:<input name="cpf/cnpj" type="text" minlength="11" maxlength="14" required/><br/><br/>
+							<label>Cpf do Gerenciador:<input name="cpf" type="text" minlength="11" maxlength="11" required/><br/><br/>
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="text" type="double" required/><br/><br/>
