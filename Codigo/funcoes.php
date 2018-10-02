@@ -195,7 +195,7 @@ function InsereSubgerente($dadosNovoSub)
 
 }
 
-function usuarioLogadoEhSubgerente($gerente, $subgerente)
+/*function usuarioLogadoEhSubgerente($gerente, $subgerente)
 {
 	$bd = FazerLigacao();
 
@@ -207,8 +207,19 @@ function usuarioLogadoEhSubgerente($gerente, $subgerente)
 	}
 
 	return null;
-}
+}*/
 
+function usuarioEhSubgerente(int $id) : boolean
+
+{
+
+  $bd = FazerLigacao();
+
+    $sql = $pdo->prepare('SELECT subgerente FROM gerenciamento WHERE id = :valId');
+
+    $sql->bindValue(':valId', $id);
+
+<<<<<<< HEAD
 function BuscaSubgerentePorEmail($email)
 {
 	$bd = FazerLigacao();
@@ -222,5 +233,20 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
+=======
+    $sql->execute();
+
+    $resultado = $sql->fetch();
+
+    if ($resultado['subgerente'] == 0)
+
+        return false;
+
+    else
+
+        return true;
+
+}
+>>>>>>> 8e6b54595216c35dd63c18bddbec2666aa0116ac
 
 ?>
