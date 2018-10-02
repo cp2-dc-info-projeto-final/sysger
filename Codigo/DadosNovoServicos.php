@@ -43,7 +43,6 @@
 
               <label>Serviço:
 								<select name="idServiço">
-								<option></option>
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
 							</select><br><br>

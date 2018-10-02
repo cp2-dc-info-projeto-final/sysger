@@ -16,7 +16,7 @@ function BuscaUsuarioPorCPF($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT cpf,senha,id FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -32,7 +32,7 @@ function BuscaGerente($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT cpf,senha,id FROM gerenciamento Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -66,7 +66,7 @@ function ListaSubgerente()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE subgerente = 1 AND gerente = 0' );
+$sql = $bd->query('SELECT * FROM gerenciamento' );
 
 if ($sql->execute())
 {
@@ -77,13 +77,13 @@ return null;
 
 }
 
-function BuscarSubgerente($nome)
+function BuscarSubgerente($pesquisa)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND subgerente = 1 AND gerente = 0' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome like :pesquisa' );
 
-$sql->bindParam(':nome', $nome);
+$sql->bindParam('%:pesquisa%', $pesquisa);
 
 if ($sql->execute())
 {
@@ -239,5 +239,21 @@ function usuarioEhSubgerente(int $id) : boolean
         return true;
 
 }
+<<<<<<< HEAD
+=======
+
+function BuscaSubgerentePorEmail($email)
+{
+	$bd = FazerLigacao();
+
+	$sql = $bd->prepare('SELECT idGerenciamento FROM gerenciamento WHERE email = :email');
+
+	$sql->bindValue(':email', $email);
+
+	$sql->execute();
+
+	return $sql->fetch();
+}
+>>>>>>> 8faaff57ad31e6b05e9674cb615e62caf7a9e900
 
 ?>
