@@ -29,14 +29,16 @@
 	if($email == false){
 		$erros[] = "Email vazio";
 	}
-	else if (empty(BuscaUsuarioPorEmail($request['email'])) == false) {
+	else if (empty(BuscaUsuarioPorEmail($email)) == false) {
 		$erros[] = "Já existe um cliente cadastrado com esse email";
 	}
 
   $cpf_cnpj = $request['cpf_cnpj'];
+	$erros[] = BuscaUsuarioPorCPF($cpf_cnpj);
 	if($cpf_cnpj == false){
 		$erros[] = "Cpf vazio";
 	}
+
 	else if (empty(BuscaUsuarioPorCPF($cpf_cnpj)) == false) {
 		$erros[] = "Já existe um cliente cadastrado com esse cpf";
 	}
