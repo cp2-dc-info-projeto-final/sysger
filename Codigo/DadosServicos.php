@@ -47,8 +47,8 @@
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
 							</select><br><br>
-							<label>ID do cliente:<input name="idCliente" type="text" minlength="1" maxlength="100" required/><br/><br/>
-							<label>ID do Gerenciador:<input name="idGerenciador" type="text" minlength="1" maxlength="100" required/><br/><br/>
+							<label>Cpf/cnpj do cliente:<input name="idCliente" type="text" minlength="1" maxlength="100" required/><br/><br/>
+							<label>Cpf do Gerenciador:<input name="idGerenciador" type="text" minlength="1" maxlength="100" required/><br/><br/>
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="text" type="double" required/><br/><br/>
