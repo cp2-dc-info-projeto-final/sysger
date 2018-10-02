@@ -4,6 +4,12 @@ require_once ('../funcoes.php');
 //verificar o que tem no get conectando no banco
 
 $request = array_map('trim', $_REQUEST);
+$request = filter_var_array(
+  $request,
+  [
+    'Pesquisa' => FILTER_DEFAULT
+  ]
+);
 
 
  ?>
@@ -72,13 +78,13 @@ $request = array_map('trim', $_REQUEST);
 
 		          echo "<tr>";
 
-		          echo "<td>.$request['nome'].</td>";
+		          echo "<td>.$s['nome'].</td>";
 
-		          echo "<td>.$request['telefone'].</td>";
+		          echo "<td>.$s['telefone'].</td>";
 
-		          echo "<td>.$request['email'].</td>";
+		          echo "<td>.$s['email'].</td>";
 
-							echo "<td>.$request['cpf'].</td>";
+							echo "<td>.$s['cpf'].</td>";
 
 		           echo "</tr>";
 

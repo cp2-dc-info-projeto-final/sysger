@@ -70,13 +70,13 @@ return null;
 
 }
 
-function BuscarSubgerente($nome)
+function BuscarSubgerente($pesquisa)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND subgerente = 1 AND gerente = 0' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND subgerente = 1 AND gerente = 0 AND nome like :pesquisa' );
 
-$sql->bindParam(':nome', $nome);
+$sql->bindParam('%:pesquisa%', $pesquisa);
 
 if ($sql->execute())
 {
