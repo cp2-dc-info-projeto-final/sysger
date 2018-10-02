@@ -1,6 +1,12 @@
 <?php
 require_once ('../funcoes.php');
 $request = array_map('trim', $_REQUEST);
+$request = filter_var_array(
+  $request,
+  [
+    'Pesquisa' => FILTER_DEFAULT
+  ]
+
 ?>
 
 <!DOCTYPE html>
@@ -68,13 +74,13 @@ $request = array_map('trim', $_REQUEST);
 
 							echo "<tr>";
 
-		          echo "<td>.$request['nome'].</td>";
+		          echo "<td>.$c['nome'].</td>";
 
-		          echo "<td>.$request['telefone'].</td>";
+		          echo "<td>.$c['telefone'].</td>";
 
-		          echo "<td>.$request['email'].</td>";
+		          echo "<td>.$c['email'].</td>";
 
-							echo "<td>.$request['cpf'].</td>";
+							echo "<td>.$c['cpf'].</td>";
 
 		           echo "</tr>";
 
