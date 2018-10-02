@@ -20,10 +20,12 @@ function BuscaUsuarioPorCPF($CPF)
 
 	$sql->bindParam(':cpf', $CPF);
 
-	$sql->execute();
+	if ($sql->execute())
+	{
+	  return $sql->fetch();
+  }
 
-	return $sql->fetch();
-
+	return null;
 }
 
 function BuscaGerente($CPF)
@@ -46,13 +48,18 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('SELECT cnpj,senha,id FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
+	$sql = $bd->prepare('SELECT cnpj,senha,id
+		 FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
 
 	$sql->bindParam(':cnpj', $CNPJ);
 
-	$sql->execute();
+	if ($sql->execute())
+	{
+		return $sql->fetch();
+	}
 
-	return $sql->fetch();
+	return null;
+
 }
 
 function ListaSubgerente()
@@ -219,21 +226,6 @@ function usuarioEhSubgerente(int $id) : boolean
 
     $sql->bindValue(':valId', $id);
 
-<<<<<<< HEAD
-function BuscaSubgerentePorEmail($email)
-{
-	$bd = FazerLigacao();
-
-	$sql = $bd->prepare('SELECT idGerenciamento FROM gerenciamento WHERE email = :email');
-
-	$sql->bindValue(':email', $email);
-
-	$sql->execute();
-
-	return $sql->fetch();
-}
-
-=======
     $sql->execute();
 
     $resultado = $sql->fetch();
@@ -247,6 +239,5 @@ function BuscaSubgerentePorEmail($email)
         return true;
 
 }
->>>>>>> 8e6b54595216c35dd63c18bddbec2666aa0116ac
 
 ?>
