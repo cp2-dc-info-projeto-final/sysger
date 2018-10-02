@@ -24,7 +24,8 @@ $id = $_SESSION['id'];
 	<body>
     <div>
 		    <h1> Gerenciamento </h1>
-				<?php if(usuarioEhSubgerente($id) == false ) { ?>
+				<?
+				php if(usuarioEhSubgerente($id) == false ) { ?>
 				<a href="Lista_sub.php">Listagem de Subgerentes</a>
 			<?php } ?><br><br><br>
 				<a href="Lista_cliente.php">Listagem de Clientes</a><br><br><br>

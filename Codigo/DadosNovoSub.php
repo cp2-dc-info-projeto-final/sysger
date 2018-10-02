@@ -81,6 +81,10 @@
 						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
+							<label>Subgerente<select name="subgerente">
+							<option></option>
+							<option value="1">SubGerente</option>
+						</select>
 
             <input type="submit" value="Cadastrar"/>
 </form>
