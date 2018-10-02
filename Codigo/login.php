@@ -47,6 +47,10 @@
 				padding-left: 65px;
 				padding-right: 68px;
 				padding-bottom: 5px;
+			#erro {
+				display: block;
+				width: 50%;
+			}
       }
 		</style>
 	</head>
@@ -55,7 +59,7 @@
 		    <h1> Tela de Login</h1>
 
 				<?php if($erro != null){ ?>
-					<div>
+					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
 					</div>
 				<?php } ?>

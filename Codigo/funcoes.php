@@ -20,12 +20,10 @@ function BuscaUsuarioPorCPF($CPF)
 
 	$sql->bindParam(':cpf', $CPF);
 
-	if ($sql->execute())
-	{
-	  return $sql->fetch();
-  }
+	$sql->execute();
 
-	return null;
+	return $sql->fetch();
+
 }
 
 function BuscaGerente($CPF)
@@ -52,13 +50,9 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 
 	$sql->bindParam(':cnpj', $CNPJ);
 
-	if ($sql->execute())
-	{
-		return $sql->fetch();
-	}
+	$sql->execute();
 
-	return null;
-
+	return $sql->fetch();
 }
 
 function ListaSubgerente()
@@ -201,7 +195,7 @@ function InsereSubgerente($dadosNovoSub)
 
 }
 
-function usuarioLogadoEhSubgerente($gerente, $subgerente)
+/*function usuarioLogadoEhSubgerente($gerente, $subgerente)
 {
 	$bd = FazerLigacao();
 
@@ -213,7 +207,43 @@ function usuarioLogadoEhSubgerente($gerente, $subgerente)
 	}
 
 	return null;
+}*/
+
+function usuarioEhSubgerente(int $id) : boolean
+
+{
+
+  $bd = FazerLigacao();
+
+    $sql = $pdo->prepare('SELECT subgerente FROM gerenciamento WHERE id = :valId');
+
+    $sql->bindValue(':valId', $id);
+
+    $sql->execute();
+
+    $resultado = $sql->fetch();
+
+    if ($resultado['subgerente'] == 0)
+
+        return false;
+
+    else
+
+        return true;
+
 }
 
+function BuscaSubgerentePorEmail($email)
+{
+	$bd = FazerLigacao();
+
+	$sql = $bd->prepare('SELECT idGerenciamento FROM gerenciamento WHERE email = :email');
+
+	$sql->bindValue(':email', $email);
+
+	$sql->execute();
+
+	return $sql->fetch();
+}
 
 ?>
