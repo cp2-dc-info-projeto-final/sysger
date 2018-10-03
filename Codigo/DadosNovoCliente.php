@@ -57,12 +57,7 @@
 
 				<?php if($erros != null) { ?>
 					<div>
-						<p> ERRO:  </p>
-						<?php foreach($erros as $msg)
-						{
-							echo "<p>$msg</p>";
-						}
-						?>
+						<p> ERRO: <?= $erros ?> </p>
 					</div>
 				<?php } ?>
 
