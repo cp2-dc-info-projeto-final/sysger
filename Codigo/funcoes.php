@@ -81,7 +81,7 @@ function BuscarSubgerente($pesquisa)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome like :pesquisa' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
 
 $sql->bindParam('%:pesquisa%', $pesquisa);
 
@@ -98,9 +98,9 @@ function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome like :pesquisa' );
+$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
 
-$sql->bindParam(':nome', $nome);
+$sql->bindParam('%:pesquisa%', $pesquisa);
 
 if ($sql->execute())
 {

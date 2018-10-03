@@ -42,13 +42,18 @@
         <form action="Controladores/cadastroServico.php" method="POST">
 
               <label>Serviço:
-								<select name="idServiço">
+								<select name="Tiposervico">
 								<option></option>
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
 							</select><br><br>
+<<<<<<< HEAD
 							<label>Cpf/cnpj do cliente:<input name="CPF/CNPJ" type="text" minlength="1" maxlength="100" required/><br/><br/>
 							<label>Cpf do Gerenciador:<input name="CPFgerente" type="text" minlength="1" maxlength="100" required/><br/><br/>
+=======
+							<label>Cpf/cnpj do cliente:<input name="cpf/cnpj" type="text" minlength="11" maxlength="14" required/><br/><br/>
+							<label>Cpf do Gerenciador:<input name="CpfGerenciador" type="text" minlength="1'" maxlength="11" required/><br/><br/>
+>>>>>>> aa326d81c53e920b94045e46467e794d51216159
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
