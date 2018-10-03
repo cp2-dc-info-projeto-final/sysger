@@ -11,6 +11,8 @@ $request = filter_var_array(
   ]
 );
 
+$nome = $request['Pesquisa'];
+
 
  ?>
 
@@ -27,7 +29,7 @@ $request = filter_var_array(
 				margin-left: 500px;
 				margin-top: 150px;
 				margin-right: 500px;
-				margin-bottom: 10 px;
+				margin-bottom: 10px;
 				padding: 20px;
 				border { background-color: black;}}
       form{padding: 50px; padding-top: 10px;}
@@ -38,7 +40,7 @@ $request = filter_var_array(
 		    <h1> Lista de Subgerentes </h1>
 				<form action="Lista_sub.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar"><br><br>
-				<input type= "button" value="Buscar"/><br>
+				<input type= "submit" value="Buscar"/><br>
 			</form>
       <?php
 
