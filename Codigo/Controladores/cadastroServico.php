@@ -8,8 +8,8 @@
 		$request,
 		[
 			'idServico' => FILTER_DEFAULT,
-			'IdCliente' => FILTER_DEFAULT,
-      'IdGerenciamento' => FILTER_DEFAULT,
+			'CPF/CNPJ' => FILTER_DEFAULT,
+      'CPFgerente' => FILTER_DEFAULT,
 			'dataContrato' => FILTER_DEFAULT,
 			'diaVenc' =>  FILTER_DEFAULT,
 			'valor' =>  FILTER_DEFAULT,
