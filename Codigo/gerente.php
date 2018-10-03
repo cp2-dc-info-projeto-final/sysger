@@ -20,7 +20,7 @@ $id = $_SESSION['id'];
 				padding: 20px;
 				border { background-color: black;}}
       form{padding: 50px; padding-top: 10px;}
-		</style>0,
+		</style>
 
 	</head>
 	<body>
