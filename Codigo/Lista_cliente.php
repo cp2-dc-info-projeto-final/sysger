@@ -6,6 +6,7 @@ $request = filter_var_array(
   [
     'Pesquisa' => FILTER_DEFAULT
   ]
+);
 
 ?>
 
@@ -88,7 +89,6 @@ $request = filter_var_array(
                     echo "</table>";
 
 							 }
-
 
 ?>
 
