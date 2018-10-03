@@ -83,7 +83,7 @@ function BuscarSubgerente($pesquisa)
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
 
-$sql->bindParam('%:pesquisa%', $pesquisa);
+$sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 
 if ($sql->execute())
 {
@@ -98,9 +98,9 @@ function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
+$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome AND nome LIKE :pesquisa  JOIN pessoa_fisica ON pessoa_fisica.id_PF = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj' );
 
-$sql->bindParam('%:pesquisa%', $pesquisa);
+$sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 
 if ($sql->execute())
 {
@@ -230,14 +230,14 @@ function usuarioEhSubgerente(int $id) : boolean
 
     $resultado = $sql->fetch();
 
-    if ($resultado['subgerente'] == 0)
+    if ($resultado['subgerente'] == 0){
 
         return false;
-
-    else
+		}
+    else{
 
         return true;
-
+		}
 }
 
 function BuscaSubgerentePorEmail($email)
