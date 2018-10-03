@@ -38,9 +38,8 @@ $request = filter_var_array(
 		    <h1> Lista de Subgerentes </h1>
 				<form action="Lista_sub.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar"><br><br>
-				<input type= "button" value="Buscar"/><br><br><br>
+				<input type= "button" value="Buscar"/><br>
 			</form>
-
       <?php
 
         if (empty($nome))
