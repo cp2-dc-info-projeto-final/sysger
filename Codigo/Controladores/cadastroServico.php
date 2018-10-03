@@ -7,12 +7,11 @@
 	$request = filter_var_array(
 		$request,
 		[
-			'idServico' => FILTER_DEFAULT,
-			'IdCliente' => FILTER_DEFAULT,
-      'IdGerenciamento' => FILTER_DEFAULT,
+			'cpf/cnpj' => FILTER_DEFAULT,
+      'CpfGerenciador' => FILTER_DEFAULT,
 			'dataContrato' => FILTER_DEFAULT,
 			'diaVenc' =>  FILTER_DEFAULT,
-			'valor' =>  FILTER_DEFAULT,
+			'Valor' =>  FILTER_DEFAULT,
 
 
 		]

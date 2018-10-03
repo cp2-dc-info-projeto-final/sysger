@@ -39,7 +39,7 @@
     <div>
 		    <h1> Cadastrar Novos Serviços </h1>
 
-        <form action="Controladores/cadastroServicos.php" method="POST">
+        <form action="Controladores/cadastroServico.php" method="POST">
 
               <label>Serviço:
 								<select name="Tiposervico">
@@ -51,7 +51,7 @@
 							<label>Cpf do Gerenciador:<input name="CpfGerenciador" type="text" minlength="1'" maxlength="11" required/><br/><br/>
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
-						  <label>Valor do serviço:<input name="text" type="double" required/><br/><br/>
+						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
 
 							<!--<form action= "Controladores/cadastroVeículo" method= "POST">
 						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/><br/><br/>
