@@ -48,7 +48,7 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('SELECT cnpj,senha,id
+	$sql = $bd->prepare('SELECT cnpj,senha
 		 FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
 
 	$sql->bindParam(':cnpj', $CNPJ);
@@ -239,7 +239,10 @@ function usuarioEhSubgerente(int $id) : boolean
         return true;
 
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> edeff3cbd5a37cfa768dd325206b44349d03acb3
 
 function BuscaSubgerentePorEmail($email)
 {

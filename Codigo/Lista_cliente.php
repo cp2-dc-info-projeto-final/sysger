@@ -93,7 +93,6 @@ $request = filter_var_array(
 
   							 }
 
-
 ?>
 
  <a href ="DadosNovoCliente.php">Cadastrar Novos Cliente</a>
