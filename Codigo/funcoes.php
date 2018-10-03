@@ -230,14 +230,14 @@ function usuarioEhSubgerente(int $id) : boolean
 
     $resultado = $sql->fetch();
 
-    if ($resultado['subgerente'] == 0)
+    if ($resultado['subgerente'] == 0){
 
         return false;
-
-    else
+		}
+    else{
 
         return true;
-
+		}
 }
 
 
