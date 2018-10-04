@@ -36,7 +36,7 @@ $nome = $request['Pesquisa'];
 		    <h1> Lista de Clientes </h1>
 				<form action="Lista_cliente" method="GET">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
-				<input type= "button" value= "Buscar"/><br><br><br></input>
+				<input type= "submit" value= "Buscar"/><br><br><br></input>
 			</form>
 
 <?php
@@ -52,8 +52,6 @@ $nome = $request['Pesquisa'];
 									{
 						{
 
-
-						echo "<h4>Listagem dos Clientes:</h4>";
 
 						echo "<h4>Listagem dos Clientes:</h4>";
 
