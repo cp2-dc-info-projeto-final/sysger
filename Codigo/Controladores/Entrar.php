@@ -24,17 +24,20 @@
 
 		$usuario = BuscaUsuarioPorCPF($codigoPessoa);
 		$destino = "Cliente.html";
+		$chaveId = "idCliente";
 
 		if ($usuario == null)
 		{
 			$usuario = BuscaGerente($codigoPessoa);
 			$destino = "gerente.php";
+			$chaveId = "idGerenciamento";
 		}
 	}
 	else if (strlen($codigoPessoa) == 14)
 	{
 		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa);
-		$destino = "gerente.php";
+		$destino = "Cliente.html";
+		$chaveId = "idCliente";
 	}
 	else
 	{
@@ -50,7 +53,7 @@
 	{
 		session_start();
 		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
-		$_SESSION['id'] = $usuario['id'];
+		$_SESSION['id'] = $usuario[$chaveId];
 		header("Location: ../$destino");
 		exit();
 	}
