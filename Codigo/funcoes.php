@@ -66,7 +66,7 @@ function ListaSubgerente()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento JOIN pessoa_fisica ON gerenciamento.cpf = pessoa_fisica.cpf ' );
+$sql = $bd->query('SELECT * FROM gerenciamento' );
 
 if ($sql->execute())
 {
@@ -84,7 +84,6 @@ function BuscarSubgerente($pesquisa)
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 	                 FROM gerenciamento
-									 JOIN pessoa_fisica ON gerenciamento.cpf = pessoa_fisica.cpf
 									 WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
 
 $sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
@@ -104,8 +103,8 @@ function BuscarCliente($buscarCliente)
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 												FROM cliente
-												JOIN pessoa_fisica
-												ON cliente.idCliente = Pessoa_Juridica.id_PJ
+												JOIN pessoa_fisica ON cliente.idCliente = Pessoa_Fisica.id_PF
+												JOIN pessoa_juridica ON Pessoa_Fisica.id_PF = Pessoa_Juridica.id_PJ
 												WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
 
 $sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
@@ -226,6 +225,21 @@ function InsereSubgerente($dadosNovoSub)
 
 	return null;
 }*/
+
+function InsereServicos($dadosServico)
+{
+	$bd = FazerLigacao();
+
+	$sql = $bd->prepare('INSERT INTO servico (valor, diaVenc, dataContrato)
+	VALUES (:valor, :diaVenc, :dataContrato);');
+
+	$sql->bindValue(':valor', $dadosServico['valor']);
+	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
+	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
+
+	$sql->execute();
+
+}
 
 function usuarioEhSubgerente(int $id)
 {
