@@ -16,7 +16,7 @@ function BuscaUsuarioPorCPF($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT cpf,senha FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT * FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -32,7 +32,7 @@ function BuscaGerente($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT cpf,senha FROM gerenciamento Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT * FROM gerenciamento Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -218,12 +218,12 @@ function InsereSubgerente($dadosNovoSub)
 	return null;
 }*/
 
-function usuarioEhSubgerente(int $id) : boolean
+function usuarioEhSubgerente(int $id)
 {
 
-  $bd = FazerLigacao();
+  	$bd = FazerLigacao();
 
-    $sql = $pdo->prepare('SELECT subgerente FROM gerenciamento WHERE id = :valId');
+    $sql = $bd->prepare('SELECT subgerente FROM gerenciamento WHERE idGerenciamento = :valId');
 
     $sql->bindValue(':valId', $id);
 
