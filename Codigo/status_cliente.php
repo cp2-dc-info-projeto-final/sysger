@@ -51,7 +51,7 @@
 
 			            echo "<td>CNPJ</td>";
 
-									echo "<td> Pagamentos</td>";
+									echo "<td>Pagamentos</td>";
 
 							   	echo "</tr>";
 
