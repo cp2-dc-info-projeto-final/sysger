@@ -69,6 +69,8 @@ $nome = $request['Pesquisa'];
 
 						echo "<td>E-mail</td>";
 
+            echo "<td>Endereço</td>";
+
 						echo "<td>CPF</td>";
 
 				   	echo "</tr>";
@@ -84,6 +86,8 @@ $nome = $request['Pesquisa'];
 		          echo "<td>".$s['telefone']."</td>";
 
 		          echo "<td>".$s['email']."</td>";
+
+              echo "<td>".$s['endereco']."</td>";
 
 							echo "<td>".$s['cpf']."</td>";
 
