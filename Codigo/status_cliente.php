@@ -27,21 +27,10 @@
 				<input type= "submit" value= "Buscar"/><br><br><br></input>
 			</form>
 			<?php
-									if (empty($cpf_cnpj))
-											 {
-													$clientes = BuscarCliente($cpf_cnpj);
-													}
-
-									 if ($clientes != null)
-												{
-									{
-
-
-
-
+/*
 									echo "<h4>Status de pagamento do cliente:</h4>";
 
-				          echo "<table border='1' bgcolor= '#BC8F8F'>";
+				          echo "<table border='1' bgcolor= '#FFCC99'>";
 
 									echo "<tr>";
 
@@ -72,7 +61,7 @@
 			                      echo "</table>";
 
 			  							 }
-
+*/
 			?>
 
 
