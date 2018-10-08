@@ -16,6 +16,19 @@
 
 		]
 	);
+	$cpf_cnpj = $request['cpf_cnpj'];
+	$erros[] = BuscaUsuarioPorCPF($cpf_cnpj);
+	if($cpf_cnpj == false){
+		$erros[] = "Cpf vazio";
+	}
+
+	else if (empty(BuscaUsuarioPorCPF($cpf_cnpj)) == false) {
+		$erros[] = "Já existe um cliente cadastrado com esse cpf";
+	}
+	else if (empty(BuscaUsuarioPorCNPJ($cpf_cnpj)) == false) {
+		$erros[] = "Já existe um cliente cadastrado com esse cnpj";
+	}
+	
 
 	/*$nome = $request['nome'];
 	if($nome == false){

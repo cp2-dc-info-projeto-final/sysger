@@ -66,7 +66,7 @@ function ListaSubgerente()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento' );
+$sql = $bd->query('SELECT * FROM gerenciamento JOIN pessoa_fisica ON gerenciamento.nome = pessoa_fisica.cpf ' );
 
 if ($sql->execute())
 {
@@ -76,12 +76,14 @@ if ($sql->execute())
 return null;
 
 }
+/*inner join tipo_bens b on a.tipo_bens = b.cod_bensT
+inner join categoria_bens c on a.cat_bens = c.cod_bens;*/
 
 function BuscarSubgerente($pesquisa)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
+$sql = $bd->query('SELECT * FROM gerenciamento WHERE nome LIKE :nome AND nome LIKE :pesquisa JOIN pessoa_fisica ON gerenciamento.nome = pessoa_fisica.cpf ' );
 
 $sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 
@@ -98,7 +100,7 @@ function BuscarCliente($buscarCliente)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome AND nome LIKE :pesquisa  JOIN pessoa_fisica ON pessoa_fisica.id_PF = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj' );
+$sql = $bd->query('SELECT * FROM cliente WHERE nome LIKE :nome AND nome LIKE :pesquisa  JOIN pessoa_fisica ON pessoa_fisica.id_PF = Pessoa_Juridica.id_PJ WHERE CNPJ = :cnpj' );
 
 $sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 
@@ -116,7 +118,7 @@ function ListaCliente()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT * FROM cliente');
+$sql = $bd->query('SELECT * FROM cliente JOIN pessoa_fisica ON cliente.nome = pessoa_fisica.cpf JOIN pessoa_juridica On pessoa_fisica.cpf = pessoa_juridica.cnpj');
 
 if ($sql->execute())
 {
