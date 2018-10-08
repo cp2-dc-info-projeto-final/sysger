@@ -19,7 +19,7 @@
 	$cpf_cnpj = $request['cpf_cnpj'];
 	$erros[] = BuscaUsuarioPorCPF($cpf_cnpj);
 	if($cpf_cnpj == false){
-		$erros[] = "Cpf vazio";
+		$erros[] = "Cpf/cnpj vazio";
 	}
 
 	else if (empty(BuscaUsuarioPorCPF($cpf_cnpj)) == false) {
@@ -28,46 +28,9 @@
 	else if (empty(BuscaUsuarioPorCNPJ($cpf_cnpj)) == false) {
 		$erros[] = "Já existe um cliente cadastrado com esse cnpj";
 	}
-	
 
-	/*$nome = $request['nome'];
-	if($nome == false){
-		$erros[] = "Nome vazio";
-	}
-	else if (strlen($nome) < 3 || strlen($nome) > 35 ){
-		$erros[] = "Nome deve ter no mínimo 3 e no máximo 35 caracteres";
-	}
 
-	$email = $request['email'];
-	if($email == false){
-		$erros[] = "Email vazio";
-	}
-	else if (empty(BuscaUsuarioPorEmail($request['email'])) == false) {
-		$erros[] = "Já existe um cliente cadastrado com esse email";
-	}
-
-  $cpf_cnpj = $request['cpf_cnpj'];
-	if($cpf_cnpj == false){
-		$erros[] = "Cpf vazio";
-	}
-	else if (empty(BuscaUsuarioPorCPF($cpf_cnpj)) == false) {
-		$erros[] = "Já existe um cliente cadastrado com esse cpf";
-	}
-	else if (empty(BuscaUsuarioPorCNPJ($cpf_cnpj)) == false) {
-		$erros[] = "Já existe um cliente cadastrado com esse cnpj";
-	}
-
-	$senha = $request['senha'];
-	if($senha == false){
-		$erros[] = "Senha vazia";
-	}
-	else if (strlen ($senha) < 6 || strlen($senha) > 12 ){
-		$erros[] = "Senha deve ter no mínimo 6 e no máximo 12 caracteres";
-	}
-
-	else {
-		$request['senha'] = password_hash($senha, PASSWORD_DEFAULT);
-	}
+	/*
 
 	$telefone = $request['telefone'];
 	if($telefone == false){
