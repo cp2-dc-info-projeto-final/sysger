@@ -217,7 +217,6 @@ function InsereSubgerente($dadosNovoSub)
 }*/
 
 function usuarioEhSubgerente(int $id) : boolean
-
 {
 
   $bd = FazerLigacao();
