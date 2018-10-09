@@ -1,10 +1,14 @@
-<?php
-?>
+
 !DOCTYPE html>
 <html>
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
+
+		<script>
+
+		</script>
+
 		<style>
 
       h1 {Color: black; padding-left: 50px;}
@@ -42,7 +46,7 @@
         <form action="Controladores/cadastroServico.php" method="POST">
 
               <label>Serviço:
-								<select name="Tiposervico">
+								<select id="tipo_servico" onchange= "exibir_ocultar()">
 								<option></option>
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
@@ -54,14 +58,14 @@
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
 
-							<!--<form action= "Controladores/cadastroVeículo" method= "POST">
-						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/><br/><br/>
-						<label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" required/><br/><br/>
-						<label>Ano:<input name="ano" type="date" required/><br/><br/>
-						<label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" required/><br/><br/>
-						<label>Marca:<input name="marca" type="text" minlength="1" maxlength="30" required/><br/><br/>
-						<label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" required/><br/><br/>
-						<label>Tipo de Veículo:
+						<form action= "Controladores/cadastroVeículo" method= "POST">
+						<div id="placa"><label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/></div><br/><br/>
+						<div id="cor"><label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" required/></div><br/><br/>
+						<div id="ano"><label>Ano:<input name="ano" type="date" required/></div><br/><br/>
+						<div id="numeroRastreador"><label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" required/></div><br/><br/>
+						<div id="marca"><label>Marca:<input name="marca" type="text" minlength="1" maxlength="30" required/></div><br/><br/>
+						<div id="modelo"><label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" required/></div><br/><br/>
+						<div id="TipoDoVeiculo"><label>Tipo de Veículo:
 							<select name="TVeículo">
 							<option></option>
 							<option value="veiculo">Carro</option>
@@ -71,11 +75,11 @@
 							<option value="veiculo">Ônibus</option>
 							<option value="veiculo">Bicicleta</option>
 							<option value="veiculo">Barco</option>
-						</select><br><br>
+						</select></div><br><br>
 
-						</form>-->
+						</form>
 
-						<!--<form action= "Controladores/cadastroCelular" method= "POST">
+					<!--<form action= "Controladores/cadastroCelular" method= "POST">
 					<label>Número do Celular:<input name="numero" type="text" minlength="8" maxlength="30" required/><br/><br/>
 					<label>Email:<input name="email" type="text" minlength="1" maxlength="100" required/><br/><br/>
 
