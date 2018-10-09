@@ -30,7 +30,7 @@
 		$erros[] = "Email vazio";
 	}
 	else if (empty(BuscaSubgerentePorEmail($email)) == false) {
-		$erros[] = "Já existe um subgerente cadastrado com esse email";
+		$erros[] = "Já existe um funcionário cadastrado com esse email";
 	}
 
   $cpf = $request['cpf'];
@@ -38,7 +38,7 @@
 		$erros[] = "Cpf vazio";
 	}
 	else if (empty(BuscaGerente($cpf)) == false) {
-		$erros[] = "Já existe um subgerente cadastrado com esse cpf";
+		$erros[] = "Já existe um funcionário cadastrado com esse cpf";
 	}
 
 	$senha = $request['senha'];
@@ -87,12 +87,12 @@
 	if (empty($erros))
 	{
 		InsereSubgerente($request);
-		$_SESSION['sucesso'] = "Subgerente $nome cadastrado com sucesso";
+		$_SESSION['sucesso'] = "Funcionário $nome cadastrado com sucesso";
 	}
 	else {
 		$_SESSION['erros'] = $erros;
 	}
 
-	header('Location: ../DadosNovoSub.php');
+	header('Location: ../DadosNovoFunc.php');
 
 ?>

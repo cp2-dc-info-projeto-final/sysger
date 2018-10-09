@@ -3,7 +3,7 @@
 
 	if(array_key_exists('emailUsuarioLogado', $_SESSION))
 	{
-		header('Location: ../gerente.php');
+		header('Location: ../administrador.php');
 		exit();
 	}
 
@@ -59,7 +59,7 @@
 	</head>
 	<body>
     <div>
-		    <h1> Cadastrar Subgerente </h1>
+		    <h1> Cadastrar Funcionário </h1>
 
 				<?php if($erros != null) { ?>
 					<div>
@@ -72,7 +72,7 @@
 					</div>
 				<?php } ?>
 
-        <form action="Controladores/cadastroSubgerente.php" method="POST">
+        <form action="Controladores/cadastroFuncionario.php" method="POST">
 
               <label>Nome:<input name="nome" type="text" minlength="3" maxlength="35" required/><br/><br/>
               <label>E-mail:<input name="email" type="email" required/><br/><br/>
@@ -81,9 +81,9 @@
 						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
-							<label>Subgerente<select name="subgerente">
+							<label>Funcionário<select name="funcionario">
 							<option></option>
-							<option value="1">SubGerente</option>
+							<option value="1">Funcionário</option>
 						</select>
 
             <input type="submit" value="Cadastrar"/>

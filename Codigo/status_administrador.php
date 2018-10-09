@@ -19,8 +19,8 @@
 	</head>
 	<body>
     <div>
-		    <h1> Status do Gerente </h1>
-                        
+		    <h1> Status dos Clientes </h1>
+
 		      </form>
 
 

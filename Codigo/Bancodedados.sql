@@ -49,8 +49,8 @@ CREATE TABLE Gerenciamento (
 				dataNasc DATE,
 				email VARCHAR(100),
 				cpf VARCHAR(100) NOT NULL,
-				gerente BOOLEAN,
-				subgerente BOOLEAN,
+				administrador BOOLEAN,
+			  funcionário BOOLEAN,
 				PRIMARY KEY(IdGerenciamento)
 
 				);
@@ -98,5 +98,3 @@ CREATE TABLE Veiculo (
 
 
 		);
-
--- INSERT INTO usuario VALUES (... '$2y$10$Vx/Eic0LMhAwnSMloA7k/uX3ePvicj/QLzsW.pfadPNkI5EJLSKg2');

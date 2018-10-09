@@ -27,10 +27,10 @@ $id = $_SESSION['id'];
     <div>
 		    <h1> Gerenciamento </h1>
 				<?php if(usuarioEhSubgerente($id) == false ) { ?>
-				<a href="Lista_sub.php">Listagem de Subgerentes</a>
+				<a href="Lista_func.php">Listagem dos Funcionários</a>
 			<?php } ?><br><br><br>
-				<a href="Lista_cliente.php">Listagem de Clientes</a><br><br><br>
-				<a href="status_gerente.php">Status dos clientes</a><br><br><br>
+				<a href="Lista_cliente.php">Listagem dos Clientes</a><br><br><br>
+				<a href="status_cliente.php">Status dos clientes</a><br><br><br>
 				<a href ="cadastroCliente.php">Cadastrar novos cliente</a><br><br><br>
 				<a href ="controladores/Sair.php">SAIR</a>
 
