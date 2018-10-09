@@ -22,11 +22,7 @@
 		    <h1> Seja bem-vindo Cliente  </h1>
 
 							<a href="status_cliente.php">Meu Status de Pagamento</a><br><br><br>
-		      <form action= "" method= "POST">
-		        	<input type= "button" value= "STATUS"/><br><br><br>
-              <input type= "button" value= "Sair"/>
-		      </form>
-
+							<a href="Controladores/Sair.php">Sair</a><br><br><br>
 
     </div>
 

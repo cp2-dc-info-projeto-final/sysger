@@ -87,7 +87,9 @@ CREATE TABLE Celular (
 CREATE TABLE Veiculo (
 
 		idVeiculo INT UNSIGNED AUTO_INCREMENT NOT NULL,
+		marca VARCHAR(30),
 		modelo VARCHAR(30),
+		tiposervico VARCHAR(30),
 		placa VARCHAR(30),
 		cor VARCHAR(30),
 		ano DATE,
