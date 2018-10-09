@@ -206,7 +206,7 @@ function InsereSubgerente($dadosNovoFunc)
 	$sql->bindValue(':dataNasc', $dadosNovoFunc['dataNasc']);
 	$sql->bindValue(':telefone', $dadosNovoFunc['telefone']);
 	$sql->bindValue(':endereco', $dadosNovoFunc['endereco']);
-	$sql->bindValue(':cpf', $dadosNovoFunc['cpf']);
+	$sql->bindValue(':cpf', $dadosNovoFunc ['cpf']);
 
 	$sql->execute();
 
@@ -236,6 +236,20 @@ function InsereServicos($dadosServico)
 	$sql->bindValue(':valor', $dadosServico['valor']);
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
+
+	$sql->execute();
+
+}
+
+function InserePagamento($dadosPagamentos)
+{
+	$bd = FazerLigacao();
+
+	$sql = $bd->prepare('INSERT INTO pagamento (valor, data)
+	VALUES (:valor, :data);');
+
+	$sql->bindValue(':valor', $dadosPagamentos['valor']);
+	$sql->bindValue(':data', $dadosPagamentos['data']);
 
 	$sql->execute();
 
