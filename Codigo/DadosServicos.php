@@ -46,6 +46,7 @@
 								<option></option>
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
+								<option value="celularveiculo">Veículo e Celular</option>
 							</select><br><br>
 							<label>Cpf/cnpj do cliente:<input name="cpf/cnpj" type="text" minlength="11" maxlength="14" required/><br/><br/>
 							<label>Cpf do Gerenciador:<input name="CpfGerenciador" type="text" minlength="1'" maxlength="11" required/><br/><br/>
@@ -59,6 +60,17 @@
 						<label>Ano:<input name="ano" type="date" required/><br/><br/>
 						<label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" required/><br/><br/>
 						<label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" required/><br/><br/>
+						<label>Tipo de Veículo:
+							<select name="TVeículo">
+							<option></option>
+							<option value="veiculo">Carro</option>
+							<option value="veiculo">Caminhão</option>
+							<option value="veiculo">Moto</option>
+							<option value="veiculo">Carro Forte</option>
+							<option value="veiculo">Ônibus</option>
+							<option value="veiculo">Bicicleta</option>
+							<option value="veiculo">Barco</option>
+						</select><br><br>
 
 						</form>-->
 

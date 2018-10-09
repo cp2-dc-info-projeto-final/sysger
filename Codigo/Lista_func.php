@@ -37,8 +37,8 @@ $nome = $request['Pesquisa'];
 	</head>
 	<body>
     <div>
-		    <h1> Lista de Subgerentes </h1>
-				<form action="Lista_sub.php" method="GET">
+		    <h1> Lista de Funcionários </h1>
+				<form action="Lista_func.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar"><br><br>
 				<input type= "submit" value="Buscar"/><br>
 			</form>
@@ -57,7 +57,7 @@ $nome = $request['Pesquisa'];
 
             {
 
-						echo "<h4>Listagem dos Subgerentes:</h4>";
+						echo "<h4>Listagem dos Funcionários:</h4>";
 
 	          echo "<table border='1' bgcolor= '#BC8F8F'>";
 

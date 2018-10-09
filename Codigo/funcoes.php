@@ -191,22 +191,22 @@ function BuscaUsuarioPorEmail($email)
 	return $sql->fetch();
 }
 
-function InsereSubgerente($dadosNovoSub)
+function InsereSubgerente($dadosNovoFunc)
 {
 	$bd = FazerLigacao();
 
-	$nome = $dadosNovoSub['nome'];
+	$nome = $dadosNovoFunc['nome'];
 
 	$sql = $bd->prepare('INSERT INTO gerenciamento (nome, email, senha, dataNasc, telefone, endereco, cpf )
 	VALUES (:nome, :email, :senha, :dataNasc,:telefone, :endereco, :cpf);');
 
 	$sql->bindValue(':nome', $nome);
-	$sql->bindValue(':email', $dadosNovoSub['email']);
-	$sql->bindValue(':senha', $dadosNovoSub['senha']);
-	$sql->bindValue(':dataNasc', $dadosNovoSub['dataNasc']);
-	$sql->bindValue(':telefone', $dadosNovoSub['telefone']);
-	$sql->bindValue(':endereco', $dadosNovoSub['endereco']);
-	$sql->bindValue(':cpf', $dadosNovoSub['cpf']);
+	$sql->bindValue(':email', $dadosNovoFunc['email']);
+	$sql->bindValue(':senha', $dadosNovoFunc['senha']);
+	$sql->bindValue(':dataNasc', $dadosNovoFunc['dataNasc']);
+	$sql->bindValue(':telefone', $dadosNovoFunc['telefone']);
+	$sql->bindValue(':endereco', $dadosNovoFunc['endereco']);
+	$sql->bindValue(':cpf', $dadosNovoFunc['cpf']);
 
 	$sql->execute();
 

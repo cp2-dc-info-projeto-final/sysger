@@ -59,7 +59,7 @@
 		$_SESSION['erros'] = $erros;
 	}
 
-	header('Location: ../DadosNovoCliente.php');
+	header('Location: ../DadosServicos.php');
 
 	/*
 
