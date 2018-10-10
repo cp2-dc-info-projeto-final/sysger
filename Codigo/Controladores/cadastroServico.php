@@ -31,7 +31,7 @@
 	$CpfGerenciador = $request['CpfGerenciador'];
 	$erros[] = BuscaGerente($CpfGerenciador);
 	if($CpfGerenciador == false){
-		$erros[] = "Cpf do gerente vazio";
+		$erros[] = "Cpf do administraor vazio";
 	}
 
 	$dataContrato = $request['dataContrato'];
@@ -61,51 +61,4 @@
 
 	header('Location: ../DadosServicos.php');
 
-	/*
-
-	$telefone = $request['telefone'];
-	if($telefone == false){
-		$erros[] = "Telefone vazio";
-	}
-	else if (strlen($telefone) < 8 || strlen($telefone) >15 ){
-		$erros[] = "Telefone deve ter no mínimo 8 e no máximo 50 caracteres";
-	}
-
-	$datanasc = $request['dataNasc'];
-
-	$data = DateTime::createFromFormat('Y-m-d', $datanasc);
-
-	if ($data == false){
-		$erros[] = "Valor de Data de Nascimento inválido";
-	}
-	else if(array_key_exists('dia', $_REQUEST)){
-		$dia = $_REQUEST['dia'];
-		$data = DateTime::createFromFormat('Y-m-d', $datanasc);
-		$hoje = new DateTime();
-		$diferença = $data -> diff ($hoje);
-		if($anoscorridos < 18){
-			$erros[] = "É necessário ter mais de 18 anos";
-		}
-	}
-	$telefone = $request['telefone'];
-	if($telefone == false){
-		$erros[] = "Telefone vazio";
-	}
-	$endereco = $request['endereco'];
-	if($endereco == false){
-		$erros[] = "Endereco vazio";
-	}
-
-	session_start();
-	if (empty($erros))
-	{
-		InsereCliente($request);
-		$_SESSION['sucesso'] = "Cliente $nome cadastrado com sucesso";
-	}
-	else {
-		$_SESSION['erros'] = $erros;
-	}
-
-	header('Location: ../DadosNovoCliente.php');
-*/
 ?>

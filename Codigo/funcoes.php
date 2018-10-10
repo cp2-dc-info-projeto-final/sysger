@@ -291,4 +291,21 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
+/*function listapagamentos()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT *
+											FROM pagamento
+											JOIN cliente ON pagamento.IdPagamento = cliente.idCliente');
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
+
+}*/
+
 ?>

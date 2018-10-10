@@ -7,18 +7,20 @@ $request = filter_var_array(
   $request,
   [
     'valor' => FILTER_DEFAULT,
-    'dataContrato' => FILTER_DEFAULT,
+    'data' => FILTER_DEFAULT,
   ]
 );
 $valor = $request['valor'];
-$erros[] = ($valor);
 if($valor == false){
-  $erros[] = "Valor vazio";
+  $erros[] = "O valor não foi inserido";
+}
+else($valor == double){
+  $erros[] = "O valor inserido é inválido"
 }
 
-$dataContrato = $request['dataContrato'];
-$erros[] = ($dataContrato);
-if($dataContrato == false){
-  $erros[] = "da vazio";
+$data = $request['$data'];
+if($data == false){
+  $erros[] = "A data não foi inserido";
 }
+
 ?>
