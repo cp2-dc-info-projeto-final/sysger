@@ -33,8 +33,11 @@ CREATE TABLE Pessoa_Juridica (
 CREATE TABLE Pagamento (
 
 				idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
-				data DATE,
-				VALOR DOUBLE,
+				dataPagamento DATE,
+				dataPago DATE,
+				idServico INT NOT NULL,
+				valor DOUBLE,
+				FOREIGN KEY (idServico) REFERENCES Servico(idServico),
 				PRIMARY KEY(IdPagamento)
 
 				);
@@ -50,11 +53,10 @@ CREATE TABLE Gerenciamento (
 				email VARCHAR(100),
 				cpf VARCHAR(100) NOT NULL,
 				administrador BOOLEAN,
-			  funcionário BOOLEAN,
+			  funcionario BOOLEAN,
 				PRIMARY KEY(IdGerenciamento)
 
 				);
-
 
 
 CREATE TABLE Servico (
@@ -63,11 +65,9 @@ CREATE TABLE Servico (
 		valor DOUBLE NOT NULL,
 		diaVenc INT NOT NULL,
 		dataContrato DATE,
-    IdPagamento INT UNSIGNED NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
     IdGerenciamento INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdServico),
-		FOREIGN KEY (IdPagamento) REFERENCES Pagamento(IdPagamento),
 		FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
 		FOREIGN KEY (IdGerenciamento) REFERENCES Gerenciamento(IdGerenciamento)
 
