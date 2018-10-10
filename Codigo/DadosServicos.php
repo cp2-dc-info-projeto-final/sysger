@@ -108,11 +108,6 @@
 
 						 <input type="submit" value="Cadastrar"/><br><br>
 						 <input type="reset" value="Cancelar" /><br>
-
-
-
-
-
     </form>
         </div>
 
