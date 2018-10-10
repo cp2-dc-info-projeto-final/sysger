@@ -9,18 +9,13 @@
 		function exibir_ocultar(val){
 			var veiculo = document.getElementById('escolhidoVeiculo');
 			var celular = document.getElementById('escolhidoCelular');
-			var celularveiculo = document.getElementById('escolhidoCelularVeiculo');
 
-			if(val == 'veiculo'){
-          $(veiculo).show();
-        }
-      if(val == 'celular'){
-					$(celular).show();
-       	}
-			if(val == 'celularveiculo'){
-					$(celularveiculo).show();
-	     }
-
+			if(val == 'veiculo' || val == 'celularveiculo'){
+				veiculo.show();
+			}
+			if(val == 'celular' || val == 'celularveiculo'){
+					celular.show();
+			}
 		}
 		</script>
 
@@ -70,10 +65,9 @@
 							<label>Cpf/cnpj do cliente:<input name="cpf/cnpj" type="text" minlength="11" maxlength="14" required/><br/><br/>
 							<label>Cpf do Gerenciador:<input name="CpfGerenciador" type="text" minlength="1'" maxlength="11" required/><br/><br/>
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
-              <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
+							<label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
 
-						<div id="escolhidoCelularVeiculo">
 						<div id="escolhidoVeiculo">
 						<form action= "Controladores/cadastroVeículo" method= "POST">
 						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/><br/><br/>
@@ -104,7 +98,6 @@
 
 					</form>
 					</div>
-				</div>
 
 						 <input type="submit" value="Cadastrar"/><br><br>
 						 <input type="reset" value="Cancelar" /><br>
