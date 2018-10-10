@@ -30,15 +30,6 @@ CREATE TABLE Pessoa_Juridica (
 		);
 
 
-CREATE TABLE Pagamento (
-
-				idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
-				data DATE,
-				VALOR DOUBLE,
-				PRIMARY KEY(IdPagamento)
-
-				);
-
 CREATE TABLE Gerenciamento (
 
 				idGerenciamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -56,22 +47,31 @@ CREATE TABLE Gerenciamento (
 				);
 
 
-
 CREATE TABLE Servico (
 
 		idServico INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		valor DOUBLE NOT NULL,
 		diaVenc INT NOT NULL,
 		dataContrato DATE,
-    IdPagamento INT UNSIGNED NOT NULL,
     IdCliente INT UNSIGNED NOT NULL,
     IdGerenciamento INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdServico),
-		FOREIGN KEY (IdPagamento) REFERENCES Pagamento(IdPagamento),
 		FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
 		FOREIGN KEY (IdGerenciamento) REFERENCES Gerenciamento(IdGerenciamento)
 
 		);
+
+CREATE TABLE Pagamento (
+
+						idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
+						dataPagamento DATE,
+						dataPago DATE,
+						idServico INT UNSIGNED NOT NULL,
+						valor DOUBLE,
+						FOREIGN KEY (idServico) REFERENCES Servico(idServico),
+						PRIMARY KEY(IdPagamento)
+
+						);
 
 CREATE TABLE Celular (
 
