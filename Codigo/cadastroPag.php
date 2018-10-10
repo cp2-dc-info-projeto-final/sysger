@@ -7,18 +7,22 @@ $request = filter_var_array(
   $request,
   [
     'valor' => FILTER_DEFAULT,
-    'dataContrato' => FILTER_DEFAULT,
+    'dataPagamento' => FILTER_DEFAULT,
+    'dataPago' => FILTER_DEFAULT,
   ]
 );
 $valor = $request['valor'];
 $erros[] = ($valor);
 if($valor == false){
-  $erros[] = "Valor vazio";
+  $erros[] = "O valor não foi inserido";
 }
 
-$dataContrato = $request['dataContrato'];
-$erros[] = ($dataContrato);
-if($dataContrato == false){
-  $erros[] = "da vazio";
+$dataPagamento = $request['dataPagamento'];
+$erros[] = ($dataPagamento);
+if($dataPagamento == false){
+  $erros[] = "A data de Pagamento não foi inserida";
 }
+
+d
+
 ?>
