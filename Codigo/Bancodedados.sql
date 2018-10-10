@@ -30,18 +30,6 @@ CREATE TABLE Pessoa_Juridica (
 		);
 
 
-CREATE TABLE Pagamento (
-
-				idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
-				dataPagamento DATE,
-				dataPago DATE,
-				idServico INT UNSIGNED NOT NULL,
-				valor DOUBLE,
-				FOREIGN KEY (idServico) REFERENCES Servico(idServico),
-				PRIMARY KEY(IdPagamento)
-
-				);
-
 CREATE TABLE Gerenciamento (
 
 				idGerenciamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
