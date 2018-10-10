@@ -3,7 +3,7 @@
 
 	if(array_key_exists('emailUsuarioLogado', $_SESSION))
 	{
-		header('Location: ../Cliente.html');
+		header('Location: ../Cliente.php');
 		exit();
 	}
 

@@ -31,7 +31,9 @@ $id = $_SESSION['id'];
 			<?php } ?><br><br><br>
 				<a href="Lista_cliente.php">Listagem dos Clientes</a><br><br><br>
 				<a href="status_cliente.php">Status dos clientes</a><br><br><br>
+					<?php if(usuarioEhSubgerente($id) == false ) { ?>
 				<a href ="cadastroCliente.php">Cadastrar novos cliente</a><br><br><br>
+					<?php } ?><br><br><br>
 				<a href ="controladores/Sair.php">SAIR</a>
 
 
