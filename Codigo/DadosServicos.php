@@ -6,7 +6,22 @@
     <title> SysGER </title>
 
 		<script>
+		function exibir_ocultar(val){
+			var veiculo = document.getElementById('escolhidoVeiculo');
+			var celular = document.getElementById('escolhidoCelular');
+			var celularveiculo = document.getElementById('escolhidoCelularVeiculo');
 
+			if(val == 'veiculo'){
+          $(veiculo).show();
+        }
+      if(val == 'celular'){
+					$(celular).show();
+       	}
+			if(val == 'celularveiculo'){
+					$(celularveiculo).show();
+	     }
+
+		}
 		</script>
 
 		<style>
@@ -58,15 +73,17 @@
               <label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
 						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
 
+						<div id="escolhidoCelularVeiculo">
+						<div id="escolhidoVeiculo">
 						<form action= "Controladores/cadastroVeículo" method= "POST">
-						<div id="placa"><label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/></div><br/><br/>
-						<div id="cor"><label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" required/></div><br/><br/>
-						<div id="ano"><label>Ano:<input name="ano" type="date" required/></div><br/><br/>
-						<div id="numeroRastreador"><label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" required/></div><br/><br/>
-						<div id="marca"><label>Marca:<input name="marca" type="text" minlength="1" maxlength="30" required/></div><br/><br/>
-						<div id="modelo"><label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" required/></div><br/><br/>
-						<div id="TipoDoVeiculo"><label>Tipo de Veículo:
-							<select name="TVeículo">
+						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/><br/><br/>
+						<label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" required/><br/><br/>
+						<label>Ano:<input name="ano" type="date" required/><br/><br/>
+						<label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" required/><br/><br/>
+						<label>Marca:<input name="marca" type="text" minlength="1" maxlength="30" required/><br/><br/>
+						<label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" required/><br/><br/>
+						<label>Tipo de Veículo:
+							<select name="Veiculo">
 							<option></option>
 							<option value="veiculo">Carro</option>
 							<option value="veiculo">Caminhão</option>
@@ -75,15 +92,19 @@
 							<option value="veiculo">Ônibus</option>
 							<option value="veiculo">Bicicleta</option>
 							<option value="veiculo">Barco</option>
-						</select></div><br><br>
+						</select><br><br>
 
 						</form>
+					</div>
 
-					<!--<form action= "Controladores/cadastroCelular" method= "POST">
+					<div id="escolhidoCelular">
+					<form action= "Controladores/cadastroCelular" method= "POST">
 					<label>Número do Celular:<input name="numero" type="text" minlength="8" maxlength="30" required/><br/><br/>
 					<label>Email:<input name="email" type="text" minlength="1" maxlength="100" required/><br/><br/>
 
-					</form>-->
+					</form>
+					</div>
+				</div>
 
 						 <input type="submit" value="Cadastrar"/><br><br>
 						 <input type="reset" value="Cancelar" /><br>
