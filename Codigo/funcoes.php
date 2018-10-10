@@ -255,12 +255,12 @@ function InserePagamento($dadosPagamentos)
 
 }
 
-function usuarioEhSubgerente(int $id)
+function usuarioEhSubgerente($id)
 {
 
   	$bd = FazerLigacao();
 
-    $sql = $bd->prepare('SELECT subgerente FROM gerenciamento WHERE idGerenciamento = :valId');
+    $sql = $bd->prepare('SELECT funcionario FROM gerenciamento WHERE idGerenciamento = :valId');
 
     $sql->bindValue(':valId', $id);
 
@@ -268,7 +268,7 @@ function usuarioEhSubgerente(int $id)
 
     $resultado = $sql->fetch();
 
-    if ($resultado['subgerente'] == 0){
+    if ($resultado['funcionario'] == 0){
 
         return false;
 		}

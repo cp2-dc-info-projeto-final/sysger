@@ -50,7 +50,7 @@ CREATE TABLE Gerenciamento (
 				email VARCHAR(100),
 				cpf VARCHAR(100) NOT NULL,
 				administrador BOOLEAN,
-			  funcionário BOOLEAN,
+			  funcionario BOOLEAN,
 				PRIMARY KEY(IdGerenciamento)
 
 				);

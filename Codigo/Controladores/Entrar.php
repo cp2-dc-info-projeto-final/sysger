@@ -23,20 +23,20 @@
 		$usuario = null;
 
 		$usuario = BuscaUsuarioPorCPF($codigoPessoa);
-		$destino = "Cliente.html";
+		$destino = "Cliente.php";
 		$chaveId = "idCliente";
 
 		if ($usuario == null)
 		{
 			$usuario = BuscaGerente($codigoPessoa);
-			$destino = "gerente.php";
+			$destino = "administrador.php";
 			$chaveId = "idGerenciamento";
 		}
 	}
 	else if (strlen($codigoPessoa) == 14)
 	{
 		$usuario = BuscaUsuarioPorCNPJ($codigoPessoa);
-		$destino = "Cliente.html";
+		$destino = "Cliente.php";
 		$chaveId = "idCliente";
 	}
 	else
