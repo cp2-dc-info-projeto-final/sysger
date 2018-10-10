@@ -16,6 +16,9 @@ $erros[] = ($valor);
 if($valor == false){
   $erros[] = "O valor não foi inserido";
 }
+if else($valor != double){
+$erros[] = "O valor inserido não correpondem aos padrões"
+}
 
 $dataPagamento = $request['dataPagamento'];
 $erros[] = ($dataPagamento);

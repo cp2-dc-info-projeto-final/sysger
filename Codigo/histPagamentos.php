@@ -24,11 +24,11 @@
     <div>
 		    <h1> Histórico de pagamentos dos Clientes  </h1>
 
-<div style="background-color:lightblue">
-  <h3>Pagamentos</h3>
-<?php /*SELECT * PAGAMENTOS */?>
+								<div style="background-color:lightblue">
+								  <h3>Pagamentos</h3>
+								<?php /*SELECT * PAGAMENTOS */?>
 
-</div>
+								</div>
     </div>
 
 	</body>
