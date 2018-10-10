@@ -26,7 +26,7 @@
 
 <div style="background-color:lightblue">
   <h3>Pagamentos</h3>
-<?php  ?>
+<?php /*SELECT * PAGAMENTOS */?>
 
 </div>
     </div>

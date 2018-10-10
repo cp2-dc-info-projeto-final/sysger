@@ -50,7 +50,7 @@
 
         <form action="Controladores/cadastroPag.php" method="POST">
 
-              <label>Valor:<input name="valor" type=""required/><br/><br/>
+              <label>Valor:<input name="valor" type="double"required/><br/><br/>
               <label>Data de Pagamento:<input name="dataPagamento" type="date" required/>
 							<label>Data de Pago:<input name="dataPago" type="date" required/> <br/><br/>
 

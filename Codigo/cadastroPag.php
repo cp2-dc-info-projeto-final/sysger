@@ -23,6 +23,10 @@ if($dataPagamento == false){
   $erros[] = "A data de Pagamento não foi inserida";
 }
 
-d
+$dataPago = $request['dataPago'];
+$erros[] = ($dataPago);
+if($dataPago == false){
+}
+
 
 ?>

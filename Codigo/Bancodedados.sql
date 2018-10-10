@@ -35,7 +35,7 @@ CREATE TABLE Pagamento (
 				idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
 				dataPagamento DATE,
 				dataPago DATE,
-				idServico INT NOT NULL,
+				idServico INT UNSIGNED NOT NULL,
 				valor DOUBLE,
 				FOREIGN KEY (idServico) REFERENCES Servico(idServico),
 				PRIMARY KEY(IdPagamento)
@@ -72,6 +72,18 @@ CREATE TABLE Servico (
 		FOREIGN KEY (IdGerenciamento) REFERENCES Gerenciamento(IdGerenciamento)
 
 		);
+
+CREATE TABLE Pagamento (
+
+						idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
+						dataPagamento DATE,
+						dataPago DATE,
+						idServico INT UNSIGNED NOT NULL,
+						valor DOUBLE,
+						FOREIGN KEY (idServico) REFERENCES Servico(idServico),
+						PRIMARY KEY(IdPagamento)
+
+						);
 
 CREATE TABLE Celular (
 
