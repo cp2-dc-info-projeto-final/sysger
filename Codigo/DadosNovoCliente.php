@@ -8,12 +8,18 @@
 	}
 
 	$erros = null;
+	$sucesso = null;
 
 	if(array_key_exists('erros', $_SESSION))
 	{
 		$erros = $_SESSION['erros'];
 		unset($_SESSION['erros']);
 	}
+	if(array_key_exists('sucesso', $_SESSION))
+		{
+			$sucesso = $_SESSION['sucesso'];
+			unset($_SESSION['sucesso']);
+		}
 ?>
 
 <!DOCTYPE html>
@@ -57,9 +63,14 @@
 
 				<?php if($erros != null) { ?>
 					<div>
-						<p> ERRO: <?= $erros ?> </p>
+						<p> ERRO:  </p>
+						<?php foreach($erros as $msg)
+						{
+							echo "<p>$msg</p>";
+						}
+						?>
 					</div>
-				<?php } ?>
+				<?php } ?>>
 
         <form action="Controladores/cadastroCliente.php" method="POST">
 

@@ -92,6 +92,7 @@
 	}
 
 	session_start();
+	
 	if (empty($erros))
 	{
 		InsereCliente($request);

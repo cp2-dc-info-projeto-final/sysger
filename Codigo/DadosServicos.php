@@ -11,10 +11,10 @@
 			var celular = document.getElementById('escolhidoCelular');
 
 			if(val == 'veiculo' || val == 'celularveiculo'){
-				veiculo.show();
+					veiculo.hidden();
 			}
 			if(val == 'celular' || val == 'celularveiculo'){
-					celular.show();
+					celular.hidden();
 			}
 		}
 		</script>
@@ -56,7 +56,7 @@
         <form action="Controladores/cadastroServico.php" method="POST">
 
               <label>Serviço:
-								<select id="tipo_servico" onchange= "exibir_ocultar()">
+								<select id="tipo_servico" onchange="exibir_ocultar(this.value)">
 								<option></option>
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
