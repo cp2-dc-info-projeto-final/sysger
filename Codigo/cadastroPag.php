@@ -29,6 +29,7 @@ if($dataPagamento == false){
 $dataPago = $request['dataPago'];
 $erros[] = ($dataPago);
 if($dataPago == false){
+  $erros[] = "A data do serviço pago ainda não foi inserida";
 }
 
 

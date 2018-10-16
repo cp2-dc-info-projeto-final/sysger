@@ -25,9 +25,19 @@
 		    <h1> Histórico de pagamentos dos Clientes  </h1>
 
 								<div style="background-color:lightblue">
-								  <h3>Pagamentos</h3>
-								<?php /*SELECT * PAGAMENTOS */?>
 
+								  <h3>Pagamentos</h3>
+
+								<!--	<?php
+								$pg = Buscapagamento();
+								if() {
+
+								}
+								else(){
+
+								}
+
+								?>-->
 								</div>
     </div>
 
