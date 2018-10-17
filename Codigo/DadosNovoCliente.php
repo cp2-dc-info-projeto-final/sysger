@@ -56,6 +56,11 @@
 						?>
 					</div>
 				<?php } ?>
+				<?php if($sucesso != null) { ?>
+					<div>
+							<? echo "<p>$sucesso</p>"; ?>	
+					</div>
+				<?php } ?>
 
         <form action="Controladores/cadastroCliente.php" method="POST">
 

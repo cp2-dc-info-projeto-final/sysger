@@ -14,6 +14,8 @@
 		$erro = $_SESSION['erros'];
 		unset($_SESSION['erros']);
 	}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +31,7 @@ body{
 h1{
 	color: black;
 	text-align: center;
+  margin-top: 200px;
 }
 
 div{
@@ -46,7 +49,6 @@ div{
 	<body>
     <div>
 		    <h1> Tela de Login</h1>
-
 				<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
@@ -56,7 +58,7 @@ div{
 		      <form action= "Controladores/Entrar.php" method= "POST">
 		          <label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
 			        <label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
-              <input class="button azul" type= "submit" value= "Entrar"/>
+              <input type= "submit" value= "Entrar"/>
 		      </form>
     </div>
 

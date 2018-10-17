@@ -50,7 +50,6 @@
 						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
 
 						<div id="escolhidoVeiculo">
-						<form action= "Controladores/cadastroVeículo" method= "POST">
 						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" required/><br/><br/>
 						<label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" required/><br/><br/>
 						<label>Ano:<input name="ano" type="date" required/><br/><br/>
@@ -69,15 +68,12 @@
 							<option value="veiculo">Barco</option>
 						</select><br><br>
 
-						</form>
 					</div>
 
 					<div id="escolhidoCelular">
-					<form action= "Controladores/cadastroCelular" method= "POST">
 					<label>Número do Celular:<input name="numero" type="text" minlength="8" maxlength="30" required/><br/><br/>
-					<label>Email:<input name="email" type="text" minlength="1" maxlength="100" required/><br/><br/>
+					<label>Email:<input name="email" type="email" required/><br/><br/>
 
-					</form>
 					</div>
 
 						 <input type="submit" value="Cadastrar"/><br><br>
