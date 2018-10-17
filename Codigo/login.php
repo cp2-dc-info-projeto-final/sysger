@@ -23,7 +23,7 @@
 		<style>
 
 body{
-	background-color: white;
+	background-color: #B5B5B5;
 }
 
 h1{
@@ -31,8 +31,14 @@ h1{
 	text-align: center;
 }
 
-div, form{
+div{
+	background-color:#828282 ;
 	text-align: center;
+	width: 300px;
+	border: 2px solid black;
+	padding: 25px;
+	margin: auto;
+	margin-top: 220px;
 }
 
 </style>
