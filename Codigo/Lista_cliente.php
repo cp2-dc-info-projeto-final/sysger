@@ -99,7 +99,7 @@ $nome = $request['Pesquisa'];
 
 ?>
 
- <a href ="DadosNovoCliente.php">Cadastrar Novos Cliente</a>
+ <a href ="DadosNovoCliente.php"><button>Cadastrar Novos Cliente</button></a>
 
 
     </div>
