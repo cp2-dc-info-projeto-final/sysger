@@ -10,12 +10,8 @@
 			var veiculo = document.getElementById('escolhidoVeiculo');
 			var celular = document.getElementById('escolhidoCelular');
 
-			if(val == 'veiculo' || val == 'celularveiculo'){
-					veiculo.hidden();
-			}
-			if(val == 'celular' || val == 'celularveiculo'){
-					celular.hidden();
-			}
+			veiculo.hidden = (val != 'veiculo' && val != 'celularveiculo');
+			celular.hidden = (val != 'celular' && val != 'celularveiculo');
 		}
 		</script>
 

@@ -55,7 +55,7 @@
 						}
 						?>
 					</div>
-				<?php } ?>>
+				<?php } ?>
 
         <form action="Controladores/cadastroCliente.php" method="POST">
 
