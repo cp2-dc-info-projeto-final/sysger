@@ -50,7 +50,7 @@ div, form{
 		      <form action= "Controladores/Entrar.php" method= "POST">
 		          <label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
 			        <label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
-              <input class="button azul" type= "submit" value= "Entrar"/>
+              <input type= "submit" value= "Entrar"/>
 		      </form>
     </div>
 

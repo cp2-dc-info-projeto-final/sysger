@@ -29,7 +29,7 @@
 	if($email == false){
 		$erros[] = "Email vazio";
 	}
-	else if (empty(BuscaUsuarioPorEmail($email)) == false) {
+	else if (BuscaUsuarioPorEmail($email) != false) {
 		$erros[] = "Já existe um cliente cadastrado com esse email";
 	}
 
@@ -37,10 +37,10 @@
 	if($cpf_cnpj == false){
 		$erros[] = "Cpf vazio";
 	}
-	else if (BuscaUsuarioPorCPF($cpf_cnpj) == false) {
+	else if (BuscaUsuarioPorCPF($cpf_cnpj) != false) {
 		$erros[] = "Já existe um cliente cadastrado com esse cpf";
 	}
-	else if (BuscaUsuarioPorCNPJ($cpf_cnpj) == false) {
+	else if (BuscaUsuarioPorCNPJ($cpf_cnpj) != false) {
 		$erros[] = "Já existe um cliente cadastrado com esse cnpj";
 	}
 
