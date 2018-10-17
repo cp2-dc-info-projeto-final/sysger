@@ -14,6 +14,8 @@
 		$erro = $_SESSION['erros'];
 		unset($_SESSION['erros']);
 	}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +31,7 @@ body{
 h1{
 	color: black;
 	text-align: center;
+  margin-top: 200px;
 }
 
 div, form{
@@ -40,7 +43,6 @@ div, form{
 	<body>
     <div>
 		    <h1> Tela de Login</h1>
-
 				<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
