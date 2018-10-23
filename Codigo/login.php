@@ -17,38 +17,18 @@
 
 
 ?>
+<a class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"></a>
+<nav class="navbar navbar-dark bg-dark">
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		<style>
-
-body{
-	background-color: #B5B5B5;
-}
-
-h1{
-	color: black;
-	text-align: center;
-  margin-top: 200px;
-}
-
-div{
-	background-color:#828282 ;
-	text-align: center;
-	width: 300px;
-	border: 2px solid black;
-	padding: 25px;
-	margin: auto;
-	margin-top: 220px;
-}
-
-</style>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	<body>
     <div>
-		    <h1> Tela de Login</h1>
+				<h1> SysGER </h1>
 				<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
@@ -58,8 +38,25 @@ div{
 		      <form action= "Controladores/Entrar.php" method= "POST">
 		          <label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
 			        <label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
-              <input type= "submit" value= "Entrar"/>
+              <input class="glyphicon glyphicon-log-in" type= "submit" value= "Entrar"/>
 		      </form>
+
+					<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header"
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>-->
     </div>
 
 	</body>
