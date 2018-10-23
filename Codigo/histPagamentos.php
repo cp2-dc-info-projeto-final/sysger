@@ -27,7 +27,10 @@
 								<div style="background-color:lightblue">
 
 								  <h3>Pagamentos</h3>
-
+										<table> //for
+<td> </td>
+<tr> </tr>
+										</table>
 								<!--	<?php
 								$pg = Buscapagamento();
 								if() {
