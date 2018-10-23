@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once("login.php");
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,12 +24,9 @@
 	</head>
 	<body>
     <div>
-		    <h1> Boleto Gerado </h1>
+		     <?php echo "Boleto do Cliente ".$_SESSION['nome'];  ?>
 
-		      <form action= "" method= "POST">
-
-		      </form>
-
+		      <a href="baixar.php?arquivo=arquivos/imagem.jpg">Download do Boleto </a>
 
     </div>
 

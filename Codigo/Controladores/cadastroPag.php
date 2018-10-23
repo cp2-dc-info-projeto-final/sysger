@@ -15,10 +15,10 @@ $request = filter_var_array(
 
 $valor = $request['valor'];
 if($valor == false){
-  $erros[] = "O valor não foi inserido";
+  $erros[] = "O valor não foi inserido.";
 }
 else($valor == double){
-  $erros[] = "O valor inserido é inválido"
+  $erros[] = "O valor inserido é inválido.";
 }
 
 $dataVencimento = $request['dataVencimento'];
@@ -30,4 +30,15 @@ if($dataPago == false){
   $erros[] = "A data que o serviço foi pago não foi inserido";
 }
 
+session_start();
+if (empty($erros))
+{
+  InserePagamento($request);
+  $_SESSION['sucesso'] = "Pagamento cadastrado com sucesso";
+}
+else {
+  $_SESSION['erros'] = $erros;
+}
+
+header('Location: ../DadosNovoPagamento.php');
 ?>
