@@ -26,7 +26,62 @@
 
 								<div style="background-color:lightblue">
 
-								  <h3>Pagamentos</h3>
+									<?php
+															if (empty($pag))
+																	{
+																			$pag = Buscapagamento();
+																	}
+																	else {
+																			$pag = Buscapagamento();
+																			}
+
+															 if ($pag != null)
+																		{
+															{
+
+
+															echo "<h3>Pagamentos:</h3>";
+
+										          echo "<table border='2' bgcolor= '#BC8F8F'>";
+
+															echo "<tr>";
+
+															echo "<td>Mensalidade</td>";
+
+															echo "<td>STATUS</td>";
+
+
+													   	echo "</tr>";
+
+									          }	for
+														if
+														(mes.pagamento == mes.mensalidade && valor.pagamento['id'] == valor.devido){
+															status['p'] = 'Pago'
+														}
+														else {
+															status['p'] = 'Pendente'
+														}
+
+														else
+									              {
+
+									  		          echo "<tr>";
+
+
+																	echo date('M');
+
+									  		          echo "<td>".$p['Mensalidade']."</td>";
+
+									  		          echo "<td>".$p['status']."</td>";
+
+									  		           echo "</tr>";
+
+									  		              }
+									                      echo "</table>";
+
+									  							 }
+
+									?>
 										<table> //for
 <td> </td>
 <tr> </tr>
