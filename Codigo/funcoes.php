@@ -313,7 +313,7 @@ function Buscapagamento()
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->query('SELECT dataPago, dataPagamento FROM pagamento');
+	$sql = $bd->query('SELECT dataPago, dataVencimento FROM pagamento');
 
 	$sql->execute();
 

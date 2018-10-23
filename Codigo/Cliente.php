@@ -4,17 +4,26 @@
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
 		<style>
+		body{
+			background-color: #B5B5B5;
+		}
 
-      h1 {Color: black; padding-left: 50px;}
-      body { background-color: #0A0A2A; }
-      div { background-color: #F8E0F7;
-				margin-left: 500px;
-				margin-top: 150px;
-				margin-right: 500px;
-				margin-bottom: 10 px;
-				padding: 20px;
-				border { background-color: black;}}
-      form{padding: 50px; padding-top: 10px;}
+		h1{
+			color: black;
+			text-align: center;
+		  margin-top: 200px;
+		}
+
+		div{
+			background-color:#828282 ;
+			text-align: center;
+			width: 300px;
+			border: 2px solid black;
+			padding: 25px;
+			margin: auto;
+			margin-top: 220px;
+		}
+
 		</style>
 	</head>
 	<body>
