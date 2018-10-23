@@ -245,11 +245,11 @@ function InserePagamento($dadosPagamentos)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('INSERT INTO pagamento (valor, dataPagamento, dataPago)
-	VALUES (:valor, :dataPagamento,:dataPago );');
+	$sql = $bd->prepare('INSERT INTO pagamento (valor, dataVencimento, dataPago)
+	VALUES (:valor, :dataVencimento,:dataPago );');
 
 	$sql->bindValue(':valor', $dadosPagamentos['valor']);
-	$sql->bindValue(':dataPagamento', $dadosPagamentos['dataPagamento']);
+	$sql->bindValue(':dataVencimento', $dadosPagamentos['dataVencimento']);
 	$sql->bindValue(':dataPago', $dadosPagamentos['dataPago']);
 
 
@@ -313,7 +313,18 @@ function Buscapagamento()
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->query('SELECT dataPago, dataPagamento FROM pagamento');
+	$sql = $bd->query('SELECT dataPago, dataVencimento FROM pagamento');
+
+	$sql->execute();
+
+	return $sql->fetch();
+}
+
+function ComparaDatas()
+{
+	$bd = FazerLigacao();
+
+	$sql = $bd->query('SELECT dataPago, dataVencimento FROM pagamento');
 
 	$sql->execute();
 
