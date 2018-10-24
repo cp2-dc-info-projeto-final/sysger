@@ -293,13 +293,16 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
-/*function listapagamentos()
+function listapagamentos()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT *
+$sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
 											FROM pagamento
-											JOIN cliente ON pagamento.IdPagamento = cliente.idCliente');
+											JOIN cliente ON pagamento.IdPagamento = cliente.nome
+											WHERE nome LIKE :nome AND nome LIKE :pesquisa');
+
+$sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 
 if ($sql->execute())
 {
@@ -308,19 +311,11 @@ if ($sql->execute())
 
 return null;
 
-}*/
-function Buscapagamento()
-{
-	$bd = FazerLigacao();
 
-	$sql = $bd->query('SELECT dataPago, dataVencimento FROM pagamento');
-
-	$sql->execute();
-
-	return $sql->fetch();
 }
 
-function ComparaDatas()
+
+function Spagamentos()
 {
 	$bd = FazerLigacao();
 
