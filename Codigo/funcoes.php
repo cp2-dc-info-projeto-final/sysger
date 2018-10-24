@@ -331,4 +331,50 @@ function ComparaDatas()
 	return $sql->fetch();
 }
 
+function ExtraiRegistroSessão(string $chave)
+{
+	if (array_key_exists($chave, $_SESSION))
+	{
+		$erro = $_SESSION[$chave];
+		unset($_SESSION[$chave]);
+
+		return $erro;
+	}
+	else
+	{
+		return null;
+	}
+}
+
+function BuscaUsuario($Id)
+{
+	$bd = FazerLigacao();
+
+ 	$sql = $bd->prepare('SELECT * FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where id = :id');
+	$sql->bindParam(':id', $Id);
+
+	if ($sql->execute())
+	{
+		return $sql->fetchAll();
+	}
+
+  $sql = $bd->prepare('SELECT * FROM gerenciamento Where id = :id');
+	$sql->bindParam(':id', $Id);
+
+	if ($sql->execute())
+	{
+		return $sql->fetchAll();
+	}
+
+  $sql = $bd->prepare('SELECT * FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where id = :id');
+	$sql->bindParam(':id', $Id);
+
+	if ($sql->execute())
+	{
+	  return $sql->fetchAll();
+  }
+
+	return null;
+}
+
 ?>

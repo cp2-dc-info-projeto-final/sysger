@@ -25,18 +25,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	<body>
-		<nav class="navbar navbar-dark bg-dark">
-			<h1 class="navbar-brand"> SysGER </h1>
-
-			<form class="form-inline" action= "Controladores/Entrar.php" method= "POST">
-					<label class="navbar-text"> CPF/CNPJ </label></br><input class="form-control" name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label>
-					<label class="navbar-text"> Senha </label></br><input class="form-control" name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label>
-					<input class="btn btn-sm btn-outline-secondary" type= "submit" value= "Entrar"/>
-			</form>
-		</nav>
-    <div>
-
-				<?php if($erro != null){ ?>
+			<?php require('BarraNav.php'); ?>
+			<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
 					</div>
@@ -60,7 +50,5 @@
     </ul>
   </div>
 </nav>-->
-    </div>
-
 	</body>
 </html>
