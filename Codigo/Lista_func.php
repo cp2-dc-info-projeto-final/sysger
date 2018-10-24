@@ -44,31 +44,6 @@ $nome = $request['Pesquisa'];
       <input type= "submit" value= "Buscar"/><br><br><br></input>
     </form>
 
-	  <!-- <head>
-		<meta charset= "utf-8"/>
-    <title> SysGER </title>
-		<style>
-    body{
-      background-color: white;
-    }
-
-    h1{
-      color: black;
-      text-align: center;
-    }
-    
-    div, form{
-      text-align: center;
-    }
-		</style>
-	</head>
-	<body>
-    <div>
-		    <h1> Lista de Funcionários </h1>
-				<form action="Lista_func.php" method="GET">
-				<input name= "Pesquisa" type="text" placeholder="Pequisar"><br><br>
-				<input type= "submit" value="Buscar"/><br>
-			</form> --!>
       <?php
 
         if (empty($nome))
