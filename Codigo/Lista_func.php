@@ -18,30 +18,32 @@ $nome = $request['Pesquisa'];
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset= "utf-8"/>
-    <title> SysGER </title>
-		<style>
+<head>
+  <meta charset= "utf-8"/>
+  <title> SysGER </title>
+  <style>
+  body{
+    background-color: white;
+  }
 
-      h1 {Color: black; padding-left: 50px;}
-      body { background-color: #0A0A2A; }
-      div { background-color: #F8E0F7;
-				margin-left: 500px;
-				margin-top: 150px;
-				margin-right: 500px;
-				margin-bottom: 10px;
-				padding: 20px;
-				border { background-color: black;}}
-      form{padding: 50px; padding-top: 10px;}
-		</style>
-	</head>
-	<body>
-    <div>
-		    <h1> Lista de Funcionários </h1>
-				<form action="Lista_func.php" method="GET">
-				<input name= "Pesquisa" type="text" placeholder="Pequisar"><br><br>
-				<input type= "submit" value="Buscar"/><br>
-			</form>
+  h1{
+    color: black;
+    text-align: center;
+  }
+
+  div, form{
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div>
+      <h1> Lista de Funcionários </h1>
+      <form action="Lista_func" method="GET">
+      <input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
+      <input type= "submit" value= "Buscar"/><br><br><br></input>
+    </form>
+
       <?php
 
         if (empty($nome))
