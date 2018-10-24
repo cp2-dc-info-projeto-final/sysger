@@ -75,7 +75,7 @@ $nomecliente = $request['Pesquisa'];
 
 									          }
 
-														if ($request ['dataPago'] != null){
+														if ($request['dataPago'] != null){
 															STATUS['p'] = 'Pago'
 														}
 														else {
@@ -105,7 +105,7 @@ $nomecliente = $request['Pesquisa'];
 									                      echo "</table>";
 
 									  							 }
-*/
+
 									?>
 										<table>
 <td> </td>
