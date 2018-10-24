@@ -1,9 +1,8 @@
 <?php
-session_start();
+/*session_start();
 require_once("login.php");
 
-
-/*$arquivo = $_GET["arquivo"];
+$arquivo = $_GET["arquivo"];
 if(isset($arquivo) && file_exists($arquivo)){
       switch(strtolower(substr(strrchr(basename($arquivo),"."),1))){
          case "pdf": $tipo="application/pdf"; break;
@@ -25,7 +24,7 @@ if(isset($arquivo) && file_exists($arquivo)){
     <title> SysGER </title>
 		<style>
 
-      h1 {Color: black; padding-left: 50px;}
+      h1 {Color: #708090; padding-left: 200px;}
       body { background-color: #0A0A2A; }
       div { background-color: #F8E0F7;
 				margin-left: 500px;
@@ -39,9 +38,11 @@ if(isset($arquivo) && file_exists($arquivo)){
 	</head>
 	<body>
     <div>
-		     <?php echo "Boleto do Cliente ".$_SESSION['nome'];  ?>
+		     <!--<?php echo "Boleto do Cliente ".$_SESSION['nome'];  ?>-->
 
-		      <a href="baixar.php?arquivo=arquivos/imagem.jpg">Download do Boleto </a>
+				 <h1>Gerar Boleto</h1>
+
+		    <br><br>  <a href="BoletoBancario.png"> Download do Boleto </a>
 
     </div>
 

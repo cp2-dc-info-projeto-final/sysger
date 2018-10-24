@@ -2,7 +2,32 @@
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
+	<meta charset= "utf-8"/>
+	<title> SysGER </title>
+	<style>
+	body{
+		background-color: white;
+	}
+
+	h1{
+		color: black;
+		text-align: center;
+	}
+
+	div, form{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div>
+			<h1> Meu Status de Pagamento </h1>
+			<form action="status_cliente.php" method="GET">
+			<input name= "Pesquisa" type= "text" placeholder="Digite seu cpf/cnpj"></input><br><br>
+			<input type= "submit" value= "Buscar"/><br><br><br></input>
+		</form>
+<!--	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
 		<style>
@@ -36,6 +61,7 @@
 				<input name= "Pesquisa" type= "text" placeholder="Digite seu cpf/cnpj"></input><br><br>
 				<input type= "submit" value= "Buscar"/><br><br><br></input>
 			</form>
+			--!>
 			<?php
 /*
 									echo "<h4>Status de pagamento do cliente:</h4>";
