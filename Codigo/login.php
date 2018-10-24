@@ -17,8 +17,6 @@
 
 
 ?>
-<a class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"></a>
-<nav class="navbar navbar-dark bg-dark">
 <!DOCTYPE html>
 <html>
 	<head>
@@ -27,19 +25,24 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<h1 class="navbar-brand"> SysGER </h1>
+
+			<form class="form-inline" action= "Controladores/Entrar.php" method= "POST">
+					<label class="navbar-text"> CPF/CNPJ </label></br><input class="form-control" name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label>
+					<label class="navbar-text"> Senha </label></br><input class="form-control" name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label>
+					<input class="btn btn-sm btn-outline-secondary" type= "submit" value= "Entrar"/>
+			</form>
+		</nav>
     <div>
-				<h1> SysGER </h1>
+
 				<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
 					</div>
 				<?php } ?>
 
-		      <form action= "Controladores/Entrar.php" method= "POST">
-		          <label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label><br/><br/>
-			        <label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label><br/></br>
-              <input class="glyphicon glyphicon-log-in" type= "submit" value= "Entrar"/>
-		      </form>
+
 
 					<!--<nav class="navbar navbar-inverse">
   <div class="container-fluid">
