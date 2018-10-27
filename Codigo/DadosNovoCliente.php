@@ -27,22 +27,10 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		<style>
-		body{
-			background-color: white;
-		}
-
-		h1{
-			color: black;
-			text-align: center;
-		}
-
-		div, form{
-			text-align: center;
-		}
-		</style>
+		
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Cliente</h1>
 
@@ -58,7 +46,7 @@
 				<?php } ?>
 				<?php if($sucesso != null) { ?>
 					<div>
-							<? echo "<p>$sucesso</p>"; ?>	
+							<? echo "<p>$sucesso</p>"; ?>
 					</div>
 				<?php } ?>
 

@@ -345,7 +345,7 @@ function BuscaUsuario($Id)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT * FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where id = :id');
+ 	$sql = $bd->prepare('SELECT * FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where idCliente = :id');
 	$sql->bindParam(':id', $Id);
 
 	if ($sql->execute())
@@ -353,21 +353,22 @@ function BuscaUsuario($Id)
 		return $sql->fetchAll();
 	}
 
-  $sql = $bd->prepare('SELECT * FROM gerenciamento Where id = :id');
-	$sql->bindParam(':id', $Id);
-
-	if ($sql->execute())
-	{
-		return $sql->fetchAll();
-	}
-
-  $sql = $bd->prepare('SELECT * FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where id = :id');
+  $sql = $bd->prepare('SELECT * FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where idCliente = :id');
 	$sql->bindParam(':id', $Id);
 
 	if ($sql->execute())
 	{
 	  return $sql->fetchAll();
   }
+
+	$sql = $bd->prepare('SELECT * FROM gerenciamento Where idGerenciamento = :id');
+	$sql->bindParam(':id', $Id);
+
+	if ($sql->execute())
+	{
+		return $sql->fetchAll();
+	}
+
 
 	return null;
 }

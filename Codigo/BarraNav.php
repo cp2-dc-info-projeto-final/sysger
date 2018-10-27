@@ -18,9 +18,9 @@
 
 	$navErroLogin = ExtraiRegistroSessão('erroLogin');
 ?>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <nav class="navbar navbar-dark bg-dark">
-	<a class="navbar-brand">SysGer</a>
+	<a class="navbar-brand" style="color:white">SysGer</a>
 
 	<?php if ($usuárioConectado == null) { ?>
 		<form class="form-inline" method="POST" action="Controladores/Entrar.php">
@@ -44,3 +44,22 @@
 		<p>Erro: <?= $navErroLogin ?></p>
 	</div>
 <?php } ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	#fundo {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+</head>
+<body>
+	<div id="fundo">
+			<img src="Fundo.jpg" alt="" />
+	</div>
+</body>
+
+</html>
