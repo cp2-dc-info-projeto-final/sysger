@@ -27,10 +27,9 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		
+
 	</head>
 	<body>
-		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Cliente</h1>
 

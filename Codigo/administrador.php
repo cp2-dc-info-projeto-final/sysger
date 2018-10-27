@@ -10,7 +10,6 @@ $id = $_SESSION['id'];
     <title> SysGER </title>
 
 	</head>
-	<?php require('BarraNav.php'); ?>
 	<body>
     <div>
 		    <h1> Gerenciamento </h1>
@@ -26,8 +25,6 @@ $id = $_SESSION['id'];
 				<a href ="DadosNovoCliente.php"><button>Cadastrar novos cliente</button></a><br><br>
 					<?php } ?>
 				<a href ="controladores/Sair.php"><button>SAIR</button></a>
-
-
 
     </div>
 	</body>

@@ -4,7 +4,7 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-	
+
 		<script>
 		function exibir_ocultar(val){
 			var veiculo = document.getElementById('escolhidoVeiculo');
@@ -17,7 +17,6 @@
 
 	</head>
 	<body>
-		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Novos Serviços </h1>
 

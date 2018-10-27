@@ -23,7 +23,6 @@ $nome = $request['Pesquisa'];
   <title> SysGER </title>
 </head>
 <body>
-  <?php require('BarraNav.php'); ?>
   <div>
       <h1> Lista de Funcionários </h1>
       <form action="Lista_func" method="GET">
