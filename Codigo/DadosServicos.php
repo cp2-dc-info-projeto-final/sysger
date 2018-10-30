@@ -17,6 +17,7 @@
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Novos Contratos </h1>
 

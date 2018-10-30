@@ -23,6 +23,7 @@
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Pagamentos </h1>
 

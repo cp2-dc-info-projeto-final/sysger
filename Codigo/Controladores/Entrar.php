@@ -52,7 +52,9 @@
 	else if ($usuario != null && password_verify($senha, $usuario['senha']))
 	{
 		session_start();
-		$_SESSION['emailUsuarioLogado'] = $codigoPessoa;
+		$_SESSION['codigoUsuarioLogado'] = $codigoPessoa;
+		$_SESSION['emailUsuarioLogado'] = $usuario['email'];
+		var_dump($usuario['email']);
 		$_SESSION['id'] = $usuario[$chaveId];
 		header("Location: ../$destino");
 		exit();

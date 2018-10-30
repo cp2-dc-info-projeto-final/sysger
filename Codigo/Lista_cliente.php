@@ -19,6 +19,7 @@ $nome = $request['Pesquisa'];
     <title> SysGER </title>
   </head>
 	<body>
+    <?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Lista de Clientes </h1>
 				<form action="Lista_cliente" method="GET">

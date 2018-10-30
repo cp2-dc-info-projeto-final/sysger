@@ -30,9 +30,9 @@
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Cliente</h1>
-
 				<?php if($erros != null) { ?>
 					<div>
 						<p> ERRO:  </p>
