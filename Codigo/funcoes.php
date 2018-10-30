@@ -313,9 +313,7 @@ return null;
 
 
 }
-
-
-function Spagamentos()
+/*function Spagamentos()
 {
 	$bd = FazerLigacao();
 
@@ -324,7 +322,7 @@ function Spagamentos()
 	$sql->execute();
 
 	return $sql->fetch();
-}
+}*/
 
 function ExtraiRegistroSessão(string $chave)
 {
