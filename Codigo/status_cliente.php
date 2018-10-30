@@ -29,6 +29,11 @@
 		</form>
 			<?php
 /*
+
+								if (empty())
+								{
+
+							}
 									echo "<h4>Status de pagamento do cliente:</h4>";
 
 				          echo "<table border='1' bgcolor= '#FFCC99'>";

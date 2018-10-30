@@ -1,7 +1,5 @@
 <?php
 require_once ('funcoes.php');
-//empty($_GET);
-//verificar o que tem no get conectando no banco
 
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
@@ -47,7 +45,7 @@ $nome = $request['Pesquisa'];
 
 						echo "<h4>Listagem dos Funcionários:</h4>";
 
-	          echo "<table border='1' bgcolor= '#BC8F8F'>";
+	          echo "<table border='1' bgcolor= '#FFFAFA'>";
 
 						echo "<tr>";
 

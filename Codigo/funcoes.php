@@ -251,8 +251,6 @@ function InserePagamento($dadosPagamentos)
 	$sql->bindValue(':valor', $dadosPagamentos['valor']);
 	$sql->bindValue(':dataVencimento', $dadosPagamentos['dataVencimento']);
 	$sql->bindValue(':dataPago', $dadosPagamentos['dataPago']);
-
-
 	$sql->execute();
 
 }
@@ -297,6 +295,7 @@ function listapagamentos()
 {
 
 $bd = FazerLigacao();
+
 $sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
 											FROM pagamento
 											JOIN cliente ON pagamento.IdPagamento = cliente.nome

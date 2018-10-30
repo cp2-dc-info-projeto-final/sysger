@@ -9,7 +9,7 @@
 	<body>
     <div>
 		    <h1> Gerenciamento </h1>
-
+				
 				<a href="Lista_func.php"> <button>Listagem dos Funcionários</button></a><br><br>
 			 	<a href ="DadosNovoFunc.php"><button>Cadastrar novos funcionários</button></a><br><br>
 				<a href="Lista_cliente.php"> <button>Listagem dos Clientes</button></a><br><br>

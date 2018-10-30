@@ -35,28 +35,21 @@ $nomecliente = $request['Pesquisa'];
 	<body>
     <div>
 
-		    <h1> Histórico de pagamentos </h1>
+		    <h1> Clientes Pendentes </h1>
 
-				<form action="histPagamentos.php" method="GET">
-				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
-				<input type= "submit" value="Buscar"/><br>
+				<form action="status_administrador.php" method="GET">
+				<input type= "submit" value="Listar"/><br>
 				</form>
 
 
-									<?php
+								<!--	<?php
                     if (empty($nomecliente))
                       {
                           $tclientes = listapagamentos();
                       }
-                      else {
-                          $tclientes = listapagamentos($nomecliente);
-                          }
 
 																		{
 															{
-
-
-															echo "<h3>Pagamentos:</h3>";
 
                               echo "<section class='row'>";
 
@@ -67,10 +60,6 @@ $nomecliente = $request['Pesquisa'];
 															echo "<td>Nome</td>";
 
 															echo "<td>Mensalidade</td>";
-
-															echo "<td>Data de Vencimento</td>";
-
-															echo "<td>Data serviço pago</td>";
 
 															echo "<td>STATUS</td>";
 
@@ -92,10 +81,6 @@ $nomecliente = $request['Pesquisa'];
 
 																echo "<td>".$p['nome']."</td>";
 
- 									 		          echo "<td>".$p['dataVencimento']."</td>";
-
- 									 		          echo "<td>".$p['dataPago']."</td>";
-
 																echo date('M');
 
 									  		         echo "<td>".$p['Mensalidade']."</td>";
@@ -109,7 +94,7 @@ $nomecliente = $request['Pesquisa'];
                                         echo  "</section>";
 									  							 }
 
-									?>
+									?>-->
 
 										<table>
 <td> </td>
@@ -118,8 +103,6 @@ $nomecliente = $request['Pesquisa'];
 
 								</div>
     </div>
-
-    <a href= "clientespendenteslista.php"> Clientes Pendentes </a>
 
 	</body>
 </html>
