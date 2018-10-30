@@ -1,6 +1,18 @@
 <?php
-/* query com volta do banco */
-?>
+require_once ('funcoes.php');
+
+$request = array_map('trim', $_REQUEST);
+$request = filter_var_array(
+  $request,
+  [
+    'Pesquisa' => FILTER_DEFAULT
+  ]
+);
+
+$nomecliente = $request['Pesquisa'];
+
+
+ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,20 +34,23 @@
 	</head>
 	<body>
     <div>
-		    <h1> Histórico de pagamentos dos Clientes  </h1>
 
-								<div style="background-color:lightblue">
+		    <h1> Histórico de pagamentos </h1>
+
+				<form action="" method="GET">
+				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
+				<input type= "submit" value="Buscar"/><br>
+				</form>
+
+<div style="background-color:lightblue">
 
 									<?php
-															if (empty($pag))
-																	{
-																			$pag = Buscapagamento();
-																	}
-																	else {
-																			$pag = Buscapagamento();
-																			}
+													if ($nomecliente != null){
 
-															 if ($pag != null)
+														$p = listapagamentos();
+
+													}
+
 																		{
 															{
 
@@ -46,20 +61,25 @@
 
 															echo "<tr>";
 
+															echo "<td>Nome</td>";
+
 															echo "<td>Mensalidade</td>";
+
+															echo "<td>Data de Vencimento</td>";
+
+															echo "<td>Data serviço pago</td>";
 
 															echo "<td>STATUS</td>";
 
-
 													   	echo "</tr>";
 
-									          }	for
-														if
-														(mes.pagamento == mes.mensalidade && valor.pagamento['id'] == valor.devido){
-															status['p'] = 'Pago'
+									          }
+
+														if ($request['dataPago'] != null){
+															STATUS['p'] = 'Pago'
 														}
 														else {
-															status['p'] = 'Pendente'
+															STATUS['p'] = 'Pendente'
 														}
 
 														else
@@ -67,14 +87,19 @@
 
 									  		          echo "<tr>";
 
+																echo "<td>".$0['nome']."</td>";
 
-																	echo date('M');
+ 									 		          echo "<td>".$p['dataVencimento']."</td>";
 
-									  		          echo "<td>".$p['Mensalidade']."</td>";
+ 									 		          echo "<td>".$p['dataPago']."</td>";
 
-									  		          echo "<td>".$p['status']."</td>";
+																echo date('M');
 
-									  		           echo "</tr>";
+									  		         echo "<td>".$p['Mensalidade']."</td>";
+
+									  		         echo "<td>".$p['STATUS']."</td>";
+
+									  		          echo "</tr>";
 
 									  		              }
 									                      echo "</table>";
@@ -82,20 +107,11 @@
 									  							 }
 
 									?>
-										<table> //for
+										<table>
 <td> </td>
 <tr> </tr>
 										</table>
-								<!--	<?php
-								$pg = Buscapagamento();
-								if() {
 
-								}
-								else(){
-
-								}
-
-								?>-->
 								</div>
     </div>
 

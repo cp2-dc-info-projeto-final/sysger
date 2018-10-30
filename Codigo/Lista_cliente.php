@@ -17,21 +17,7 @@ $nome = $request['Pesquisa'];
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		<style>
-    body{
-      background-color: white;
-    }
-
-    h1{
-      color: black;
-      text-align: center;
-    }
-
-    div, form{
-      text-align: center;
-    }
-		</style>
-	</head>
+  </head>
 	<body>
     <div>
 		    <h1> Lista de Clientes </h1>

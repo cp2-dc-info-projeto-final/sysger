@@ -15,20 +15,6 @@
 		}
 		</script>
 
-		<style>
-		body{
-			background-color: white;
-		}
-
-		h1{
-			color: black;
-			text-align: center;
-		}
-
-		div, form{
-			text-align: center;
-		}
-		</style>
 	</head>
 	<body>
     <div>

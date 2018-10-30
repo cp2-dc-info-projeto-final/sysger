@@ -293,13 +293,16 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
-/*function listapagamentos()
+function listapagamentos()
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT *
+$sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
 											FROM pagamento
-											JOIN cliente ON pagamento.IdPagamento = cliente.idCliente');
+											JOIN cliente ON pagamento.IdPagamento = cliente.nome
+											WHERE nome LIKE :nome AND nome LIKE :pesquisa');
+
+$sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 
 if ($sql->execute())
 {
@@ -308,8 +311,11 @@ if ($sql->execute())
 
 return null;
 
-}*/
-function Buscapagamento()
+
+}
+
+
+function Spagamentos()
 {
 	$bd = FazerLigacao();
 
@@ -320,15 +326,51 @@ function Buscapagamento()
 	return $sql->fetch();
 }
 
-function ComparaDatas()
+function ExtraiRegistroSessão(string $chave)
+{
+	if (array_key_exists($chave, $_SESSION))
+	{
+		$erro = $_SESSION[$chave];
+		unset($_SESSION[$chave]);
+
+		return $erro;
+	}
+	else
+	{
+		return null;
+	}
+}
+
+function BuscaUsuario($Id)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->query('SELECT dataPago, dataVencimento FROM pagamento');
+ 	$sql = $bd->prepare('SELECT * FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where idCliente = :id');
+	$sql->bindParam(':id', $Id);
 
-	$sql->execute();
+	if ($sql->execute())
+	{
+		return $sql->fetchAll();
+	}
 
-	return $sql->fetch();
+  $sql = $bd->prepare('SELECT * FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where idCliente = :id');
+	$sql->bindParam(':id', $Id);
+
+	if ($sql->execute())
+	{
+	  return $sql->fetchAll();
+  }
+
+	$sql = $bd->prepare('SELECT * FROM gerenciamento Where idGerenciamento = :id');
+	$sql->bindParam(':id', $Id);
+
+	if ($sql->execute())
+	{
+		return $sql->fetchAll();
+	}
+
+
+	return null;
 }
 
 ?>

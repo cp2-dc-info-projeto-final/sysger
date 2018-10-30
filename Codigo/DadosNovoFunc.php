@@ -1,11 +1,11 @@
 <?php
 	session_start();
 
-	if(array_key_exists('emailUsuarioLogado', $_SESSION))
-	{
-		header('Location: ../administrador.php');
-		exit();
-	}
+	//if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	//{
+		//header('Location: ../DadosNovoFunc.php');
+		//exit();
+	//}
 
 	$erros = null;
 	$sucesso = null;
@@ -27,20 +27,7 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		<style>
-		body{
-			background-color: white;
-		}
 
-		h1{
-			color: black;
-			text-align: center;
-		}
-
-		div, form{
-			text-align: center;
-		}
-		</style>
 	</head>
 	<body>
     <div>

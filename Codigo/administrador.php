@@ -8,20 +8,6 @@ $id = $_SESSION['id'];
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		<style>
-		body{
-			background-color: white;
-		}
-
-		h1{
-			color: black;
-			text-align: center;
-		}
-
-		div, form{
-			text-align: center;
-		}
-		</style>
 
 	</head>
 	<body>
@@ -39,8 +25,6 @@ $id = $_SESSION['id'];
 				<a href ="DadosNovoCliente.php"><button>Cadastrar novos cliente</button></a><br><br>
 					<?php } ?>
 				<a href ="controladores/Sair.php"><button>SAIR</button></a>
-
-
 
     </div>
 	</body>
