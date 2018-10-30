@@ -62,7 +62,7 @@
             <input type="submit" value="Cadastrar"/><br><br>
 						<input type="reset" value="Cancelar" /><br><br>
 
-						<a href ="DadosServicos.php">Cadastrar novos serviços</a><br><br><br>
+						<a href ="DadosServicos.php">Cadastrar novos contratos</a><br><br><br>
 
 
 </form>

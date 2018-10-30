@@ -18,7 +18,7 @@
 	</head>
 	<body>
     <div>
-		    <h1> Cadastrar Novos Serviços </h1>
+		    <h1> Cadastrar Novos Contratos </h1>
 
         <form action="Controladores/cadastroServico.php" method="POST">
 

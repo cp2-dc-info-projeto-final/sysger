@@ -87,7 +87,7 @@ $nomecliente = $request['Pesquisa'];
 
 									  		          echo "<tr>";
 
-																echo "<td>".$0['nome']."</td>";
+																echo "<td>".$p['nome']."</td>";
 
  									 		          echo "<td>".$p['dataVencimento']."</td>";
 
