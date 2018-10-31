@@ -69,15 +69,10 @@ $nome = $request['Pesquisa'];
 
 ?>
 
-<<<<<<< HEAD
- <a href ="DadosNovoCliente.php"><button>Cadastrar Novos Cliente</button></a>
-
-</main>
-=======
  <a href ="DadosNovoCliente.php">Cadastrar Novos Cliente</a>
  <a href ="administrador.php">Voltar</a>
- 
->>>>>>> 0ff954a37ded70bee4f12f88e4484db76a7ee62f
+
+
     </div>
 
 	</body>

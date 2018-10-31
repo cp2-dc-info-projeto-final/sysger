@@ -23,12 +23,9 @@ $nomecliente = $request['Pesquisa'];
 	<body>
     <?php require('BarraNav.php'); ?>
     <div>
-<<<<<<< HEAD
 
 		 <main>  <h1> Histórico de pagamentos </h1>
-=======
 		    <h1> Histórico de pagamentos </h1>
->>>>>>> 0ff954a37ded70bee4f12f88e4484db76a7ee62f
 
 				<form action="histPagamentos.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
@@ -90,11 +87,8 @@ $nomecliente = $request['Pesquisa'];
     </div>
 
     <a href= "clientespendenteslista.php"> Clientes Pendentes </a>
-<<<<<<< HEAD
-</main>
-=======
-    <a href ="administrador.php">Voltar</a>
 
->>>>>>> 0ff954a37ded70bee4f12f88e4484db76a7ee62f
+    <a href ="administrador.php">Voltar</a>
+</main>
 	</body>
 </html>
