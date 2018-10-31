@@ -64,9 +64,8 @@
 
 						<a href ="DadosServicos.php">Cadastrar novos contratos</a><br><br><br>
 
-
-</form>
+					</form>
     </div>
-
+						<a href ="administrador.php">Voltar</a>
 	</body>
 </html>

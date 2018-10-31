@@ -59,8 +59,8 @@
 						</select>
 
             <input type="submit" value="Cadastrar"/>
-</form>
+				</form>
     </div>
-
+<a href ="administrador.php">Voltar</a>
 	</body>
 </html>
