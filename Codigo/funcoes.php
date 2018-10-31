@@ -125,8 +125,8 @@ function ListaCliente()
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente
-											JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
-											JOIN pessoa_juridica ON pessoa_fisica.id_PF = pessoa_juridica.id_PJ');
+											LEFT JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
+											LEFT JOIN pessoa_juridica ON cliente.IdCliente = pessoa_juridica.id_PJ');
 
 if ($sql->execute())
 {
@@ -277,7 +277,7 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
-function listapagamentos()
+function BuscaPagamentos($nomecliente)
 {
 
 $bd = FazerLigacao();
@@ -296,8 +296,25 @@ if ($sql->execute())
 
 return null;
 
+}
+
+function listapagamentos()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
+											FROM pagamento
+											JOIN cliente ON pagamento.IdPagamento = cliente.nome');
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
 
 }
+
 /*function Spagamentos()
 {
 	$bd = FazerLigacao();

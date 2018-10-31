@@ -1,4 +1,8 @@
-
+<?php
+require_once ('funcoes.php');
+session_start();
+$id = $_SESSION['id'];
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,7 +20,6 @@
 				<a href="Lista_cliente.php">Listagem dos Clientes</a><br><br>
 				<a href="status_cliente.php">Status dos clientes</a><br><br>
 				<a href ="DadosNovoCliente.php">Cadastrar novos cliente</a><br><br>
-				<a href ="controladores/Sair.php">SAIR</a>
 
     </div>
 	</body>

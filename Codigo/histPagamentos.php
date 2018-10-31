@@ -18,24 +18,17 @@ $nomecliente = $request['Pesquisa'];
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-		<style>
 
-      h1 {Color: black; padding-left: 50px;}
-      body { background-color: #0A0A2A; }
-      div { background-color: #F8E0F7;
-				margin-left: 500px;
-				margin-top: 150px;
-				margin-right: 500px;
-				margin-bottom: 10 px;
-				padding: 20px;
-				border { background-color: black;}}
-      form{padding: 50px; padding-top: 10px;}
-		</style>
 	</head>
 	<body>
+    <?php require('BarraNav.php'); ?>
     <div>
+<<<<<<< HEAD
 
 		 <main>  <h1> Histórico de pagamentos </h1>
+=======
+		    <h1> Histórico de pagamentos </h1>
+>>>>>>> 0ff954a37ded70bee4f12f88e4484db76a7ee62f
 
 				<form action="histPagamentos.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
@@ -49,67 +42,44 @@ $nomecliente = $request['Pesquisa'];
                           $tclientes = listapagamentos();
                       }
                       else {
-                          $tclientes = listapagamentos($nomecliente);
-                          }
-
-																		{
-															{
-
+                          $tclientes = BuscaPagamentos($nomecliente);
+                      }
 
 															echo "<h3>Pagamentos:</h3>";
-
                               echo "<section class='row'>";
-
 										          echo "<table border='1' bgcolor= '#FFFAFA'>";
-
 															echo "<tr>";
-
 															echo "<td>Nome</td>";
-
-															echo "<td>Mensalidade</td>";
-
 															echo "<td>Data de Vencimento</td>";
-
 															echo "<td>Data serviço pago</td>";
-
 															echo "<td>STATUS</td>";
-
 													   	echo "</tr>";
 
-									          }
+                      foreach($tclientes as $p)
+									    {
+									  		      echo "<tr>";
+															echo "<td>".$p['nome']."</td>";
+								 		          echo "<td>".$p['dataVencimento']."</td>";
+								 		          echo "<td>".$p['dataPago']."</td>";
+															echo date('M');
+                            	if ($request['dataPago'] == null){
+                                    echo "<td>Pendente</td>";
+                              }
+                              else if ($p['dataPago'] <= $p['dataVencimento']) {
+                                    echo "<td>Pago</td>";
+                              }
+                              else
+                              {
+									  		            echo "<td>Pago com atraso</td>";
+                              }
 
-                            foreach($tclientes as $p)
+									  		       echo "</tr>";
 
-													/*	if ($request['dataPago'] != null){
-															STATUS['p'] = 'Pago'
-														}
-														else {
-															STATUS['p'] = 'Pendente'
-														}*/
-									              {
+									  		 }
+									       echo "</table>";
+                         echo  "</section>";
 
-									  		          echo "<tr>";
-
-																echo "<td>".$p['nome']."</td>";
-
- 									 		          echo "<td>".$p['dataVencimento']."</td>";
-
- 									 		          echo "<td>".$p['dataPago']."</td>";
-
-																echo date('M');
-
-									  		         echo "<td>".$p['Mensalidade']."</td>";
-
-									  		         echo "<td>".$p['STATUS']."</td>";
-
-									  		          echo "</tr>";
-
-									  		              }
-									                      echo "</table>";
-                                        echo  "</section>";
-									  							 }
-
-									?>
+?>
 
 										<table>
 <td> </td>
@@ -120,6 +90,11 @@ $nomecliente = $request['Pesquisa'];
     </div>
 
     <a href= "clientespendenteslista.php"> Clientes Pendentes </a>
+<<<<<<< HEAD
 </main>
+=======
+    <a href ="administrador.php">Voltar</a>
+
+>>>>>>> 0ff954a37ded70bee4f12f88e4484db76a7ee62f
 	</body>
 </html>

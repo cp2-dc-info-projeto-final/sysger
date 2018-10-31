@@ -64,7 +64,7 @@ CREATE TABLE Servico (
 CREATE TABLE Pagamento (
 
 						idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
-						dataPagamento DATE,
+						dataVencimento DATE,
 						dataPago DATE,
 						idServico INT UNSIGNED NOT NULL,
 						valor DOUBLE,

@@ -40,52 +40,34 @@ $nome = $request['Pesquisa'];
                 }
 
          if ($subgerentes != null)
-          {
-
-            {
-
+        {
 						echo "<h4>Listagem dos Funcionários:</h4>";
-
 	          echo "<table border='1' bgcolor= '#FFFAFA'>";
-
 						echo "<tr>";
-
 						echo "<td>Nome</td>";
-
 						echo "<td>Telefone</td>";
-
 						echo "<td>E-mail</td>";
-
             echo "<td>Endereço</td>";
-
 						echo "<td>CPF</td>";
-
 				   	echo "</tr>";
 
-						}
 						foreach($subgerentes as $s)
             {
-
 		          echo "<tr>";
-
 		          echo "<td>".$s['nome']."</td>";
-
 		          echo "<td>".$s['telefone']."</td>";
-
 		          echo "<td>".$s['email']."</td>";
-
               echo "<td>".$s['endereco']."</td>";
-
 							echo "<td>".$s['cpf']."</td>";
+	            echo "</tr>";
+		         }
 
-		           echo "</tr>";
+              echo "</table>";
 
-		              }
-                    echo "</table>";
-
-							 }
+					}
 
 ?>
+<a href ="administrador.php">Voltar</a>
     </div>
 
 	</body>
