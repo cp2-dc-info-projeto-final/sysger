@@ -49,7 +49,7 @@ $nomecliente = $request['Pesquisa'];
                           $tclientes = listapagamentos();
                       }
                       else {
-                          $tclientes = listapagamentos($nomecliente);
+                          $tclientes = BuscaPagamentos($nomecliente);
                           }
 
 																		{
@@ -66,8 +66,6 @@ $nomecliente = $request['Pesquisa'];
 
 															echo "<td>Nome</td>";
 
-															echo "<td>Mensalidade</td>";
-
 															echo "<td>Data de Vencimento</td>";
 
 															echo "<td>Data serviço pago</td>";
@@ -79,13 +77,6 @@ $nomecliente = $request['Pesquisa'];
 									          }
 
                             foreach($tclientes as $p)
-
-													/*	if ($request['dataPago'] != null){
-															STATUS['p'] = 'Pago'
-														}
-														else {
-															STATUS['p'] = 'Pendente'
-														}*/
 									              {
 
 									  		          echo "<tr>";
@@ -98,9 +89,16 @@ $nomecliente = $request['Pesquisa'];
 
 																echo date('M');
 
-									  		         echo "<td>".$p['Mensalidade']."</td>";
-
-									  		         echo "<td>".$p['STATUS']."</td>";
+                                	if ($request['dataPago'] == null){
+                                    echo "<td>Pendente</td>";
+                                  }
+                                  else if ($p['dataPago'] <= $p['dataVencimento']) {
+                                    echo "<td>Pago</td>";
+                                  }
+                                  else
+                                  {
+									  		            echo "<td>Pago com atraso</td>";
+                                  }
 
 									  		          echo "</tr>";
 
@@ -120,6 +118,7 @@ $nomecliente = $request['Pesquisa'];
     </div>
 
     <a href= "clientespendenteslista.php"> Clientes Pendentes </a>
+    <a href ="administrador.php">Voltar</a>
 
 	</body>
 </html>

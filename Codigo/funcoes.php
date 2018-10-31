@@ -291,7 +291,7 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
-function listapagamentos()
+function BuscaPagamentos($nomecliente)
 {
 
 $bd = FazerLigacao();
@@ -310,8 +310,25 @@ if ($sql->execute())
 
 return null;
 
+}
+
+function listapagamentos()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
+											FROM pagamento
+											JOIN cliente ON pagamento.IdPagamento = cliente.nome');
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
 
 }
+
 /*function Spagamentos()
 {
 	$bd = FazerLigacao();
