@@ -18,24 +18,11 @@ $nomecliente = $request['Pesquisa'];
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
-    <style>
-    body{
-  		background-color: white;
-  	}
 
-  	h1{
-  		color: black;
-  		text-align: center;
-  	}
-
-  	div, form{
-  		text-align: center;
-  	}
-    </style>
 	</head>
 	<body>
+    <?php require('BarraNav.php'); ?>
     <div>
-
 		    <h1> Histórico de pagamentos </h1>
 
 				<form action="histPagamentos.php" method="GET">
@@ -51,64 +38,43 @@ $nomecliente = $request['Pesquisa'];
                       }
                       else {
                           $tclientes = BuscaPagamentos($nomecliente);
-                          }
-
-																		{
-															{
-
+                      }
 
 															echo "<h3>Pagamentos:</h3>";
-
                               echo "<section class='row'>";
-
 										          echo "<table border='1' bgcolor= '#FFFAFA'>";
-
 															echo "<tr>";
-
 															echo "<td>Nome</td>";
-
 															echo "<td>Data de Vencimento</td>";
-
 															echo "<td>Data serviço pago</td>";
-
 															echo "<td>STATUS</td>";
-
 													   	echo "</tr>";
 
-									          }
-
-                            foreach($tclientes as $p)
-									              {
-
-									  		          echo "<tr>";
-
-																echo "<td>".$p['nome']."</td>";
-
- 									 		          echo "<td>".$p['dataVencimento']."</td>";
-
- 									 		          echo "<td>".$p['dataPago']."</td>";
-
-																echo date('M');
-
-                                	if ($request['dataPago'] == null){
+                      foreach($tclientes as $p)
+									    {
+									  		      echo "<tr>";
+															echo "<td>".$p['nome']."</td>";
+								 		          echo "<td>".$p['dataVencimento']."</td>";
+								 		          echo "<td>".$p['dataPago']."</td>";
+															echo date('M');
+                            	if ($request['dataPago'] == null){
                                     echo "<td>Pendente</td>";
-                                  }
-                                  else if ($p['dataPago'] <= $p['dataVencimento']) {
+                              }
+                              else if ($p['dataPago'] <= $p['dataVencimento']) {
                                     echo "<td>Pago</td>";
-                                  }
-                                  else
-                                  {
+                              }
+                              else
+                              {
 									  		            echo "<td>Pago com atraso</td>";
-                                  }
+                              }
 
-									  		          echo "</tr>";
+									  		       echo "</tr>";
 
-									  		              }
-									                      echo "</table>";
-                                        echo  "</section>";
-									  							 }
+									  		 }
+									       echo "</table>";
+                         echo  "</section>";
 
-									?>
+?>
 
 										<table>
 <td> </td>
