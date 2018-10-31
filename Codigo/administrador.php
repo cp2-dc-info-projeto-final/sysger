@@ -16,10 +16,10 @@ $id = $_SESSION['id'];
 		    <h1> Gerenciamento </h1>
 
 				<a href="Lista_func.php"> Listagem dos Funcionários</a><br><br>
-			 	<a href ="DadosNovoFunc.php">Cadastrar novos funcionários</a><br><br>
+			 	<a href="DadosNovoFunc.php">Cadastrar novos funcionários</a><br><br>
 				<a href="Lista_cliente.php">Listagem dos Clientes</a><br><br>
-				<a href="status_cliente.php">Status dos clientes</a><br><br>
-				<a href ="DadosNovoCliente.php">Cadastrar novos cliente</a><br><br>
+				<a href="histPagamentos.php">Status dos clientes</a><br><br>
+				<a href="DadosNovoCliente.php">Cadastrar novos cliente</a><br><br>
 
     </div>
 	</body>
