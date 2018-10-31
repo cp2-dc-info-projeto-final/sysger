@@ -30,9 +30,9 @@
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Cliente</h1>
-
 				<?php if($erros != null) { ?>
 					<div>
 						<p> ERRO:  </p>
@@ -64,9 +64,8 @@
 
 						<a href ="DadosServicos.php">Cadastrar novos contratos</a><br><br><br>
 
-
-</form>
+					</form>
     </div>
-
+						<a href ="administrador.php">Voltar</a>
 	</body>
 </html>

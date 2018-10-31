@@ -23,6 +23,7 @@
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Pagamentos </h1>
 
@@ -46,6 +47,6 @@
             <input type="submit" value="Cadastrar"/>
 </form>
     </div>
-
+<a href ="administrador.php">Voltar</a>
 	</body>
 </html>

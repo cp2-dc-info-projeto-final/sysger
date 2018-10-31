@@ -9,11 +9,15 @@
 
 	if (array_key_exists('emailUsuarioLogado', $_SESSION))
 	{
-		$usuárioConectado = BuscaUsuario($_SESSION['emailUsuarioLogado']);
+		$usuarioConectado = BuscaUsuarioPorEmail($_SESSION['emailUsuarioLogado']);
+		if ($usuarioConectado == null)
+		{
+			$usuarioConectado = BuscaSubgerentePorEmail($_SESSION['emailUsuarioLogado']);
+		}
 	}
 	else
 	{
-		$usuárioConectado = null;
+		$usuarioConectado = null;
 	}
 
 	$navErroLogin = ExtraiRegistroSessão('erroLogin');
@@ -22,7 +26,7 @@
 <nav class="navbar navbar-dark bg-dark">
 	<a class="navbar-brand" style="color:white">SysGer</a>
 
-	<?php if ($usuárioConectado == null) { ?>
+	<?php if ($usuarioConectado == null) { ?>
 		<form class="form-inline" method="POST" action="Controladores/Entrar.php">
 			<label class="navbar-text"> CPF/CNPJ </label></br><input class="form-control" name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label>
 			<label class="navbar-text"> Senha </label></br><input class="form-control" name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label>
@@ -30,7 +34,7 @@
 			<input class="btn btn-outline-info my-2 my-sm-0" type= "submit" value= "Entrar"/>
 		</form>
 	<?php } else { ?>
-		<a class="ml-auto mr-2" href="usuário.php?id=<?= $usuárioConectado['id'] ?>"><?= $usuárioConectado['nome'] ?></a>
+		<a class="ml-auto mr-2" href="usuário.php?id=<?= $usuarioConectado['id'] ?>"><?= $usuarioConectado['nome'] ?></a>
 
 		<form class="form-inline" method="POST" action="Controladores/Sair.php">
 			<input name="local" type="hidden" value="<?=  $_SERVER['REQUEST_URI'] ?>">
@@ -45,21 +49,18 @@
 	</div>
 <?php } ?>
 
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <style>
-	#fundo {
+	body {
 		position: fixed;
-		width: 100%;
-		height: 100%;
+		background-image: url('Fundo.jpg');
+		width:100%;
+		height:100%;
 	}
 </style>
 </head>
 <body>
-	<div id="fundo">
-			<img src="Fundo.jpg" alt="" />
-	</div>
 </body>
-
 </html>

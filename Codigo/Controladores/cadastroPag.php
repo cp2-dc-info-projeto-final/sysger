@@ -15,10 +15,7 @@ $request = filter_var_array(
 
 $valor = $request['valor'];
 if($valor == false){
-  $erros[] = "O valor não foi inserido.";
-}
-else($valor == double){
-  $erros[] = "O valor inserido é inválido.";
+  $erros[] = "O valor não foi inserido ou inválido.";
 }
 
 $dataVencimento = $request['dataVencimento'];

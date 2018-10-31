@@ -12,8 +12,10 @@ $id = $_SESSION['id'];
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Gerenciamento </h1>
+<<<<<<< HEAD
 				<?php if(usuarioEhSubgerente($id) == false ) { ?>
 				<a href="Lista_func.php"> <button>Listagem dos Funcionários</button></a><br><br>
 			<?php } ?>
@@ -26,6 +28,14 @@ $id = $_SESSION['id'];
 				<a href ="DadosNovoCliente.php"><button>Cadastrar novos cliente</button></a><br><br>
 					<?php } ?>
 				<a href ="controladores/Sair.php"><button>SAIR</button></a>
+=======
+
+				<a href="Lista_func.php"> Listagem dos Funcionários</a><br><br>
+			 	<a href ="DadosNovoFunc.php">Cadastrar novos funcionários</a><br><br>
+				<a href="Lista_cliente.php">Listagem dos Clientes</a><br><br>
+				<a href="status_cliente.php">Status dos clientes</a><br><br>
+				<a href ="DadosNovoCliente.php">Cadastrar novos cliente</a><br><br>
+>>>>>>> 44cbfd76a735286693ec38cdce6ea78a3f15dec2
 
     </div>
 	</body>

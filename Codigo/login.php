@@ -25,6 +25,7 @@
 
 	</head>
 	<body>
+			<?php require('BarraNav.php'); ?>
 			<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
@@ -33,11 +34,11 @@
 
 				<h1> Tela de Login </h1>
 
-				<form method="POST" action="Controladores/Entrar.php">
+				<!--<form method="POST" action="Controladores/Entrar.php">
 					<label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label></br></br>
 					<label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label></br></br>
 					<input type= "submit" value= "Entrar"/>
-				</form>
+				</form>-->
 
 	</body>
 </html>

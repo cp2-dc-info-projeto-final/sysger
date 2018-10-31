@@ -4,6 +4,7 @@
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Seja bem-vindo Cliente  </h1>
 

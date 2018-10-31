@@ -19,6 +19,7 @@ $nome = $request['Pesquisa'];
     <title> SysGER </title>
   </head>
 	<body>
+    <?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Lista de Clientes </h1>
 				<form action="Lista_cliente" method="GET">
@@ -35,60 +36,42 @@ $nome = $request['Pesquisa'];
 										$clientes = BuscarCliente($nome);
 										}
 
-						 if ($clientes != null)
-									{
+						if ($clientes != null)
 						{
 
 
-						echo "<h4>Listagem dos Clientes:</h4>";
+  						echo "<h4>Listagem dos Clientes:</h4>";
+  	          echo "<table border='1' bgcolor= '#BC8F8F'>";
+  						echo "<tr>";
+  						echo "<td>Nome</td>";
+  						echo "<td>Telefone</td>";
+  						echo "<td>E-mail</td>";
+              echo "<td>Endereço</td>";
+  						echo "<td>CPF</td>";
+              echo "<td>CNPJ</td>";
+  				   	echo "</tr>";
 
-	          echo "<table border='1' bgcolor= '#BC8F8F'>";
-
-						echo "<tr>";
-
-						echo "<td>Nome</td>";
-
-						echo "<td>Telefone</td>";
-
-						echo "<td>E-mail</td>";
-
-            echo "<td>Endereço</td>";
-
-						echo "<td>CPF</td>";
-
-            echo "<td>CNPJ</td>";
-
-				   	echo "</tr>";
-
-          }	foreach($clientes as $c)
+            	foreach($clientes as $c)
               {
+    		          echo "<tr>";
+    		          echo "<td>".$c['nome']."</td>";
+    		          echo "<td>".$c['telefone']."</td>";
+    		          echo "<td>".$c['email']."</td>";
+                  echo "<td>".$c['endereco']."</td>";
+    							echo "<td>".$c['cpf']."</td>";
+                  echo "<td>".$c['cnpj']."</td>";
 
-  		          echo "<tr>";
+    		          echo "</tr>";
+    		      }
 
-  		          echo "<td>".$c['nome']."</td>";
-
-  		          echo "<td>".$c['telefone']."</td>";
-
-  		          echo "<td>".$c['email']."</td>";
-
-                echo "<td>".$c['endereco']."</td>";
-
-  							echo "<td>".$c['cpf']."</td>";
-
-                echo "<td>".$c['cnpj']."</td>";
-
-  		           echo "</tr>";
-
-  		              }
-                      echo "</table>";
-
-  							 }
+              echo "</table>";
+  					}
 
 ?>
 
- <a href ="DadosNovoCliente.php"><button>Cadastrar Novos Cliente</button></a>
-
-
+ <a href ="DadosNovoCliente.php">Cadastrar Novos Cliente</a>
+ <a href ="administrador.php">Voltar</a>
+ 
     </div>
 
 	</body>

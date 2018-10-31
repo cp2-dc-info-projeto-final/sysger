@@ -30,9 +30,9 @@
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
 		    <h1> Cadastrar Funcionário </h1>
-
 				<?php if($erros != null) { ?>
 					<div>
 						<p> ERRO:  </p>
@@ -59,8 +59,8 @@
 						</select>
 
             <input type="submit" value="Cadastrar"/>
-</form>
+				</form>
     </div>
-
+<a href ="administrador.php">Voltar</a>
 	</body>
 </html>
