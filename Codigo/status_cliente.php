@@ -22,11 +22,12 @@
 </head>
 <body>
 	<div>
-			<h1> Status de Pagamento </h1>
+		<main> <h1> Status de Pagamento </h1>
 			<form action="status_cliente.php" method="GET">
 			<input name= "Pesquisa" type= "text" placeholder="Digite cpf/cnpj"></input><br><br>
 			<input type= "submit" value= "Buscar"/><br><br><br></input>
 		</form>
+	</main>
 			<?php
 /*
 

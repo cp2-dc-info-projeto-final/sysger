@@ -212,20 +212,6 @@ function InsereSubgerente($dadosNovoFunc)
 
 }
 
-/*function usuarioLogadoEhSubgerente($gerente, $subgerente)
-{
-	$bd = FazerLigacao();
-
- 	$sql = $bd->prepare('SELECT subgerente FROM gerenciamento WHERE subgerente = 1');
-
-	if ($sql->execute())
-	{
-		return $sql->fetchall();
-	}
-
-	return null;
-}*/
-
 function InsereServicos($dadosServico)
 {
 	$bd = FazerLigacao();

@@ -42,7 +42,7 @@ $nomecliente = $request['Pesquisa'];
 				</form>
 
 
-								<!--	<?php
+								<?php
                     if (empty($nomecliente))
                       {
                           $tclientes = listapagamentos();
@@ -52,41 +52,30 @@ $nomecliente = $request['Pesquisa'];
 															{
 
                               echo "<section class='row'>";
-
 										          echo "<table border='1' bgcolor= '#FFFAFA'>";
-
 															echo "<tr>";
-
 															echo "<td>Nome</td>";
-
 															echo "<td>Mensalidade</td>";
-
 															echo "<td>STATUS</td>";
-
 													   	echo "</tr>";
 
 									          }
 
                             foreach($tclientes as $p)
 
-													/*	if ($request['dataPago'] != null){
+													if ($request['dataPago'] != null){
 															STATUS['p'] = 'Pago'
 														}
 														else {
 															STATUS['p'] = 'Pendente'
-														}*/
+														}
 									              {
 
 									  		          echo "<tr>";
-
 																echo "<td>".$p['nome']."</td>";
-
 																echo date('M');
-
 									  		         echo "<td>".$p['Mensalidade']."</td>";
-
 									  		         echo "<td>".$p['STATUS']."</td>";
-
 									  		          echo "</tr>";
 
 									  		              }
@@ -94,12 +83,7 @@ $nomecliente = $request['Pesquisa'];
                                         echo  "</section>";
 									  							 }
 
-									?>-->
-
-										<table>
-<td> </td>
-<tr> </tr>
-										</table>
+									?>
 
 								</div>
     </div>

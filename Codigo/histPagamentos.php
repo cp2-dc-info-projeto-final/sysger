@@ -35,7 +35,7 @@ $nomecliente = $request['Pesquisa'];
 	<body>
     <div>
 
-		    <h1> Histórico de pagamentos </h1>
+		 <main>  <h1> Histórico de pagamentos </h1>
 
 				<form action="histPagamentos.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
@@ -120,6 +120,6 @@ $nomecliente = $request['Pesquisa'];
     </div>
 
     <a href= "clientespendenteslista.php"> Clientes Pendentes </a>
-
+</main>
 	</body>
 </html>

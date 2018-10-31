@@ -38,13 +38,14 @@
 					</div>
 				<?php } ?>
 
-        <form action="Controladores/cadastroPag.php" method="POST">
+  <main>      <form action="Controladores/cadastroPag.php" method="POST">
 
               <label>Valor:<input name="valor" type="double"required/><br/><br/>
               <label>Vencimento:<input name="dataVencimento" type="date" required/><br/><br/>
 							<label>Data de Pago:<input name="dataPago" type="date" required/> <br/><br/>
 
             <input type="submit" value="Cadastrar"/>
+	</main>
 </form>
     </div>
 
