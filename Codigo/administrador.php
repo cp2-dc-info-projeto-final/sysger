@@ -1,7 +1,5 @@
 <?php
 require_once ('funcoes.php');
-session_start();
-$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,6 +18,8 @@ $id = $_SESSION['id'];
 				<a href="Lista_cliente.php">Listagem dos Clientes</a><br><br>
 				<a href="histPagamentos.php">Status dos clientes</a><br><br>
 				<a href="DadosNovoCliente.php">Cadastrar novos cliente</a><br><br>
+				<a href="DadosNovoContrato.php">Cadastrar novos contratos/a><br><br>
+				<a href="DadosPagamento.php">Cadastrar novos Pagamentos</a><br><br>
 
     </div>
 	</body>
