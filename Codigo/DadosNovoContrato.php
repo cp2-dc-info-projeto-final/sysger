@@ -67,6 +67,7 @@
 						 <input type="reset" value="Cancelar" /><br>
     </form>
         </div>
+
 <a href ="administrador.php">Voltar</a>
     	</body>
     </html>

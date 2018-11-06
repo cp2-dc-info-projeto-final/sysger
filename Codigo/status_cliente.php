@@ -1,5 +1,17 @@
 <?php
+require_once ('funcoes.php');
+$request = array_map('trim', $_REQUEST);
+$request = filter_var_array(
+  $request,
+  [
+    'Pesquisa' => FILTER_DEFAULT
+  ]
+);
+
+$nome = $request['Pesquisa'];
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,42 +29,39 @@
 		</form>
 	</main>
 			<?php
-/*
 
-								if (empty())
-								{
-
+			if (empty($nome))
+					{
+							$clientesp = ListaCliente();
+					}
+					else {
+							$clientesp = BuscarCliente($nome);
 							}
+
+			if ($clientes != null)
+			{
 									echo "<h4>Status de pagamento do cliente:</h4>";
-
 				          echo "<table border='1' bgcolor= '#FFCC99'>";
-
 									echo "<tr>";
-
 									echo "<td>Nome</td>";
-
 									echo "<td>Mês</td>";
-
 									echo "<td>Status</td>";
-
 							   	echo "</tr>";
 
-			          }	foreach($clientes as $c)
+			          }	foreach($clientesp as $cp)
 			              {
 
 			  		          echo "<tr>";
-
-			  		          echo "<td>".$c['nome']."</td>";
-
-											echo "<td>"
-
-			  		           echo "</tr>";
+			  		          echo "<td>".$cp['nome']."</td>";
+											echo "<td>".$cp ['']. "</td>";
+											echo "td" .$cp['']. "</td>";
+			  		          echo "</tr>";
 
 			  		              }
 			                      echo "</table>";
 
 			  							 }
-*/
+
 			?>
 
 			<a href ="Cliente.php">Voltar</a>

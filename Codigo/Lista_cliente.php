@@ -68,8 +68,8 @@ $nome = $request['Pesquisa'];
   					}
 
 ?>
-
- <a href ="DadosNovoCliente.php">Cadastrar Novos Cliente</a>
+ <a href ="clientespendenteslista.php"> Pagamentos Pendentes </a>
+ <a href ="DadosNovoCliente.php">Cadastrar Cliente</a>
  <a href ="administrador.php">Voltar</a>
 
 
