@@ -40,6 +40,7 @@
 
   <main>      <form action="Controladores/cadastroPag.php" method="POST">
 
+							<label>Serviço:<input name="idServico" type="double" disabled value='7'/><br/><br/>
               <label>Valor:<input name="valor" type="double"required/><br/><br/>
               <label>Vencimento:<input name="dataVencimento" type="date" required/><br/><br/>
 							<label>Data de Pago:<input name="dataPago" type="date" required/> <br/><br/>
