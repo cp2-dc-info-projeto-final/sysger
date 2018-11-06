@@ -42,48 +42,43 @@ $nomecliente = $request['Pesquisa'];
 				</form>
 
 
-								<?php
-                    if (empty($nomecliente))
-                      {
-                          $tclientes = listapagamentos();
-                      }
+        <?php
+          if (empty($nomecliente))
+            {
+                $tclientes = listapagamentos();
+            }
+            else {
+                $tclientes = BuscaPagamentos($nomecliente);
+            }
 
-																		{
-															{
+                    echo "<h3>Pagamentos Pendentes:</h3>";
+                    echo "<section class='row'>";
+                    echo "<table border='1' bgcolor= '#FFFAFA'>";
+                    echo "<tr>";
+                    echo "<td>Nome</td>";
+                    echo "<td>Data de Vencimento</td>";
+                    echo "<td>Data serviço pago</td>";
+                    echo "<td>STATUS</td>";
+                    echo "</tr>";
 
-                              echo "<section class='row'>";
-										          echo "<table border='1' bgcolor= '#FFFAFA'>";
-															echo "<tr>";
-															echo "<td>Nome</td>";
-															echo "<td>Mensalidade</td>";
-															echo "<td>STATUS</td>";
-													   	echo "</tr>";
+            foreach($tclientes as $p)
+            {
+                    echo "<tr>";
+                    echo "<td>".$p['nome']."</td>";
+                    echo "<td>".$p['dataVencimento']."</td>";
+                    echo "<td>".$p['dataPago']."</td>";
+                    echo date('M');
+                    if ($request['dataPago'] == null){
+                          echo "<td>Pendente</td>";
+                    }
+                     echo "</tr>";
 
-									          }
+               }
+               echo "</table>";
+               echo  "</section>";
 
-                            foreach($tclientes as $p)
+?>
 
-													if ($request['dataPago'] != null){
-															STATUS['p'] = 'Pago'
-														}
-														else {
-															STATUS['p'] = 'Pendente'
-														}
-									              {
-
-									  		          echo "<tr>";
-																echo "<td>".$p['nome']."</td>";
-																echo date('M');
-									  		         echo "<td>".$p['Mensalidade']."</td>";
-									  		         echo "<td>".$p['STATUS']."</td>";
-									  		          echo "</tr>";
-
-									  		              }
-									                      echo "</table>";
-                                        echo  "</section>";
-									  							 }
-
-									?>
 
 								</div>
     </div>

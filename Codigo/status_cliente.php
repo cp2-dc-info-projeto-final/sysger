@@ -31,11 +31,9 @@
 
 									echo "<td>Nome</td>";
 
-									echo "<td>CPF</td>";
+									echo "<td>Mês</td>";
 
-			            echo "<td>CNPJ</td>";
-
-									echo "<td>Pagamentos</td>";
+									echo "<td>Status</td>";
 
 							   	echo "</tr>";
 
@@ -46,9 +44,7 @@
 
 			  		          echo "<td>".$c['nome']."</td>";
 
-			  							echo "<td>".$c['cpf']."</td>";
-
-			                echo "<td>".$c['cnpj']."</td>";
+											echo "<td>"
 
 			  		           echo "</tr>";
 
