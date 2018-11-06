@@ -24,7 +24,7 @@ $nomecliente = $request['Pesquisa'];
     <?php require('BarraNav.php'); ?>
     <div>
 
-		 <main>  <h1> Histórico de pagamentos </h1>
+		 <main>
 		    <h1> Histórico de pagamentos </h1>
 
 				<form action="histPagamentos.php" method="GET">
@@ -77,11 +77,6 @@ $nomecliente = $request['Pesquisa'];
                          echo  "</section>";
 
 ?>
-
-										<table>
-<td> </td>
-<tr> </tr>
-										</table>
 
 								</div>
     </div>
