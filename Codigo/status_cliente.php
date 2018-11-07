@@ -23,6 +23,7 @@ $nome = $request['Pesquisa'];
 <body>
 	<?php require('BarraNav.php'); ?>
 	<div>
+<main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px ">
 		<h1> Seu status de Pagamento </h1>
 			<?php
 
@@ -61,7 +62,7 @@ $nome = $request['Pesquisa'];
                       {
                             echo "<td>Pago com atraso</td>";
                       }
-                      
+
 			  		          echo "</tr>";
 
 			  		              }
@@ -74,6 +75,6 @@ $nome = $request['Pesquisa'];
 			<a href ="Cliente.php">Voltar</a>
 
     </div>
-
+</main>
 	</body>
 </html>

@@ -25,7 +25,7 @@ $nomecliente = $request['Pesquisa'];
     <?php require('BarraNav.php'); ?>
     <div>
 
-		 <main>
+ <main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px ">
 		    <h1> Histórico de pagamentos </h1>
 
 				<form action="histPagamentos.php" method="GET">
