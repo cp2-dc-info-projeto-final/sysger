@@ -48,19 +48,3 @@
 		<p>Erro: <?= $navErroLogin ?></p>
 	</div>
 <?php } ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-	body {
-		position: fixed;
-		background-image: url('Fundo.jpg');
-		width:100%;
-		height:100%;
-	}
-</style>
-</head>
-<body>
-</body>
-</html>
