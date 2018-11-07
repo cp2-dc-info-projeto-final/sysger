@@ -12,7 +12,8 @@ require_once ('funcoes.php');
 	<body>
 		<?php require('BarraNav.php'); ?>
     <div>
-		    <h1> Gerenciamento </h1>
+<main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px; border-radius:30px 30px 30px 30px">
+		    <h1> Gerenciamento </h1><br>
 
 				<a href="Lista_func.php"> Listagem dos Funcionários</a><br><br>
 			 	<a href="DadosNovoFunc.php">Cadastrar novos funcionários</a><br><br>
@@ -23,5 +24,6 @@ require_once ('funcoes.php');
 				<a href="DadosPagamento.php">Cadastrar novos Pagamentos</a><br><br>
 
     </div>
+</main>
 	</body>
 </html>
