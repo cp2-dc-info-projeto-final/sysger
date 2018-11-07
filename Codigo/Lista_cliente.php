@@ -22,7 +22,8 @@ $nome = $request['Pesquisa'];
 	<body>
     <?php require('BarraNav.php'); ?>
     <div>
-		   <main> <h1> Lista de Clientes </h1>
+  <main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px ">
+		    <h1> Lista de Clientes </h1>
 				<form action="Lista_cliente" method="GET">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
 				<input type= "submit" value= "Buscar"/><br><br><br></input>
@@ -75,6 +76,6 @@ $nome = $request['Pesquisa'];
 
 
     </div>
-
+</main>
 	</body>
 </html>
