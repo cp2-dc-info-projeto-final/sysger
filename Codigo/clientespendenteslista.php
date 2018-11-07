@@ -24,6 +24,7 @@ $nomecliente = $request['Pesquisa'];
 	<body>
     <?php require('BarraNav.php'); ?>
     <div>
+      <main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px ">
 		    <h1> Clientes Pendentes </h1>
 
 				<form action="status_administrador.php" method="GET">
@@ -71,6 +72,6 @@ $nomecliente = $request['Pesquisa'];
 
 								</div>
     </div>
-
+  </main>
 	</body>
 </html>
