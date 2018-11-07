@@ -6,6 +6,7 @@ require_once ('funcoes.php');
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
+		<?php require('ImagemDeFundo.css'); ?>
 
 	</head>
 	<body>

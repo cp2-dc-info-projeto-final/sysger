@@ -17,6 +17,7 @@ $nome = $request['Pesquisa'];
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
+    <?php require('ImagemDeFundo.css'); ?>
   </head>
 	<body>
     <?php require('BarraNav.php'); ?>
