@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<?php require('BarraNav.php'); ?>
-    <main>
+    <main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px ">
 		    <h1> Cadastrar Novos Contratos </h1>
 
         <form action="Controladores/cadastroServico.php" method="POST">
