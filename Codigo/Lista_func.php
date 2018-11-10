@@ -45,8 +45,7 @@ $nome = $request['Pesquisa'];
 
             {
 
-						echo "<h4>Listagem dos Funcionários:</h4>";
-
+						
 	          echo "<table border='1' bgcolor= '#BC8F8F'>";
 
 						echo "<tr>";
