@@ -4,6 +4,7 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
+		<?php require('ImagemDeFundo.css'); ?>
 
 		<script>
 		function exibir_ocultar(val){
@@ -17,8 +18,13 @@
 
 	</head>
 	<body>
-    <div>
-		    <h1> Cadastrar Novos Serviços </h1>
+		<?php require('BarraNav.php'); ?>
+    <main class="container" style="border: 1px solid black;
+														max-width: 600px;
+														margin-top: 20px;
+														border-radius:30px 30px 30px 30px;
+														box-shadow: 2px 2px 2px">
+		    <h1> Cadastrar Novos Contratos </h1>
 
         <form action="Controladores/cadastroServico.php" method="POST">
 
@@ -63,9 +69,10 @@
 					</div>
 
 						 <input type="submit" value="Cadastrar"/><br><br>
-						 <input type="reset" value="Cancelar" /><br>
+						 <input type="reset" value="Cancelar" /><br></br>
     </form>
-        </div>
-
+		<a href ="DadosPagamento.php" class="btn btn-outline-dark"> Cadastrar Pagamentos</a></br></br>
+		<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
+	</main>
     	</body>
     </html>

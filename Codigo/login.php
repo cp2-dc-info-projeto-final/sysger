@@ -22,22 +22,16 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title>SysGer </title>
+		<?php require('ImagemDeFundo.css'); ?>
 
 	</head>
 	<body>
+			<?php require('BarraNav.php'); ?>
 			<?php if($erro != null){ ?>
 					<div id="erro">
 						<p> ERRO: <?= $erro ?> </p>
 					</div>
 				<?php } ?>
-
-				<h1> Tela de Login </h1>
-
-				<form method="POST" action="Controladores/Entrar.php">
-					<label> CPF/CNPJ </label></br><input name="CPF/CNPJ" required type="text" value="" minlenght="11" maxlength="14"/></label></br></br>
-					<label> Senha </label></br><input name="senha" required type="password" value=""/minlenght="6" maxlength="12"></label></br></br>
-					<input type= "submit" value= "Entrar"/>
-				</form>
 
 	</body>
 </html>

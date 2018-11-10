@@ -17,9 +17,16 @@ $nome = $request['Pesquisa'];
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
+    <?php require('ImagemDeFundo.css'); ?>
   </head>
 	<body>
+    <?php require('BarraNav.php'); ?>
     <div>
+  <main class="container" style="border: 1px solid black;
+                          max-width: 600px;
+                          margin-top: 20px;
+                          border-radius:30px 30px 30px 30px;
+                          box-shadow: 2px 2px 2px">
 		    <h1> Lista de Clientes </h1>
 				<form action="Lista_cliente" method="GET">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
@@ -35,61 +42,42 @@ $nome = $request['Pesquisa'];
 										$clientes = BuscarCliente($nome);
 										}
 
-						 if ($clientes != null)
-									{
+						if ($clientes != null)
 						{
 
 
-						echo "<h4>Listagem dos Clientes:</h4>";
+  						echo "<h4>Listagem dos Clientes:</h4>";
+  	          echo "<table border='1' bgcolor= '#BC8F8F'>";
+  						echo "<tr>";
+  						echo "<td>Nome</td>";
+  						echo "<td>Telefone</td>";
+  						echo "<td>E-mail</td>";
+              echo "<td>Endereço</td>";
+  						echo "<td>CPF</td>";
+              echo "<td>CNPJ</td>";
+  				   	echo "</tr>";
 
-	          echo "<table border='1' bgcolor= '#BC8F8F'>";
-
-						echo "<tr>";
-
-						echo "<td>Nome</td>";
-
-						echo "<td>Telefone</td>";
-
-						echo "<td>E-mail</td>";
-
-            echo "<td>Endereço</td>";
-
-						echo "<td>CPF</td>";
-
-            echo "<td>CNPJ</td>";
-
-				   	echo "</tr>";
-
-          }	foreach($clientes as $c)
+            	foreach($clientes as $c)
               {
+    		          echo "<tr>";
+    		          echo "<td>".$c['nome']."</td>";
+    		          echo "<td>".$c['telefone']."</td>";
+    		          echo "<td>".$c['email']."</td>";
+                  echo "<td>".$c['endereco']."</td>";
+    							echo "<td>".$c['cpf']."</td>";
+                  echo "<td>".$c['cnpj']."</td>";
 
-  		          echo "<tr>";
+    		          echo "</tr>";
+    		      }
 
-  		          echo "<td>".$c['nome']."</td>";
-
-  		          echo "<td>".$c['telefone']."</td>";
-
-  		          echo "<td>".$c['email']."</td>";
-
-                echo "<td>".$c['endereco']."</td>";
-
-  							echo "<td>".$c['cpf']."</td>";
-
-                echo "<td>".$c['cnpj']."</td>";
-
-  		           echo "</tr>";
-
-  		              }
-                      echo "</table>";
-
-  							 }
+              echo "</table>";
+  					}
 
 ?>
-
- <a href ="DadosNovoCliente.php"><button>Cadastrar Novos Cliente</button></a>
-
-
+ <a href ="clientespendenteslista.php" class="btn btn-outline-dark"> Pagamentos Pendentes </a></br></br>
+ <a href ="DadosNovoCliente.php" class="btn btn-outline-dark">Cadastrar Cliente</a></br></br>
+ <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
     </div>
-
+</main>
 	</body>
 </html>

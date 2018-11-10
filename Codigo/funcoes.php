@@ -16,7 +16,7 @@ function BuscaUsuarioPorCPF($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT * FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT nome, cpf, email  FROM Pessoa_Fisica JOIN Cliente ON Cliente.IdCliente = Pessoa_Fisica.id_PF Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -32,7 +32,7 @@ function BuscaGerente($CPF)
 {
 	$bd = FazerLigacao();
 
- 	$sql = $bd->prepare('SELECT * FROM gerenciamento Where CPF = :cpf');
+ 	$sql = $bd->prepare('SELECT nome, cpf, senha, email FROM gerenciamento Where CPF = :cpf');
 
 	$sql->bindParam(':cpf', $CPF);
 
@@ -48,7 +48,7 @@ function BuscaUsuarioPorCNPJ($CNPJ)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('SELECT cnpj,senha
+	$sql = $bd->prepare('SELECT cnpj,senha, email
 		 FROM Pessoa_Juridica JOIN Cliente ON Cliente.IdCliente = Pessoa_Juridica.id_PJ Where CNPJ = :cnpj');
 
 	$sql->bindParam(':cnpj', $CNPJ);
@@ -125,8 +125,8 @@ function ListaCliente()
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente
-											JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
-											JOIN pessoa_juridica ON pessoa_fisica.id_PF = pessoa_juridica.id_PJ');
+											LEFT JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
+											LEFT JOIN pessoa_juridica ON cliente.IdCliente = pessoa_juridica.id_PJ');
 
 if ($sql->execute())
 {
@@ -182,7 +182,7 @@ function BuscaUsuarioPorEmail($email)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('SELECT idCliente FROM cliente WHERE email = :email');
+	$sql = $bd->prepare('SELECT idCliente, nome FROM cliente WHERE email = :email');
 
 	$sql->bindValue(':email', $email);
 
@@ -212,20 +212,6 @@ function InsereSubgerente($dadosNovoFunc)
 
 }
 
-/*function usuarioLogadoEhSubgerente($gerente, $subgerente)
-{
-	$bd = FazerLigacao();
-
- 	$sql = $bd->prepare('SELECT subgerente FROM gerenciamento WHERE subgerente = 1');
-
-	if ($sql->execute())
-	{
-		return $sql->fetchall();
-	}
-
-	return null;
-}*/
-
 function InsereServicos($dadosServico)
 {
 	$bd = FazerLigacao();
@@ -251,8 +237,6 @@ function InserePagamento($dadosPagamentos)
 	$sql->bindValue(':valor', $dadosPagamentos['valor']);
 	$sql->bindValue(':dataVencimento', $dadosPagamentos['dataVencimento']);
 	$sql->bindValue(':dataPago', $dadosPagamentos['dataPago']);
-
-
 	$sql->execute();
 
 }
@@ -284,7 +268,7 @@ function BuscaSubgerentePorEmail($email)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('SELECT idGerenciamento FROM gerenciamento WHERE email = :email');
+	$sql = $bd->prepare('SELECT idGerenciamento, nome FROM gerenciamento WHERE email = :email');
 
 	$sql->bindValue(':email', $email);
 
@@ -293,10 +277,11 @@ function BuscaSubgerentePorEmail($email)
 	return $sql->fetch();
 }
 
-function listapagamentos()
+function BuscaPagamentos($nomecliente)
 {
 
 $bd = FazerLigacao();
+
 $sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
 											FROM pagamento
 											JOIN cliente ON pagamento.IdPagamento = cliente.nome
@@ -311,11 +296,26 @@ if ($sql->execute())
 
 return null;
 
+}
+
+function listapagamentos()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT dataPago, dataVencimento, IdPagamento
+											FROM pagamento
+											JOIN cliente ON pagamento.IdPagamento = cliente.nome');
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
 
 }
 
-
-function Spagamentos()
+/*function Spagamentos()
 {
 	$bd = FazerLigacao();
 
@@ -324,7 +324,7 @@ function Spagamentos()
 	$sql->execute();
 
 	return $sql->fetch();
-}
+}*/
 
 function ExtraiRegistroSessão(string $chave)
 {
@@ -368,7 +368,6 @@ function BuscaUsuario($Id)
 	{
 		return $sql->fetchAll();
 	}
-
 
 	return null;
 }

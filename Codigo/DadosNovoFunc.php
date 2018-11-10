@@ -27,12 +27,18 @@
 	<head>
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
+		<?php require('ImagemDeFundo.css'); ?>
 
 	</head>
 	<body>
+		<?php require('BarraNav.php'); ?>
     <div>
+			<main class="container" style="border: 1px solid black;
+															max-width: 600px;
+															margin-top: 20px;
+															border-radius:30px 30px 30px 30px;
+															box-shadow: 2px 2px 2px">
 		    <h1> Cadastrar Funcionário </h1>
-
 				<?php if($erros != null) { ?>
 					<div>
 						<p> ERRO:  </p>
@@ -57,10 +63,12 @@
 							<option></option>
 							<option value="1">Funcionário</option>
 						</select>
-
-            <input type="submit" value="Cadastrar"/>
-</form>
+						</br></br>
+            <input type="submit" value="Cadastrar"/></br></br>
+				</form>
+				
+				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a>
     </div>
-
+   </main>
 	</body>
 </html>
