@@ -25,7 +25,11 @@ $nomecliente = $request['Pesquisa'];
     <?php require('BarraNav.php'); ?>
     <div>
 
- <main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px; border-radius:30px 30px 30px 30px ">
+ <main class="container" style="border: 1px solid black;
+                          max-width: 600px;
+                          margin-top: 20px;
+                          border-radius:30px 30px 30px 30px;
+                          box-shadow: 2px 2px 2px">
 		    <h1> Histórico de pagamentos </h1>
 
 				<form action="histPagamentos.php" method="GET">
@@ -78,13 +82,10 @@ $nomecliente = $request['Pesquisa'];
                          echo  "</section>";
 
 ?>
-
-								</div>
+</br>
+          <a href= "clientespendenteslista.php"> Clientes Pendentes </a></br>
+          <a href ="administrador.php">Voltar</a>
     </div>
-
-    <a href= "clientespendenteslista.php"> Clientes Pendentes </a>
-
-    <a href ="administrador.php">Voltar</a>
 </main>
 	</body>
 </html>

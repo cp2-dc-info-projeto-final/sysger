@@ -26,7 +26,11 @@
 	<body>
 		<?php require('BarraNav.php'); ?>
     <div>
-			<main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px; border-radius:30px 30px 30px 30px ">
+			<main class="container" style="border: 1px solid black;
+															max-width: 600px;
+															margin-top: 20px;
+															border-radius:30px 30px 30px 30px;
+															box-shadow: 2px 2px 2px">
 		    <h1> Cadastrar Pagamentos </h1>
 
 				<?php if($erros != null) { ?>
@@ -48,10 +52,10 @@
 							<label>Data de Pago:<input name="dataPago" type="date" required/> <br/><br/>
 
             <input type="submit" value="Cadastrar"/>
-	</main>
 </form>
+</br></br>
+				<a href ="administrador.php">Voltar</a>
     </div>
-<a href ="administrador.php">Voltar</a>
-<main>
+</main>
 	</body>
 </html>

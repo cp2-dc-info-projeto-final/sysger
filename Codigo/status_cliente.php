@@ -23,7 +23,11 @@ $nome = $request['Pesquisa'];
 <body>
 	<?php require('BarraNav.php'); ?>
 	<div>
-<main class="container" style="border: 1px solid black; max-width: 600px; margin-top: 20px; border-radius:30px 30px 30px 30px ">
+<main class="container" style="border: 1px solid black;
+                        max-width: 600px;
+                        margin-top: 20px;
+                        border-radius:30px 30px 30px 30px;
+                        box-shadow: 2px 2px 2px">
 		<h1> Seu status de Pagamento </h1>
 			<?php
 
@@ -35,7 +39,7 @@ $nome = $request['Pesquisa'];
 							$clientesp = BuscarCliente($nome);
 							}
 
-			if ($clientes != null)
+			if ($clientesp != null)
 			{
 									echo "<h4>Pagamentos do cliente:</h4>";
 				          echo "<table border='1' bgcolor= '#FFCC99'>";
@@ -65,8 +69,7 @@ $nome = $request['Pesquisa'];
 
 			  		          echo "</tr>";
 
-			  		              }
-			                      echo "</table>";
+                        echo "</table>";
 
 			  							 }
 
