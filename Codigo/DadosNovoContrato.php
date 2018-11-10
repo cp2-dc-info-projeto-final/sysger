@@ -69,10 +69,10 @@
 					</div>
 
 						 <input type="submit" value="Cadastrar"/><br><br>
-						 <input type="reset" value="Cancelar" /><br>
+						 <input type="reset" value="Cancelar" /><br></br>
     </form>
-		<a href ="DadosPagamento.php"> Cadastrar Pagamentos</a>
-		<a href ="administrador.php">Voltar</a>
+		<a href ="DadosPagamento.php" class="btn btn-outline-dark"> Cadastrar Pagamentos</a></br></br>
+		<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
 	</main>
     	</body>
     </html>

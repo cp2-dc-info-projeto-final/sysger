@@ -83,8 +83,8 @@ $nomecliente = $request['Pesquisa'];
 
 ?>
 </br>
-          <a href= "clientespendenteslista.php"> Clientes Pendentes </a></br>
-          <a href ="administrador.php">Voltar</a>
+          <a href= "clientespendenteslista.php" class="btn btn-outline-dark"> Clientes Pendentes </a></br></br>
+          <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
     </div>
 </main>
 	</body>

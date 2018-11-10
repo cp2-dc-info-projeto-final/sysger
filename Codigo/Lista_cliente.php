@@ -74,11 +74,9 @@ $nome = $request['Pesquisa'];
   					}
 
 ?>
- <a href ="clientespendenteslista.php"> Pagamentos Pendentes </a>
- <a href ="DadosNovoCliente.php">Cadastrar Cliente</a>
- <a href ="administrador.php">Voltar</a>
-
-
+ <a href ="clientespendenteslista.php" class="btn btn-outline-dark"> Pagamentos Pendentes </a></br></br>
+ <a href ="DadosNovoCliente.php" class="btn btn-outline-dark">Cadastrar Cliente</a></br></br>
+ <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
     </div>
 </main>
 	</body>

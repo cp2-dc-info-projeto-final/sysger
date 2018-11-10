@@ -54,7 +54,7 @@
             <input type="submit" value="Cadastrar"/>
 </form>
 </br></br>
-				<a href ="administrador.php">Voltar</a>
+				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br>
     </div>
 </main>
 	</body>

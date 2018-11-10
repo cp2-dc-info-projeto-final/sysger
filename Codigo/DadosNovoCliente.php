@@ -68,11 +68,12 @@
             <input type="submit" value="Cadastrar"/><br><br>
 						<input type="reset" value="Cancelar" /><br><br>
 
-						<a href ="DadosServicos.php">Cadastrar novos contratos</a><br><br><br>
+						<a href ="DadosNovoContrato.php" class="btn btn-outline-dark">Cadastrar novos Contratos</a><br><br>
 
 					</form>
-    </div>
-						<a href ="administrador.php">Voltar</a>
+
+						<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br>
+				</div>
 		</main>
 	</body>
 </html>

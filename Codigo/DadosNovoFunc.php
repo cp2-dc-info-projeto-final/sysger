@@ -64,11 +64,11 @@
 							<option value="1">Funcionário</option>
 						</select>
 						</br></br>
-            <input type="submit" value="Cadastrar"/></br>
+            <input type="submit" value="Cadastrar"/></br></br>
 				</form>
-				<a href ="administrador.php">Voltar</a>
+				
+				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a>
     </div>
-
    </main>
 	</body>
 </html>

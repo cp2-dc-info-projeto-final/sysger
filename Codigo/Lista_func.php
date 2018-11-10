@@ -73,7 +73,7 @@ $nome = $request['Pesquisa'];
 					}
 
 ?>
-<a href ="administrador.php">Voltar</a>
+<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
     </div>
 </main>
 	</body>
