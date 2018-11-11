@@ -315,16 +315,6 @@ return null;
 
 }
 
-/*function Spagamentos()
-{
-	$bd = FazerLigacao();
-
-	$sql = $bd->query('SELECT dataPago, dataVencimento FROM pagamento');
-
-	$sql->execute();
-
-	return $sql->fetch();
-}*/
 
 function ExtraiRegistroSessão(string $chave)
 {

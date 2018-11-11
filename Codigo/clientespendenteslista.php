@@ -33,13 +33,13 @@ $nomecliente = $request['Pesquisa'];
 
 
         <?php
-          if (empty($nomecliente))
+          /*if (empty())
             {
-                $tclientes = listapagamentos();
+                $tpclientes = listapagamentos();
             }
             else {
-                $tclientes = BuscaPagamentos($nomecliente);
-            }
+                $tpclientes = BuscaPagamentos($nomecliente);
+            }*/
 
                     echo "<h3>Pagamentos Pendentes:</h3>";
                     echo "<section class='row'>";
@@ -48,15 +48,17 @@ $nomecliente = $request['Pesquisa'];
                     echo "<td>Nome</td>";
                     echo "<td>Data de Vencimento</td>";
                     echo "<td>Data serviço pago</td>";
+                  /*  echo "<td>Serviço</td>";*/
                     echo "<td>STATUS</td>";
                     echo "</tr>";
 
-            foreach($tclientes as $p)
+            foreach($tpclientes as $pd)
             {
                     echo "<tr>";
-                    echo "<td>".$p['nome']."</td>";
-                    echo "<td>".$p['dataVencimento']."</td>";
-                    echo "<td>".$p['dataPago']."</td>";
+                    echo "<td>".$pd['nome']."</td>";
+                    echo "<td>".$pd['dataVencimento']."</td>";
+                    echo "<td>".$pd['dataPago']."</td>";
+                  /*  echo "<td>".$pd['']."</td>";*/
                     echo date('M');
                     if ($request['dataPago'] == null){
                           echo "<td>Pendente</td>";
