@@ -38,9 +38,9 @@ if ($cliente == null)
 		<h1> Seu status de Pagamento </h1>
 			<?php
 
-			$clientesp = ListaClientePag();
+			$cliente = ListaClientePag();
 
-			if ($clientesp != null)
+			if ($cliente != null)
 			{
 									echo "<h4>Pagamentos do cliente:</h4>";
 				          echo "<table border='1' bgcolor= '#FFCC99'>";
@@ -50,7 +50,7 @@ if ($cliente == null)
 									echo "<td>Status</td>";
 							   	echo "</tr>";
 
-			          }	foreach($clientesp as $cp)
+			          }	foreach($cliente as $cp)
 			              {
 
 			  		          echo "<tr>";

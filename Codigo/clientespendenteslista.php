@@ -10,8 +10,7 @@ $request = filter_var_array(
 );
 
 $nomecliente = $request['Pesquisa'];
-$cliente = ClienteLogado();
- 
+
  ?>
 <!DOCTYPE html>
 <html>
