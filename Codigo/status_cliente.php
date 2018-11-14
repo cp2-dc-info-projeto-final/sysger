@@ -10,6 +10,13 @@ $request = filter_var_array(
 
 $nome = $request['Pesquisa'];
 
+$cliente = ClienteLogado();
+if ($cliente == null)
+{
+  header('Location: login.php');
+  exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +38,7 @@ $nome = $request['Pesquisa'];
 		<h1> Seu status de Pagamento </h1>
 			<?php
 
-			if (empty($nome))
-					{
-							$clientesp = ListaCliente();
-					}
-					else {
-							$clientesp = BuscarCliente($nome);
-							}
+			$clientesp = ListaClientePag();
 
 			if ($clientesp != null)
 			{
@@ -45,7 +46,7 @@ $nome = $request['Pesquisa'];
 				          echo "<table border='1' bgcolor= '#FFCC99'>";
 									echo "<tr>";
 									echo "<td>Nome</td>";
-									echo "<td>Mês</td>";
+                  echo "<td>Valor do Contrato</td>";
 									echo "<td>Status</td>";
 							   	echo "</tr>";
 
@@ -54,8 +55,8 @@ $nome = $request['Pesquisa'];
 
 			  		          echo "<tr>";
 			  		          echo "<td>".$cp['nome']."</td>";
+                      echo "<td>".$cp['valor']."</td>";
 											echo "<td>".$cp ['dataPago']. "</td>";
-                      echo date('M');
                       if ($request['dataPago'] == null){
                             echo "<td>Pendente</td>";
                       }
@@ -72,7 +73,6 @@ $nome = $request['Pesquisa'];
                         echo "</table>";
 
 			  							 }
-
 			?>
 
 			<a href ="Cliente.php" class="btn btn-outline-dark">Voltar</a></br></br>

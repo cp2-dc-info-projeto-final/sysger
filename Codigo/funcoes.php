@@ -103,8 +103,8 @@ function BuscarCliente($buscarCliente)
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 												FROM cliente
-												JOIN pessoa_fisica ON cliente.idCliente = Pessoa_Fisica.id_PF
-												JOIN pessoa_juridica ON Pessoa_Fisica.id_PF = Pessoa_Juridica.id_PJ
+												LEFT JOIN pessoa_fisica ON cliente.idCliente = Pessoa_Fisica.id_PF
+												LEFT JOIN pessoa_juridica ON cliente.idCliente = Pessoa_Juridica.id_PJ
 												WHERE nome LIKE :nome AND nome LIKE :pesquisa' );
 
 $sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
@@ -112,6 +112,27 @@ $sql->bindParam(':pesquisa', '%' . $pesquisa . '%');
 if ($sql->execute())
 {
 	return $sql->fetchall();
+}
+
+return null;
+
+}
+
+function BuscarClientePorId(int $id)
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT *
+												FROM cliente
+												LEFT JOIN pessoa_fisica ON cliente.idCliente = Pessoa_Fisica.id_PF
+												LEFT JOIN pessoa_juridica ON cliente.idCliente = Pessoa_Juridica.id_PJ
+												WHERE id LIKE :valId' );
+
+$sql->bindParam(':valId', $id);
+
+if ($sql->execute())
+{
+	return $sql->fetch();
 }
 
 return null;
@@ -362,16 +383,36 @@ function BuscaUsuario($Id)
 	return null;
 }
 
-function ClienteLogado($id)
+function ClienteLogado()
+{
+		session_start();
+		if (array_key_exists('id', $_SESSION ))
+		{
+	  	$id = $_SESSION['id'];
+  		return BuscarClientePorId($id);
+		}
+		else {
+			return null;
+		}
+}
+
+function ListaClientePag()
 {
 
-  	$bd = FazerLigacao();
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT *
+											FROM cliente
+											LEFT JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
+											LEFT JOIN pessoa_juridica ON cliente.IdCliente = pessoa_juridica.id_PJ
+											LEFT JOIN pagamento ON cliente.IdCliente = pagamento.dataPago, pagamento.valor'
+										);
 
-    $sql = $bd->prepare('SELECT * FROM cliente WHERE idCliente = :valId');
-    $sql->bindValue(':valId', $id);
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
 
-    $sql->execute();
+return null;
 
-    $resultado = $sql->fetch();
-
+}
 ?>

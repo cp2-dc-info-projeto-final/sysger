@@ -36,7 +36,7 @@ $nome = $request['Pesquisa'];
 <?php
 						if (empty($nome))
 								{
-										$clientes = ListaCliente();
+										$clientes = ListaClientePag();
 								}
 								else {
 										$clientes = BuscarCliente($nome);
@@ -55,8 +55,8 @@ $nome = $request['Pesquisa'];
               echo "<td>Endereço</td>";
   						echo "<td>CPF</td>";
               echo "<td>CNPJ</td>";
-            /*echo "<td>Serviço</td>";
-              echo "<td>Valor do Serviço</td>;*/
+            /*echo "<td>Serviço</td>";*/
+              echo "<td>Valor do Contrato</td>";
   				   	echo "</tr>";
 
             	foreach($clientes as $c)
@@ -68,8 +68,8 @@ $nome = $request['Pesquisa'];
                   echo "<td>".$c['endereco']."</td>";
     							echo "<td>".$c['cpf']."</td>";
                   echo "<td>".$c['cnpj']."</td>";
-                /* echo "<td>.$c['serviço'].</td>";
-                  echo "<td>.$c['valor'].</td>";*/
+                /* echo "<td>.$c['serviço'].</td>"; */
+                  echo "<td>.$c['valor'].</td>";
 
     		          echo "</tr>";
     		      }
