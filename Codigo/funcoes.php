@@ -147,7 +147,10 @@ $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente
 											LEFT JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
-											LEFT JOIN pessoa_juridica ON cliente.IdCliente = pessoa_juridica.id_PJ');
+											LEFT JOIN pessoa_juridica ON cliente.IdCliente = pessoa_juridica.id_PJ
+											LEFT JOIN servico ON cliente.IdCliente = servico.idServico
+											LEFT JOIN pagamento ON pagamento.idServico = servico.idServico
+											');
 
 if ($sql->execute())
 {

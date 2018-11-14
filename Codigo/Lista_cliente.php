@@ -70,7 +70,7 @@ $nome = $request['Pesquisa'];
     							echo "<td>".$c['cpf']."</td>";
                   echo "<td>".$c['cnpj']."</td>";
                 /* echo "<td>.$c['serviço'].</td>"; */
-                  echo "<td>.$c['valor'].</td>";
+                echo "<td>".$c['valor']."</td>";
 
     		          echo "</tr>";
     		      }

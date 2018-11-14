@@ -29,7 +29,7 @@
         <form action="Controladores/cadastroServico.php" method="POST">
 
               <label>Serviço:
-								<select id="tipo_servico" onchange="exibir_ocultar(this.value)">
+								<select name = tiposerv id="tipo_servico" onchange="exibir_ocultar(this.value)">
 								<option></option>
 								<option value="veiculo">Veiculo</option>
 								<option value="celular">Celular</option>
@@ -39,7 +39,7 @@
 							<label>Cpf do Gerenciador:<input name="CpfGerenciador" type="text" minlength="1'" maxlength="11" required/><br/><br/>
 							<label>Data do contrato:<input name="dataContrato" type="date" required/><br/><br/>
 							<label>Data de vencimento:<input name="diaVenc" type="date" required/><br/><br/>
-						  <label>Valor do serviço:<input name="Valor" type="double" required/><br/><br/>
+						  <label>Valor do serviço:<input name="valor" type="double" required/><br/><br/>
 
 						<div id="escolhidoVeiculo">
 						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" /><br/><br/>
