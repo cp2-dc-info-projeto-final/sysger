@@ -10,6 +10,7 @@ $request = filter_var_array(
 );
 
 $nomecliente = $request['Pesquisa'];
+$cl= ClienteLogado;
 
 
  ?>
@@ -33,15 +34,11 @@ $nomecliente = $request['Pesquisa'];
 
 
         <?php
-          /*if (empty())
+          if (array_key_exists($cl))
             {
                 $tpclientes = listapagamentos();
             }
-            else {
-                $tpclientes = BuscaPagamentos($nomecliente);
-            }*/
 
-                    echo "<h3>Pagamentos Pendentes:</h3>";
                     echo "<section class='row'>";
                     echo "<table border='1' bgcolor= '#FFFAFA'>";
                     echo "<tr>";
@@ -70,8 +67,6 @@ $nomecliente = $request['Pesquisa'];
                echo  "</section>";
 
 ?>
-
-
 								</div>
     </div>
   </main>
