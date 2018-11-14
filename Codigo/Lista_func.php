@@ -11,7 +11,6 @@ $request = filter_var_array(
 
 $nome = $request['Pesquisa'];
 
-
  ?>
 
 <!DOCTYPE html>

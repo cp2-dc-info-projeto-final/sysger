@@ -10,9 +10,8 @@ $request = filter_var_array(
 );
 
 $nomecliente = $request['Pesquisa'];
-$cl= ClienteLogado;
-
-
+$cliente = ClienteLogado();
+ 
  ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +33,7 @@ $cl= ClienteLogado;
 
 
         <?php
-          if (array_key_exists($cl))
+          if (array_key_exists())
             {
                 $tpclientes = listapagamentos();
             }
