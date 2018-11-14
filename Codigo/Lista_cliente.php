@@ -1,4 +1,5 @@
 <?php
+
 require_once ('funcoes.php');
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
@@ -28,7 +29,7 @@ $nome = $request['Pesquisa'];
                           border-radius:30px 30px 30px 30px;
                           box-shadow: 2px 2px 2px">
 		    <h1> Clientes </h1>
-				<form action="Lista_cliente" method="GET">
+				<form action="Lista_cliente.php" method="GET">
 				<input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
 				<input type= "submit" value= "Buscar"/><br><br><br></input>
 			</form>
@@ -36,7 +37,7 @@ $nome = $request['Pesquisa'];
 <?php
 						if (empty($nome))
 								{
-										$clientes = ListaClientePag();
+										$clientes = ListaCliente();
 								}
 								else {
 										$clientes = BuscarCliente($nome);
@@ -47,7 +48,7 @@ $nome = $request['Pesquisa'];
 
 
   						echo "<h4>Listagem dos Clientes:</h4>";
-  	          echo "<table border='1' bgcolor= '#BC8F8F'>";
+  	          echo "<table border='1' bgcolor= '#FFFAFA'>";
   						echo "<tr>";
   						echo "<td>Nome</td>";
   						echo "<td>Telefone</td>";
@@ -69,7 +70,7 @@ $nome = $request['Pesquisa'];
     							echo "<td>".$c['cpf']."</td>";
                   echo "<td>".$c['cnpj']."</td>";
                 /* echo "<td>.$c['serviço'].</td>"; */
-                  echo "<td>.$c['valor'].</td>";
+                  /*echo "<td>.$c['valor'].</td>";*/
 
     		          echo "</tr>";
     		      }

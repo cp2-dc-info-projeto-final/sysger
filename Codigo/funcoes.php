@@ -403,10 +403,28 @@ function ListaClientePag()
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente
-											LEFT JOIN pessoa_fisica ON cliente.IdCliente = pessoa_fisica.id_PF
-											LEFT JOIN pessoa_juridica ON cliente.IdCliente = pessoa_juridica.id_PJ
-											LEFT JOIN pagamento ON cliente.IdCliente = pagamento.dataPago, pagamento.valor'
+											LEFT JOIN servico ON cliente.IdCliente = servico.idServico
+											LEFT JOIN pagamento ON pagamento.idServico = sevico.idServico'
 										);
+
+if ($sql->execute())
+{
+	return $sql->fetchall();
+}
+
+return null;
+
+}
+
+function listapagamentosp()
+{
+
+$bd = FazerLigacao();
+$sql = $bd->query('SELECT *
+											FROM cliente
+											JOIN servico ON cliente.IdCliente = servico.idServico
+											JOIN pagamento ON pagamento.idServico = servico.idServico
+											WHERE dataPago is null ');
 
 if ($sql->execute())
 {
