@@ -61,6 +61,7 @@ $nomecliente = $request['Pesquisa'];
                echo  "</section>";
 
 ?>
+<br><br>
 								</div>
     </div>
   </main>

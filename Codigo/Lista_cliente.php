@@ -70,7 +70,7 @@ $nome = $request['Pesquisa'];
     							echo "<td>".$c['cpf']."</td>";
                   echo "<td>".$c['cnpj']."</td>";
                 /* echo "<td>.$c['serviço'].</td>"; */
-                  /*echo "<td>.$c['valor'].</td>";*/
+                  echo "<td>.$c['valor'].</td>";
 
     		          echo "</tr>";
     		      }
@@ -79,6 +79,7 @@ $nome = $request['Pesquisa'];
   					}
 
 ?>
+<br><br>
  <a href ="clientespendenteslista.php" class="btn btn-outline-dark"> Pagamentos Pendentes </a></br></br>
  <a href ="DadosNovoCliente.php" class="btn btn-outline-dark">Cadastrar Cliente</a></br></br>
  <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
