@@ -29,7 +29,7 @@ $nome = $request['Pesquisa'];
                         margin-top: 20px;
                         border-radius:30px 30px 30px 30px;
                         box-shadow: 2px 2px 2px">
-      <h1> Lista de Funcionários </h1>
+      <h1> Funcionários </h1>
       <form action="Lista_func" method="GET">
       <input name= "Pesquisa" type= "text" placeholder="Pequisar"></input><br><br>
       <input type= "submit" value= "Buscar"/><br><br><br></input>
@@ -73,6 +73,7 @@ $nome = $request['Pesquisa'];
 					}
 
 ?>
+<br><br>
 <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
     </div>
 </main>

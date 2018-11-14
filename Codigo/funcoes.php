@@ -362,4 +362,16 @@ function BuscaUsuario($Id)
 	return null;
 }
 
+function ClienteLogado($id)
+{
+
+  	$bd = FazerLigacao();
+
+    $sql = $bd->prepare('SELECT * FROM cliente WHERE idCliente = :valId');
+    $sql->bindValue(':valId', $id);
+
+    $sql->execute();
+
+    $resultado = $sql->fetch();
+
 ?>
