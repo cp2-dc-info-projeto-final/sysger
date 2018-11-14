@@ -16,7 +16,7 @@
 		    <h1> Seja bem-vindo Cliente  </h1><br>
 
 							<a href="status_cliente.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark">Meu Status de Pagamento</a><br><br>
-							<a href="BoletoBancario.png" class="btn btn-prymary btn-lg btn-block btn-outline-dark">2a via do Boleto</a><br><br>
+							<a href="Imagens/BoletoBancario.png" class="btn btn-prymary btn-lg btn-block btn-outline-dark">2a via do Boleto</a><br><br>
 
     </div>
      </main>
