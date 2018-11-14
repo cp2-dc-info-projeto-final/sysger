@@ -12,7 +12,6 @@
 			'diaVenc' =>  FILTER_DEFAULT,
 			'Valor' =>  FILTER_DEFAULT,
 
-
 		]
 	);
 	$cpf_cnpj = $request['cpf_cnpj'];

@@ -18,7 +18,6 @@
 	if(array_key_exists('sucesso', $_SESSION))
 		{
 			$sucesso = $_SESSION['sucesso'];
-			unset($_SESSION['sucesso']);
 		}
 ?>
 

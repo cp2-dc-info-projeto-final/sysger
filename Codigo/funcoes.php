@@ -231,12 +231,13 @@ function InserePagamento($dadosPagamentos)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('INSERT INTO pagamento (valor, dataVencimento, dataPago)
-	VALUES (:valor, :dataVencimento,:dataPago );');
+	$sql = $bd->prepare('INSERT INTO pagamento (valor, dataVencimento, idServico , dataPago)
+	VALUES (:valor, :dataVencimento, :idServico, :dataPago );');
 
 	$sql->bindValue(':valor', $dadosPagamentos['valor']);
 	$sql->bindValue(':dataVencimento', $dadosPagamentos['dataVencimento']);
 	$sql->bindValue(':dataPago', $dadosPagamentos['dataPago']);
+	$sql->bindValue(':idServico', $dadosPagamentos['idServico']);
 	$sql->execute();
 
 }
@@ -373,5 +374,7 @@ function ClienteLogado($id)
     $sql->execute();
 
     $resultado = $sql->fetch();
+
+}
 
 ?>

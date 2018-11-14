@@ -40,8 +40,6 @@ CREATE TABLE Gerenciamento (
 				dataNasc DATE,
 				email VARCHAR(100),
 				cpf VARCHAR(100) NOT NULL,
-				administrador BOOLEAN,
-			  funcionario BOOLEAN,
 				PRIMARY KEY(IdGerenciamento)
 
 				);
@@ -100,3 +98,7 @@ CREATE TABLE Veiculo (
 
 
 		);
+
+INSERT INTO cliente (idCliente, nome, senha, endereco , telefone, dataNasc, email) VALUES
+(1, 'Fulano', ''),
+(2, 'nbbb', 'kkk');
