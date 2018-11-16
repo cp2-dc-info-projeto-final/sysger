@@ -15,8 +15,6 @@
 		unset($_SESSION['erros']);
 	}
 
-$idServico = $_GET['idServico'];
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,6 +22,7 @@ $idServico = $_GET['idServico'];
 		<meta charset= "utf-8"/>
     <title> SysGER </title>
 		<?php require('ImagemDeFundo.css'); ?>
+
 
 	</head>
 	<body>
