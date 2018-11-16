@@ -71,8 +71,8 @@
 						 <input type="submit" value="Cadastrar"/><br><br>
 						 <input type="reset" value="Cancelar" /><br></br>
     </form>
-		<a href ="DadosPagamento.php" class="btn btn-outline-dark"> Cadastrar Pagamentos</a></br></br>
-		<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
+		<a href ="DadosPagamento.php" class="btn btn-outline-dark"><b> Cadastrar Pagamentos</b></a></br></br>
+		<a href ="administrador.php" class="btn btn-outline-dark"><b>Voltar</b></a></br></br>
 	</main>
     	</body>
     </html>

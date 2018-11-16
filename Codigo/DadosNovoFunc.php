@@ -59,11 +59,11 @@
 						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
-					
+
             <input type="submit" value="Cadastrar"/></br></br>
 				</form>
 
-				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a>
+				<a href ="administrador.php" class="btn btn-outline-dark"><b>Voltar</b></a>
     </div>
    </main>
 	</body>

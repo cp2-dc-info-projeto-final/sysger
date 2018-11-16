@@ -30,7 +30,7 @@ $nomecliente = $request['Pesquisa'];
                           margin-top: 20px;
                           border-radius:30px 30px 30px 30px;
                           box-shadow: 2px 2px 2px">
-		    <h1> Histórico de pagamentos </h1>
+		    <h1> Histórico de Pagamentos </h1>
 
 				<form action="histPagamentos.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
@@ -81,8 +81,8 @@ $nomecliente = $request['Pesquisa'];
 
 ?>
 </br>
-          <a href= "clientespendenteslista.php" class="btn btn-outline-dark"> Clientes Pendentes </a></br></br>
-          <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
+          <a href= "clientespendenteslista.php" class="btn btn-outline-dark"><b> Clientes Pendentes</bd> </a></br></br>
+          <a href ="administrador.php" class="btn btn-outline-dark"><b> Voltar </b></a></br></br>
     </div>
 </main>
 	</body>

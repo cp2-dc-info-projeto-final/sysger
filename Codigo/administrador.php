@@ -24,13 +24,13 @@ require_once ('funcoes.php');
 
 		     <h1> Gerenciamento </h1><br>
 
-				<a href="Lista_func.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> Listagem dos Funcionários</a><br><br>
-				<a href="Lista_cliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark">Listagem dos Clientes</a><br><br>
-				<a href="histPagamentos.php" class="btn btn-primary btn-lg btn-block btn-outline-dark">Status dos Clientes</a><br><br>
-				<a href="DadosNovoFunc.php" class="btn btn-primary btn-lg btn-block btn-outline-dark">Cadastrar novos Funcionários</a><br><br>
-				<a href="DadosNovoCliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark">Cadastrar novos Clientes</a><br><br>
-				<a href="DadosNovoContrato.php" class="btn btn-primary btn-lg btn-block btn-outline-dark">Cadastrar novos Contratos</a><br><br>
-				<a href="DadosPagamento.php" class="btn btn-primary btn-lg btn-block btn-outline-dark">Cadastrar novos Pagamentos</a><br><br>
+				<a href="Lista_func.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> <b> Listagem dos Funcionários </b> </a><br><br>
+				<a href="Lista_cliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Listagem dos Clientes </b> </a><br><br>
+				<a href="histPagamentos.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Status dos Clientes </b> </a><br><br>
+				<a href="DadosNovoFunc.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Funcionários </b> </a><br><br>
+				<a href="DadosNovoCliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Clientes </b></a><br><br>
+				<a href="DadosNovoContrato.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Cadastrar novos Contratos </b></a><br><br>
+				<a href="DadosPagamento.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Pagamentos </b> </a><br><br>
 
     </div>
 </main>
