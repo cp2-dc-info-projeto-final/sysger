@@ -80,9 +80,9 @@ $nome = $request['Pesquisa'];
 
 ?>
 <br><br>
- <a href ="clientespendenteslista.php" class="btn btn-outline-dark"> Pagamentos Pendentes </a></br></br>
- <a href ="DadosNovoCliente.php" class="btn btn-outline-dark">Cadastrar Cliente</a></br></br>
- <a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br></br>
+ <a href ="clientespendenteslista.php" class="btn btn-outline-dark"> <b> Pagamentos Pendentes</b> </a></br></br>
+ <a href ="DadosNovoCliente.php" class="btn btn-outline-dark"><b>Cadastrar Cliente</b></a></br></br>
+ <a href ="administrador.php" class="btn btn-outline-dark"><b>Voltar</b></a></br></br>
     </div>
 </main>
 	</body>
