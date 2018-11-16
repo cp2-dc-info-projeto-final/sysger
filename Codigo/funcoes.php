@@ -421,6 +421,7 @@ return null;
 
 function listapagamentosp()
 {
+	
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente
