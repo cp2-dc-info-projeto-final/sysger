@@ -6,12 +6,20 @@
 	$request = filter_var_array(
 		$request,
 		[
+			'tiposerv' => FILTER_DEFAULT,
 			'cpf/cnpj' => FILTER_DEFAULT,
       'CpfGerenciador' => FILTER_DEFAULT,
 			'dataContrato' => FILTER_DEFAULT,
 			'diaVenc' =>  FILTER_DEFAULT,
-			'Valor' =>  FILTER_DEFAULT,
-
+			'valor' =>  FILTER_DEFAULT,
+			'placa' => FILTER_DEFAULT,
+			'cor' => FILTER_DEFAULT,
+			'ano' => FILTER_DEFAULT,
+			'numRastreador' => FILTER_DEFAULT,
+			'marca' => FILTER_DEFAULT,
+			'modelo' => FILTER_DEFAULT,
+			'numero' => FILTER_DEFAULT,
+			'email' => FILTER_DEFAULT
 
 		]
 	);
@@ -60,5 +68,42 @@
 	}
 
 	header('Location: ../DadosServicos.php');
+
+if ($tiposerv == 'veiculo' && $tiposerv == 'celularveiculo')
+{
+	$placa = $request['placa'];
+	if($placa == false){
+		$erros[] ="" ;
+
+	$ano = $request['ano'];
+	if($ano == false){
+			$erros[] ="" ;
+
+	$cor = $request['cor'];
+	if($cor == false){
+	$erros[] ="" ;
+
+	$numRastreador = $request['numRastreador'];
+	if($numRastreador == false){
+  $erros[] ="" ;
+
+	$marca = $request['marca'];
+	if($marca == false){
+	$erros[] ="" ;
+
+	$modelo = $request['modelo'];
+	if($modelo == false){
+ $erros[] ="" ;
+
+	}
+}
+
+if ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
+
+	$numero = $request['numero'];
+	if($numero == false){
+	$erros[] ="" ;
+
+}
 
 ?>

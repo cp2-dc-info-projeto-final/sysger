@@ -32,30 +32,26 @@ $nomecliente = $request['Pesquisa'];
 
 
         <?php
-          if (array_key_exists())
-            {
-                $tpclientes = listapagamentos();
-            }
+                    $listapend = listapagamentosp();
 
                     echo "<section class='row'>";
                     echo "<table border='1' bgcolor= '#FFFAFA'>";
                     echo "<tr>";
                     echo "<td>Nome</td>";
                     echo "<td>Data de Vencimento</td>";
-                    echo "<td>Data serviço pago</td>";
+                    echo "<td>Data do Serviço Pago</td>";
                   /*  echo "<td>Serviço</td>";*/
                     echo "<td>STATUS</td>";
                     echo "</tr>";
 
-            foreach($tpclientes as $pd)
+            foreach($listapend as $pd)
             {
                     echo "<tr>";
                     echo "<td>".$pd['nome']."</td>";
                     echo "<td>".$pd['dataVencimento']."</td>";
                     echo "<td>".$pd['dataPago']."</td>";
                   /*  echo "<td>".$pd['']."</td>";*/
-                    echo date('M');
-                    if ($request['dataPago'] == null){
+                    if ($pd['dataPago'] == null){
                           echo "<td>Pendente</td>";
                     }
                      echo "</tr>";
@@ -65,6 +61,7 @@ $nomecliente = $request['Pesquisa'];
                echo  "</section>";
 
 ?>
+<br><br>
 								</div>
     </div>
   </main>

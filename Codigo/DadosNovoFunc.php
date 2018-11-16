@@ -59,14 +59,10 @@
 						  <label>Telefone:<input name="telefone" type="telefone" required/><br/><br/>
 						  <label>Endereço:<input name="endereco" type="endereco" required/><br/><br/>
             	<label>Data de nascimento: <input name="dataNasc" type="date" required/></label><br/><br/>
-							<label>Funcionário<select name="funcionario">
-							<option></option>
-							<option value="1">Funcionário</option>
-						</select>
-						</br></br>
+					
             <input type="submit" value="Cadastrar"/></br></br>
 				</form>
-				
+
 				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a>
     </div>
    </main>

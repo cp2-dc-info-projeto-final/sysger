@@ -62,7 +62,6 @@ $nomecliente = $request['Pesquisa'];
 															echo "<td>".$p['nome']."</td>";
 								 		          echo "<td>".$p['dataVencimento']."</td>";
 								 		          echo "<td>".$p['dataPago']."</td>";
-															echo date('M');
                             	if ($request['dataPago'] == null){
                                     echo "<td>Pendente</td>";
                               }
