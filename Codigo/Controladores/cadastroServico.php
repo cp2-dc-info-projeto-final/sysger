@@ -23,23 +23,36 @@
 
 		]
 	);
-	$cpf_cnpj = $request['cpf_cnpj'];
-	$erros[] = BuscaUsuarioPorCPF($cpf_cnpj);
+	$cpf_cnpj = $request['cpf/cnpj'];
+
 	if($cpf_cnpj == false){
 		$erros[] = "Cpf/cnpj vazio";
 	}
-
-	else if (empty(BuscaUsuarioPorCPF($cpf_cnpj)) == false) {
-		$erros[] = "Já existe um cliente cadastrado com esse cpf";
+	else if (strlen($cpf_cnpj) == 11) {
+		$cliente = BuscaUsuarioPorCPF($cpf_cnpj);
 	}
-	else if (empty(BuscaUsuarioPorCNPJ($cpf_cnpj)) == false) {
-		$erros[] = "Já existe um cliente cadastrado com esse cnpj";
+	else if (strlen($cpf_cnpj) == 14) {
+		$cliente = BuscaUsuarioPorCNPJ($cpf_cnpj);
+	}
+	else {
+		$erros[] = "CPF/CNPJ informado não é válido";
+	}
+
+	if ($cpf_cnpj != false && $cliente == null)
+	{
+		$erros[] = "Nenhum cliente cadastrado com o CPF/CNPJ informado";
 	}
 
 	$CpfGerenciador = $request['CpfGerenciador'];
-	$erros[] = BuscaGerente($CpfGerenciador);
 	if($CpfGerenciador == false){
 		$erros[] = "Cpf do administrador vazio";
+	}
+	else {
+		$gerente = BuscaGerente($CpfGerenciador);
+		if ($gerente == false)
+		{
+			$erros[] = "Nenhum gerente cadastrado com o CPF informado";
+		}
 	}
 
 	$dataContrato = $request['dataContrato'];
@@ -52,11 +65,12 @@
 		$erros[] = "Dia do Vencimento está vazio";
 	}
 
-	$valor = $request['Valor'];
+	$valor = $request['valor'];
 	if($valor == false){
 		$erros[] = "Valor do serviço está vazio";
 	}
 
+  $tiposerv = $request['tiposerv'];
 if ($tiposerv == 'veiculo' && $tiposerv == 'celularveiculo')
 {
 	$placa = $request['placa'];
@@ -86,7 +100,7 @@ if ($tiposerv == 'veiculo' && $tiposerv == 'celularveiculo')
 	}
 }
 
-if else ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
+else if ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
 
 	$numero = $request['numero'];
 	if($numero == false){
@@ -108,6 +122,8 @@ else {
 	$_SESSION['erros'] = $erros;
 }
 
-header('Location: ../DadosServicos.php');
+var_dump($_SESSION);
+exit();
+header('Location: ../DadosNovoContrato.php');
 
 ?>

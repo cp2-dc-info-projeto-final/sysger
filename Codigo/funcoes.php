@@ -247,6 +247,7 @@ function InsereServicos($dadosServico)
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
 
+
 	$sql->execute();
 
 }
