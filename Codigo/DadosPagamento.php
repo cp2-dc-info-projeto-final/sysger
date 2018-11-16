@@ -15,7 +15,7 @@
 		unset($_SESSION['erros']);
 	}
 
-	$idServico = $_GET['idServico'];
+$idServico = $_GET['idServico'];
 
 ?>
 <!DOCTYPE html>
