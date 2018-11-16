@@ -247,11 +247,9 @@ function InsereServicos($dadosServico)
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
 
-
 	$sql->execute();
 
 	$idServico = $bd->lastInsertedId();
-
 
 	if ($dadosServico['numero'] != false)
 	{
@@ -446,9 +444,7 @@ $sql = $bd->prepare("SELECT *
 											WHERE cliente.IdCliente  = :id "
 										);
 										$sql->bindParam(':id', $id);
-										// WHERE cliente.IdCliente = " {$id} "
-										//$row = mysql_fetch_assoc($sql);
-										//echo $row['IdCliente'];
+
 
 if ($sql->execute())
 {
@@ -502,7 +498,7 @@ if ($dia_vencimento <= $dia_inicio) {
 
 $sql = $bd->prepare('SELECT
 											 dataCal,
-											 COALESCE(pgto.status, 'NÂO-PAGO')
+											 COALESCE(pgto.status, "NÃO-PAGO")
 										 FROM       (
 													 				SELECT
 						                          dataVencimento,
@@ -514,7 +510,7 @@ $sql = $bd->prepare('SELECT
 								                   FROM pagamento WHERE idServico = 1
 																 ) as pgto
 									   RIGHT JOIN  (
-													 						SELECT '2018-05-15' + INTERVAL (seq) MONTH dataCal
+													 						SELECT "2018-05-15" + INTERVAL (seq) MONTH dataCal
 			                               	FROM seq_0_to_400
 																	) AS sequencia
 	                   ON sequencia.dataCal = pgto.dataVencimento

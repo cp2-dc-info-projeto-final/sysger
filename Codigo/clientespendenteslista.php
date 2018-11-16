@@ -34,31 +34,31 @@ $nomecliente = $request['Pesquisa'];
         <?php
                     $listapend = listapagamentosp();
 
-                    echo "<section class='row'>";
-                    echo "<table border='1' bgcolor= '#FFFAFA'>";
-                    echo "<tr>";
-                    echo "<td>Nome</td>";
-                    echo "<td>Data de Vencimento</td>";
-                    echo "<td>Data do Serviço Pago</td>";
-                  /*  echo "<td>Serviço</td>";*/
-                    echo "<td>STATUS</td>";
-                    echo "</tr>";
+                              echo "<section class='row'>";
+                              echo "<table border='1' bgcolor= '#FFFAFA'>";
+                              echo "<tr>";
+                              echo "<td>Nome</td>";
+                              echo "<td>Data de Vencimento</td>";
+                              echo "<td>Data do Serviço Pago</td>";
+                            /*  echo "<td>Serviço</td>";*/
+                              echo "<td>STATUS</td>";
+                              echo "</tr>";
 
-            foreach($listapend as $pd)
-            {
-                    echo "<tr>";
-                    echo "<td>".$pd['nome']."</td>";
-                    echo "<td>".$pd['dataVencimento']."</td>";
-                    echo "<td>".$pd['dataPago']."</td>";
-                  /*  echo "<td>".$pd['']."</td>";*/
-                    if ($pd['dataPago'] == null){
-                          echo "<td>Pendente</td>";
-                    }
-                     echo "</tr>";
+                                  foreach($listapend as $pd)
+                                  {
+                                          echo "<tr>";
+                                          echo "<td>".$pd['nome']."</td>";
+                                          echo "<td>".$pd['dataVencimento']."</td>";
+                                          echo "<td>".$pd['dataPago']."</td>";
+                                        /*  echo "<td>".$pd['']."</td>";*/
+                                          if ($pd['dataPago'] == null){
+                                                echo "<td>Pendente</td>";
+                                          }
+                                           echo "</tr>";
 
-               }
-               echo "</table>";
-               echo  "</section>";
+                                     }
+                         echo "</table>";
+                         echo  "</section>";
 
 ?>
 <br><br>
