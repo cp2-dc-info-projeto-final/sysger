@@ -98,7 +98,3 @@ CREATE TABLE Veiculo (
 
 
 		);
-
-INSERT INTO cliente (idCliente, nome, senha, endereco , telefone, dataNasc, email) VALUES
-(1, 'Fulano', ''),
-(2, 'nbbb', 'kkk');

@@ -122,11 +122,11 @@ function BuscarClientePorId(int $id)
 {
 
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT *
+$sql = $bd->prepare('SELECT *
 												FROM cliente
 												LEFT JOIN pessoa_fisica ON cliente.idCliente = Pessoa_Fisica.id_PF
 												LEFT JOIN pessoa_juridica ON cliente.idCliente = Pessoa_Juridica.id_PJ
-												WHERE id LIKE :valId' );
+												WHERE idCliente LIKE :valId' );
 
 $sql->bindParam(':valId', $id);
 
@@ -249,7 +249,36 @@ function InsereServicos($dadosServico)
 
 	$sql->execute();
 
+	$idSevico = $bd->lastInsertedId();
+
+
+	if ($dadosServico['numero'] != false)
+	{
+		$sql = $bd->prepare('INSERT INTO celular (...)
+		VALUES (...);');
+
+		$sql->bindValue(':valor', $dadosServico['valor']);
+		$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
+		$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
+
+		$sql->execute();
+	}
+
+	if ($dadosServico['placa'] != false)
+	{
+		$sql = $bd->prepare('INSERT INTO veiculo (...)
+		VALUES (...);');
+
+		$sql->bindValue(':valor', $dadosServico['valor']);
+		$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
+		$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
+
+		$sql->execute();
+	}
+
+
 }
+
 
 function InserePagamento($dadosPagamentos)
 {
@@ -402,13 +431,20 @@ function ClienteLogado()
 
 function ListaClientePag()
 {
-
+$id = $_SESSION['id'];
 $bd = FazerLigacao();
-$sql = $bd->query('SELECT *
+
+$id = intval($id);
+$sql = $bd->prepare("SELECT *
 											FROM cliente
 											LEFT JOIN servico ON cliente.IdCliente = servico.idServico
-											LEFT JOIN pagamento ON pagamento.idServico = sevico.idServico'
+											LEFT JOIN pagamento ON pagamento.idServico = servico.idServico
+											WHERE cliente.IdCliente  = :id "
 										);
+										$sql->bindParam(':id', $id);
+										// WHERE cliente.IdCliente = " {$id} "
+										//$row = mysql_fetch_assoc($sql);
+										//echo $row['IdCliente'];
 
 if ($sql->execute())
 {

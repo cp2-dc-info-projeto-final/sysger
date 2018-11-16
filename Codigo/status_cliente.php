@@ -35,18 +35,19 @@ if ($cliente == null)
                         margin-top: 20px;
                         border-radius:30px 30px 30px 30px;
                         box-shadow: 2px 2px 2px">
-		<h1> Seu status de Pagamento </h1>
+		<h1> Seu status de Pagamento </h1><br>
 			<?php
 
 			$cliente = ListaClientePag();
 
 			if ($cliente != null)
 			{
-									echo "<h4>Pagamentos do cliente:</h4>";
-				          echo "<table border='1' bgcolor= '#FFCC99'>";
+
+				          echo "<table border='1' bgcolor= '#FFFAFA'>";
 									echo "<tr>";
 									echo "<td>Nome</td>";
                   echo "<td>Valor do Contrato</td>";
+                  echo "<td>Data de Pagamento</td>";
 									echo "<td>Status</td>";
 							   	echo "</tr>";
 
@@ -57,10 +58,10 @@ if ($cliente == null)
 			  		          echo "<td>".$cp['nome']."</td>";
                       echo "<td>".$cp['valor']."</td>";
 											echo "<td>".$cp ['dataPago']. "</td>";
-                      if ($request['dataPago'] == null){
+                      if ($cp['dataPago'] == null){
                             echo "<td>Pendente</td>";
                       }
-                      else if ($p['dataPago'] <= $p['dataVencimento']) {
+                      else if ($cp['dataPago'] <= $cp['dataVencimento']) {
                             echo "<td>Pago</td>";
                       }
                       else
@@ -69,12 +70,12 @@ if ($cliente == null)
                       }
 
 			  		          echo "</tr>";
-
-                        echo "</table>";
-
 			  							 }
+
+                       echo "</table>";
 			?>
 
+      <br><br>
 			<a href ="Cliente.php" class="btn btn-outline-dark">Voltar</a></br></br>
 
     </div>
