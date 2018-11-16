@@ -28,7 +28,7 @@ $nomecliente = $request['Pesquisa'];
 
 				<form action="status_administrador.php" method="GET">
 				<input type= "submit" value="Listar"/><br>
-				</form>
+      </form><br><br>
 
 
         <?php

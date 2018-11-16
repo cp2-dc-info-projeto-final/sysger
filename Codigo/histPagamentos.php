@@ -34,7 +34,7 @@ $nomecliente = $request['Pesquisa'];
 
 				<form action="histPagamentos.php" method="GET">
 				<input name= "Pesquisa" type="text" placeholder="Pequisar clientes"><br><br>
-				<input type= "submit" value="Buscar"/><br>
+				<input type= "submit" value="Buscar"/><br><br><br>
 				</form>
 
 
@@ -47,7 +47,6 @@ $nomecliente = $request['Pesquisa'];
                           $tclientes = BuscaPagamentos($nomecliente);
                       }
 
-															echo "<h3>Pagamentos:</h3>";
                               echo "<section class='row'>";
 										          echo "<table border='1' bgcolor= '#FFFAFA'>";
 															echo "<tr>";
