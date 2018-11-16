@@ -44,7 +44,7 @@
 						<div id="escolhidoVeiculo">
 						<label>Placa do veículo:<input name="placa" type="text" minlength="7" maxlength="30" /><br/><br/>
 						<label>Cor:<input name="cor" type="text" minlength="1" maxlength="30" /><br/><br/>
-						<label>Ano:<input name="ano" type="date" required/><br/><br/>
+						<label>Ano:<input name="ano" type="string" minlength = "4" maxlength="4" required/><br/><br/>
 						<label>Número do rastreador:<input name="numRastreador" type="text" minlength="11" maxlength="11" /><br/><br/>
 						<label>Marca:<input name="marca" type="text" minlength="1" maxlength="30" /><br/><br/>
 						<label>Modelo:<input name="modelo" type="text" minlength="1" maxlength="30" /><br/><br/>
