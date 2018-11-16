@@ -250,29 +250,32 @@ function InsereServicos($dadosServico)
 
 	$sql->execute();
 
-	$idSevico = $bd->lastInsertedId();
+	$idServico = $bd->lastInsertedId();
 
 
 	if ($dadosServico['numero'] != false)
 	{
-		$sql = $bd->prepare('INSERT INTO celular (...)
-		VALUES (...);');
+		$sql = $bd->prepare('INSERT INTO celular (numero, email)
+		VALUES (:numero, :email);');
 
-		$sql->bindValue(':valor', $dadosServico['valor']);
-		$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
-		$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
+		$sql->bindValue(':numero', $dadosServico['numero']);
+		$sql->bindValue(':email', $dadosServico['email']);
 
 		$sql->execute();
 	}
 
 	if ($dadosServico['placa'] != false)
 	{
-		$sql = $bd->prepare('INSERT INTO veiculo (...)
-		VALUES (...);');
+		$sql = $bd->prepare('INSERT INTO veiculo (marca, modelo, tiposervico, placa, cor, ano, numRastreador )
+		VALUES (:marca, :modelo, :tiposervico, :placa, :cor, :ano, :numRastreador);');
 
-		$sql->bindValue(':valor', $dadosServico['valor']);
-		$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
-		$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
+		$sql->bindValue(':marca', $dadosServico['marca']);
+		$sql->bindValue(':modelo', $dadosServico['modelo']);
+		$sql->bindValue(':tiposervico', $dadosServico['tiposervico']);
+		$sql->bindValue(':placa', $dadosServico['placa']);
+		$sql->bindValue(':cor', $dadosServico['cor']);
+		$sql->bindValue(':ano', $dadosServico['ano']);
+		$sql->bindValue(':numRastreador', $dadosServico['numRastreador']);
 
 		$sql->execute();
 	}
@@ -458,7 +461,7 @@ return null;
 
 function listapagamentosp()
 {
-	
+
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente

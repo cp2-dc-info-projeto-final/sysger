@@ -17,7 +17,6 @@ require_once ('funcoes.php');
 				max-width: 600px;
 				margin-top: 40px;
 				border-radius:30px 30px 30px 30px;
-			/*	background-color:#D3D3D3;*/
 				box-shadow: 2px 2px 2px;
 				padding-left: : 100px"
 				>
