@@ -61,38 +61,43 @@ if ($tiposerv == 'veiculo' && $tiposerv == 'celularveiculo')
 {
 	$placa = $request['placa'];
 	if($placa == false){
-		$erros[] ="Placa do veículo vazio" ;
+		$erros[] ="Placa do veículo está vazio";
 }
 	$ano = $request['ano'];
 	if($ano == false){
-			$erros[] ="Ano do veículo vazio " ;
+			$erros[] ="Ano do veículo está vazio ";
 }
 	$cor = $request['cor'];
 	if($cor == false){
-	$erros[] ="Cor do veículo vazio" ;
+	$erros[] ="Cor do veículo está vazio";
 }
 	$numRastreador = $request['numRastreador'];
 	if($numRastreador == false){
-  $erros[] ="Número do rastreio vazio" ;
+  $erros[] ="Número do rastreio está vazio";
 }
 	$marca = $request['marca'];
 	if($marca == false){
-	$erros[] =" Marca do veículo vazio" ;
+	$erros[] =" Marca do veículo está vazio";
 }
 	$modelo = $request['modelo'];
 	if($modelo == false){
- $erros[] =" Modelo do veículo vazio " ;
+ $erros[] ="Modelo do veículo está vazio";
 
 	}
 }
 
-if ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
+if else ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
 
 	$numero = $request['numero'];
 	if($numero == false){
+		$erros[] = "O número do celular não foi inserido";
    }
-}
 
+	 $email = $request['email'];
+	 if($email == false){
+	 	$erros[] = "O email não foi inserido";
+	  }
+}
 session_start();
 if (empty($erros))
 {
