@@ -39,7 +39,7 @@
 	$CpfGerenciador = $request['CpfGerenciador'];
 	$erros[] = BuscaGerente($CpfGerenciador);
 	if($CpfGerenciador == false){
-		$erros[] = "Cpf do administraor vazio";
+		$erros[] = "Cpf do administrador vazio";
 	}
 
 	$dataContrato = $request['dataContrato'];
@@ -57,43 +57,31 @@
 		$erros[] = "Valor do serviço está vazio";
 	}
 
-	session_start();
-	if (empty($erros))
-	{
-		InsereServicos($request);
-		$_SESSION['sucesso'] = "Serviço cadastrado com sucesso";
-	}
-	else {
-		$_SESSION['erros'] = $erros;
-	}
-
-	header('Location: ../DadosServicos.php');
-
 if ($tiposerv == 'veiculo' && $tiposerv == 'celularveiculo')
 {
 	$placa = $request['placa'];
 	if($placa == false){
-		$erros[] ="" ;
-
+		$erros[] ="Placa do veículo vazio" ;
+}
 	$ano = $request['ano'];
 	if($ano == false){
-			$erros[] ="" ;
-
+			$erros[] ="Ano do veículo vazio " ;
+}
 	$cor = $request['cor'];
 	if($cor == false){
-	$erros[] ="" ;
-
+	$erros[] ="Cor do veículo vazio" ;
+}
 	$numRastreador = $request['numRastreador'];
 	if($numRastreador == false){
-  $erros[] ="" ;
-
+  $erros[] ="Número do rastreio vazio" ;
+}
 	$marca = $request['marca'];
 	if($marca == false){
-	$erros[] ="" ;
-
+	$erros[] =" Marca do veículo vazio" ;
+}
 	$modelo = $request['modelo'];
 	if($modelo == false){
- $erros[] ="" ;
+ $erros[] =" Modelo do veículo vazio " ;
 
 	}
 }
@@ -102,8 +90,19 @@ if ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
 
 	$numero = $request['numero'];
 	if($numero == false){
-	$erros[] ="" ;
-
+   }
 }
+
+session_start();
+if (empty($erros))
+{
+	InsereServicos($request);
+	$_SESSION['sucesso'] = "Serviço cadastrado com sucesso";
+}
+else {
+	$_SESSION['erros'] = $erros;
+}
+
+header('Location: ../DadosServicos.php');
 
 ?>
