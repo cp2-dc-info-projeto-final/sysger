@@ -247,6 +247,7 @@ function InsereServicos($dadosServico)
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
 
+
 	$sql->execute();
 
 	$idSevico = $bd->lastInsertedId();
@@ -457,7 +458,7 @@ return null;
 
 function listapagamentosp()
 {
-
+	
 $bd = FazerLigacao();
 $sql = $bd->query('SELECT *
 											FROM cliente
@@ -471,6 +472,57 @@ if ($sql->execute())
 }
 
 return null;
+
+}
+
+function criaCalendario($idServico)
+{
+
+$bd = FazerLigacao();
+
+$sql = $bd->query('SELECT diaVenc, dataContrato FROM Servico
+									WHERE idServico = :valIdServico');
+
+$sql->bindValue(':valIdServico', $idServico);
+$resultado = $sql->fetch();
+
+$dia_vencimento = $resultado['diaVenc'];
+$data_inicio = $resultado['dataContrato'];
+$dia_inicio = intval(date('d', $data_inicio));
+
+if ($dia_vencimento <= $dia_inicio) {
+	//primeiro vencimento proximo mes
+	$primeiro_vencimento = date('Y-m-d', strtotime("+1 months", strtotime($data_inicio)));
+} else {
+	$primeiro_vencimento = $data_inicio;
+}
+
+$sql = $bd->prepare('SELECT
+											 dataCal,
+											 COALESCE(pgto.status, 'NÂO-PAGO')
+										 FROM       (
+													 				SELECT
+						                          dataVencimento,
+						                          dataPago,
+						                          CASE
+						                              WHEN dataPago > dataVencimento THEN "ATRASADO"
+						                              ELSE "PAGO"
+						                          END as status
+								                   FROM pagamento WHERE idServico = 1
+																 ) as pgto
+									   RIGHT JOIN  (
+													 						SELECT '2018-05-15' + INTERVAL (seq) MONTH dataCal
+			                               	FROM seq_0_to_400
+																	) AS sequencia
+	                   ON sequencia.dataCal = pgto.dataVencimento
+							       WHERE (sequencia.dataCal) <= CURDATE()
+										 ORDER BY dataCal');
+
+$sql->bindValue(':valDataPrimeiroVencimento', $primeiro_vencimento);
+$sql->bindValue(':valIdServico', $idServico);
+
+$sql->execute();
+return $sql->fetchAll();
 
 }
 

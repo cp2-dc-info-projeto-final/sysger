@@ -51,7 +51,7 @@ if ($cliente == null)
 									echo "<td>Status</td>";
 							   	echo "</tr>";
 
-			          }	foreach($cliente as $cp)
+			  }	foreach($cliente as $cp)
 			              {
 
 			  		          echo "<tr>";
