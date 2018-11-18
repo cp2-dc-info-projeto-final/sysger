@@ -29,7 +29,8 @@ require_once ('funcoes.php');
 				<a href="DadosNovoFunc.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Funcionários </b> </a><br><br>
 				<a href="DadosNovoCliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Clientes </b></a><br><br>
 				<a href="DadosNovoContrato.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Cadastrar novos Contratos </b></a><br><br>
-				<a href="DadosPagamento.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Pagamentos </b> </a><br><br>
+				<a href="DadosPagamento.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> <b> Cadastrar Pagamentos </b> </a><br><br>
+
 
     </div>
 </main>

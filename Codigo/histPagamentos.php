@@ -27,7 +27,7 @@ $nomecliente = $request['Pesquisa'];
 
  <main class="container" style="border: 1px solid black;
                           max-width: 600px;
-                          margin-top: 20px;
+                          margin-top: 30px;
                           border-radius:30px 30px 30px 30px;
                           box-shadow: 2px 2px 2px">
 		    <h1> Histórico de Pagamentos </h1>
