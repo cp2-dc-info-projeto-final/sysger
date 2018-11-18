@@ -37,8 +37,9 @@ $nomecliente = $request['Pesquisa'];
 				<input type= "submit" value="Buscar"/><br><br><br>
 				</form>
 
+            <?  $calendariostatus = criaCalendario(); ?>
 
-									<?php
+								<!-- 	<?php
                     if (empty($nomecliente))
                       {
                           $tclientes = listapagamentos();
@@ -79,7 +80,7 @@ $nomecliente = $request['Pesquisa'];
 									       echo "</table>";
                          echo  "</section>";
 
-?>
+?>-->
 </br>
           <a href= "clientespendenteslista.php" class="btn btn-outline-dark"><b> Clientes Pendentes</bd> </a></br></br>
           <a href ="administrador.php" class="btn btn-outline-dark"><b> Voltar </b></a></br></br>

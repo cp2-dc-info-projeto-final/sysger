@@ -445,7 +445,6 @@ $sql = $bd->prepare("SELECT *
 										);
 										$sql->bindParam(':id', $id);
 
-
 if ($sql->execute())
 {
 	return $sql->fetchall();
