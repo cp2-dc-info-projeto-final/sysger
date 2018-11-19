@@ -10,6 +10,21 @@ Esther Paulino nº08
 Mariana Ruiz  nº17
 Otavio Nathan nº18
 
+## Sumário
+
+- [Proposta](https://git-scm.com/)
+- [Lista Stakeholders](https://git-scm.com/book/pt-br/v2)
+- [Requisitos](https://try.github.io/)
+- [Casos de Uso](http://git-school.github.io/visualizing-git/)
+- [Diagrama de Casos de Uso](http://git-school.github.io/visualizing-git/)
+- [Descrição de Casos de Uso](http://git-school.github.io/visualizing-git/)
+- [Modelagem](http://git-school.github.io/visualizing-git/)
+- [Diagrama de Classes](http://git-school.github.io/visualizing-git/)
+- [Banco de Dados](http://git-school.github.io/visualizing-git/)
+- [Manual](http://git-school.github.io/visualizing-git/)
+
+
+
 # Proposta Final
 
 A proposta Final do grupo consiste na criação de um software para uma empresa envolvida no ramo de rastreamento de automóveis e aparelhos celulares. Tem como objetivo permitir que o gestor da empresa tenha uma melhor organização dos dados dos clientes juntamente com a situação no vínculo cliente e empresa.
