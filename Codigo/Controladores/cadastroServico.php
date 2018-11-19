@@ -115,7 +115,7 @@ else if ($tiposerv == 'celular' && $tiposerv == 'celularveiculo'){
 session_start();
 if (empty($erros))
 {
-	InsereServicos($gerente['id'], $cliente['id'], $request);
+	InsereServicos($gerente['idGerenciamento'], $cliente['idCliente'], $request);
 	$_SESSION['sucesso'] = "Serviço cadastrado com sucesso";
 }
 else {
