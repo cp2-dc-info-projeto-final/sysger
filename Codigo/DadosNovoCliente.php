@@ -37,7 +37,7 @@
 															margin-top: 20px;
 															border-radius:30px 30px 30px 30px;
 															box-shadow: 2px 2px 2px">
-		    <h1> Cadastrar Cliente</h1><br>
+		    <h1> Cadastrar Cliente </h1><br>
 				<?php if($erros != null) { ?>
 					<div>
 						<p> ERRO:  </p>
@@ -45,12 +45,13 @@
 						{
 							echo "<p>$msg</p>";
 						}
+						
 						?>
 					</div>
 				<?php } ?>
 				<?php if($sucesso != null) { ?>
 					<div>
-							<? echo "<p>$sucesso</p>"; ?>
+							<? echo "<p> Cliente Cadastrado com sucesso </p>" ?>
 					</div>
 				<?php } ?>
 

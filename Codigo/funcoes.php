@@ -236,7 +236,7 @@ function InsereSubgerente($dadosNovoFunc)
 
 }
 
-function InsereServicos($dadosServico)
+function InsereServicos(int $idGerente, int $idCliente, $dadosServico)
 {
 	$bd = FazerLigacao();
 
@@ -277,7 +277,6 @@ function InsereServicos($dadosServico)
 
 		$sql->execute();
 	}
-
 
 }
 
