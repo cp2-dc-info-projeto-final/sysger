@@ -236,13 +236,15 @@ function InsereSubgerente($dadosNovoFunc)
 
 }
 
-function InsereServicos(int $idGerente, int $idCliente, $dadosServico)
+function InsereServicos(int $idGerenciamento, int $idCliente, $dadosServico)
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->prepare('INSERT INTO servico (valor, diaVenc, dataContrato)
-	VALUES (:valor, :diaVenc, :dataContrato);');
+	$sql = $bd->prepare('INSERT INTO servico (idCliente, idGerenciamento, valor, diaVenc, dataContrato)
+	VALUES (:valIdCliente, :valIdGerenciamento, :valor, :diaVenc, :dataContrato);');
 
+	$sql->bindValue(':valIdCliente', $idCliente['idCliente']);
+	$sql->bindValue(':valIdGerenciamento', $idGerenciamento['idGerenciamento']);
 	$sql->bindValue(':valor', $dadosServico['valor']);
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
@@ -279,7 +281,6 @@ function InsereServicos(int $idGerente, int $idCliente, $dadosServico)
 	}
 
 }
-
 
 function InserePagamento($dadosPagamentos)
 {
