@@ -61,18 +61,33 @@
             <input type="submit" value="Cadastrar"/>
 </form>
 </br></br>
+				<table border='1' bgcolor= '#FFFAFA'>
+
+				<thead>
+					<th>Data</th>
+					<th>Situação</th>
+
+				</thead>
+
+<tbody>
+
+<?php
+$resultado = statusMensalidade($idServico);
+
+ 				foreach ($resultado as $r) { ?>
+					<tr>
+							<td> <?= $r['dataCal'] ?> </td>
+							<td> <?= $r['status'] ?> </td>
+					</tr>
+
+				<?php } ?>
+
+</tbody>
+
+				</table>
+	</br>
 				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br>
 
-				<?php
-
-				$resultado = statusMensalidade($idServico);
-				foreach ($resultado as $r)
-				{
-					echo $resultado['dataCal'];
-					echo $resultado['pgto.status'];
-				}
-
-				?>
     </div>
 </main>
 </body>

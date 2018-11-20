@@ -472,7 +472,7 @@ if ($sql->execute())
 return null;
 
 }
-/*
+
 function statusMensalidade($idServico)
 {
 
@@ -497,7 +497,7 @@ if ($dia_vencimento <= $dia_inicio) {
 
 $sql = $bd->prepare('SELECT
 											 dataCal,
-											 COALESCE(pgto.status, "NÃO-PAGO")
+											 COALESCE(pgto.status, "NÃO-PAGO") AS status
 										 FROM       (
 													 				SELECT
 						                          dataVencimento,
@@ -522,7 +522,7 @@ $sql->execute();
 return $sql->fetchAll();
 
 }
-*/
+
 function BuscaServico()
 {
 	$bd = FazerLigacao();
