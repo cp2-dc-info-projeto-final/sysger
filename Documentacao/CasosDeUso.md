@@ -8,6 +8,6 @@
 
 # Diagrama De Casos de Uso
 
-![GitHub Diagrama De Casos de Uso](/FotosDTela/casosdeuso.png)
+![Diagrama De Casos de Uso](/FotosDTela/casosdeuso.png)
 
-- [Casos de Uso](http://git-school.github.io/visualizing-git/)
+- [Casos de Uso](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Descri%C3%A7aoCasosDeUso.md)
