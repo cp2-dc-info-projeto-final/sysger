@@ -473,7 +473,7 @@ return null;
 
 }
 
-function criaCalendario($idServico)
+function statusMensalidade($idServico)
 {
 
 $bd = FazerLigacao();
@@ -522,6 +522,23 @@ $sql->bindValue(':valIdServico', $idServico);
 $sql->execute();
 return $sql->fetchAll();
 
+}
+
+function BuscaServico()
+{
+	$bd = FazerLigacao();
+
+	$sql = $bd->query('SELECT idServico,valor,diaVenc,dataContrato,idCliente,idGerenciamento
+		 									FROM Servico');
+
+	if ($sql->execute())
+	{
+		return $sql->fetchAll();
+ 	}
+	else
+	{
+		return null;
+	}
 }
 
 ?>

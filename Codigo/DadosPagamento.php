@@ -3,8 +3,11 @@
 
 	/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
 	{
-		header('Location: ../DadosPagamento.php');
-		exit();
+		header('Location: DadosPagamento.php');
+	}
+	else {
+			header('Location: login.php');
+			exit();
 	}*/
 
 	$erros = null;
@@ -14,6 +17,8 @@
 		$erros = $_SESSION['erros'];
 		unset($_SESSION['erros']);
 	}
+
+	$idServico = 1
 
 ?>
 <!DOCTYPE html>
@@ -58,6 +63,17 @@
 </br></br>
 				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br>
     </div>
+
+		<?php
+
+		$resultado = statusMensalidade($idServico);
+		foreach ($resultado as $r) {
+
+		 		echo $r;
+		 }
+
+		?>
+
 </main>
 	</body>
 </html>

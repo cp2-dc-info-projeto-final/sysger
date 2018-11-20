@@ -1,11 +1,14 @@
 <?php
 	session_start();
 
-	//if(array_key_exists('emailUsuarioLogado', $_SESSION))
-	//{
-		//header('Location: ../DadosNovoFunc.php');
-		//exit();
-	//}
+/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	{
+		header('Location: DadosNovoFunc.php');
+	}
+	else {
+			header('Location: login.php');
+			exit();
+	}*/
 
 	$erros = null;
 	$sucesso = null;
@@ -47,6 +50,11 @@
 							echo "<p>$msg</p>";
 						}
 						?>
+					</div>
+				<?php } ?>
+				<?php if($sucesso != null) { ?>
+					<div>
+							<?php echo "<p> Funcionário Cadastrado com sucesso </p>" ?>
 					</div>
 				<?php } ?>
 

@@ -1,11 +1,14 @@
 <?php
 	session_start();
 
-	//if(array_key_exists('emailUsuarioLogado', $_SESSION))
-	//{
-		//header('Location: ../Cliente.php');
-		//exit();
-	//}
+	/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	{
+		header('Location: DadosNovoCliente.php');
+	}
+	else {
+			header('Location: login.php');
+			exit();
+	}*/
 
 	$erros = null;
 	$sucesso = null;
@@ -15,9 +18,10 @@
 		$erros = $_SESSION['erros'];
 		unset($_SESSION['erros']);
 	}
-	if(array_key_exists('sucesso', $_SESSION))
+	else if(array_key_exists('sucesso', $_SESSION))
 		{
 			$sucesso = $_SESSION['sucesso'];
+			unset($_SESSION['sucesso']);
 		}
 ?>
 
@@ -45,13 +49,12 @@
 						{
 							echo "<p>$msg</p>";
 						}
-						
 						?>
 					</div>
 				<?php } ?>
 				<?php if($sucesso != null) { ?>
 					<div>
-							<? echo "<p> Cliente Cadastrado com sucesso </p>" ?>
+							<?php echo "<p> Cliente Cadastrado com sucesso </p>" ?>
 					</div>
 				<?php } ?>
 

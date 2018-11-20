@@ -1,6 +1,17 @@
 <?php
 require_once ('funcoes.php');
 
+/*session_start();
+
+if(array_key_exists('emailUsuarioLogado', $_SESSION))
+{
+	header('Location: clientespendenteslista.php');
+}
+else {
+		header('Location: login.php');
+		exit();
+}*/
+
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
   $request,
