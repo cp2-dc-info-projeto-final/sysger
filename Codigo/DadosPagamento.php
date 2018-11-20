@@ -66,11 +66,11 @@
 
 		<?php
 
-		$resultado = statusMensalidade($idServico);
+	/*	$resultado = statusMensalidade($idServico);
 		foreach ($resultado as $r) {
 
 		 		echo $r;
-		 }
+		 }*/
 
 		?>
 

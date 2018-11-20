@@ -37,9 +37,9 @@ else {
 				<a href="Lista_func.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> <b> Listagem dos Funcionários </b> </a><br><br>
 				<a href="Lista_cliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Listagem dos Clientes </b> </a><br><br>
 				<a href="histPagamentos.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Status dos Clientes </b> </a><br><br>
-				<a href="DadosNovoFunc.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Funcionários </b> </a><br><br>
-				<a href="DadosNovoCliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar novos Clientes </b></a><br><br>
-				<a href="DadosNovoContrato.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Cadastrar novos Contratos </b></a><br><br>
+				<a href="DadosNovoFunc.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar Novos Funcionários </b> </a><br><br>
+				<a href="DadosNovoCliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar Novos Clientes </b></a><br><br>
+				<a href="DadosNovoContrato.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Cadastrar Novos Contratos </b></a><br><br>
 				<a href="DadosPagamento.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> <b> Cadastrar Pagamentos </b> </a><br><br>
 
 
