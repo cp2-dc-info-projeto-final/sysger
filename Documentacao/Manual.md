@@ -27,11 +27,11 @@
 
 ## Slides da apresentação (.pdf)
 
-## Modelagem do banco de dados (arquivo editável e .png)
+## Modelagem do banco de dados (arquivo editável)
 
 - [Banco de Dados](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Codigo/Bancodedados.sql)
 
-  ![Bancodedados1]()
+  ![Bancodedados1](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/Modelagembanco.PNG)
 
 ## Script de criação do banco de dados funcionando.
 
