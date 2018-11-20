@@ -2,4 +2,4 @@
 
 ![GitHub Diagrama De Classes](/FotosDTela/DiagramaDeClasses.png)
 
-- [Banco de Dados](http://git-school.github.io/visualizing-git/)
+- [Banco de Dados](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Codigo/Bancodedados.sql)

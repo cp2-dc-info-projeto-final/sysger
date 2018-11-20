@@ -94,6 +94,3 @@
   1. Gerente e Subgerente seleciona o mês que deseja visualizar o status de pagamento.
   2. O Sistema mostra a lista da situação da mensalidade de todos os clientes e se a emissão de boleto já foi feita.
   3. O Sistema irá emitir os boletos selecionados e enviará para o email do cliente selecionado.
-
-
-  

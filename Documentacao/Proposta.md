@@ -29,4 +29,4 @@ O Stakeholter concordou com a maioria das informações concedidas pelos program
 
 - Luiz Fernando da Silva Machado;
 
-- [Requisitos](https://git-scm.com/)
+- [Requisitos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Requisitos.md)
