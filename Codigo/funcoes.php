@@ -249,11 +249,7 @@ function InsereServicos(int $gerente, int $cliente, $dadosServico)
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
 
-	var_dump($cliente);
 	$sql->execute();
-
-	var_dump($cliente);
-	exit();
 
 	$idServico = $bd->lastInsertedId();
 
