@@ -482,7 +482,7 @@ function statusMensalidade($idServico)
 
 $bd = FazerLigacao();
 
-$sql = $bd->query('SELECT diaVenc, dataContrato FROM Servico
+$sql = $bd->prepare('SELECT diaVenc, dataContrato FROM Servico
 									WHERE idServico = :valIdServico');
 
 $sql->bindValue(':valIdServico', $idServico);
@@ -510,7 +510,7 @@ $sql = $bd->prepare('SELECT
 						                              WHEN dataPago > dataVencimento THEN "ATRASADO"
 						                              ELSE "PAGO"
 						                          END as status
-								                   FROM pagamento WHERE idServico = 1
+								                   FROM pagamento WHERE idServico = :valIdServico
 																 ) as pgto
 									   RIGHT JOIN  (
 													 						SELECT "2018-05-15" + INTERVAL (seq) MONTH dataCal
@@ -520,7 +520,6 @@ $sql = $bd->prepare('SELECT
 							       WHERE (sequencia.dataCal) <= CURDATE()
 										 ORDER BY dataCal');
 
-$sql->bindValue(':valDataPrimeiroVencimento', $primeiro_vencimento);
 $sql->bindValue(':valIdServico', $idServico);
 
 $sql->execute();

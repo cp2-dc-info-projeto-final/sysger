@@ -62,18 +62,18 @@
 </form>
 </br></br>
 				<a href ="administrador.php" class="btn btn-outline-dark">Voltar</a></br>
+
+				<?php
+
+				$resultado = statusMensalidade($idServico);
+				foreach ($resultado as $r)
+				{
+					echo $resultado['dataCal'];
+					echo $resultado['pgto.status'];
+				}
+
+				?>
     </div>
-
-		<?php
-
-		$resultado = statusMensalidade($idServico);
-		foreach ($resultado as $r) {
-
-		 		echo $r;
-		 }
-
-		?>
-
 </main>
-	</body>
+</body>
 </html>

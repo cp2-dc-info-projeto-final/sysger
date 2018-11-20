@@ -3,7 +3,15 @@
 require('funcoes.php');
 
 $resultado = BuscaServico();
+?>
 
+<!DOCTYPE hmtl>
+<html>
+<head>
+</head>
+<body>
+
+<?php
 if ($resultado != null)
 {
    echo "<h4>Listagem dos Serviços:</h4>";
@@ -28,8 +36,9 @@ if ($resultado != null)
      echo "<td>".$r['idGerenciamento']."</td>";
      echo "</tr>";
    }
-
     echo "</table>";
   ?>
-      </a>
-<?= } ?>
+</a>
+<?php } ?>
+</body>
+</html>
