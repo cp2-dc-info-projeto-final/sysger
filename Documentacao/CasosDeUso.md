@@ -8,6 +8,6 @@
 
 # Diagrama De Casos de Uso
 
-![Diagrama De Casos de Uso](/FotosDTela/casosdeuso.png)
+![Diagrama De Casos de Uso](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/casosdeuso.PNG)
 
 - [Casos de Uso](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Descri%C3%A7aoCasosDeUso.md)

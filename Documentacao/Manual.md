@@ -1,8 +1,46 @@
 ## Breve manual de utilização com prints
 
-![Tela1]()
-![Tela1]()
-![Tela1]()
+# Login
+
+![Tela de Login](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaLogin.PNG)
+
+# Área do Administrador
+
+![Tela do Administrador](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/Tela1Gerenciamento.PNG)
+
+# Listagem De Funcionários
+
+![Tela de Listagem dos Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaFuncion%C3%A1rio.PNG)
+
+# Cadastro Funcionários
+
+![Tela de Cadastro Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroFunc.PNG)
+
+# Cadastrar Clientes
+
+![Tela de Cadastro Cliente](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroCliente.PNG)
+
+# Cadastrar Novos Contratos Veículo
+
+![Tela de Novos Contratos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroContraVe1.PNG)
+
+![Tela de Novos Contratos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroContraVe2.PNG)
+
+# Cadastrar Novos Contratos Celular
+
+![Tela de Novos Contratos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaContratoCelular.PNG)
+
+# Cadastrar Pagamentos
+
+![Tela de Pagamentos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroPag.PNG)
+
+# Área do Cliente
+
+![Tela do Cliente](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCliente1.PNG)
+
+# 2ª via Boleto
+
+![2ª via Boleto](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaBoletoCliente.PNG)
 
 ## Requisitos funcionais e não funcionais.
 
