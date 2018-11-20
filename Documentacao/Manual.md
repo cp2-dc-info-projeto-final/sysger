@@ -34,6 +34,14 @@
 
 ![Tela de Pagamentos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroPag.PNG)
 
+# Área do Cliente
+
+![Tela do Cliente](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCliente1.PNG)
+
+# 2ª via Boleto
+
+![2ª via Boleto](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaBoletoCliente.PNG)
+
 ## Requisitos funcionais e não funcionais.
 
 - [Requisitos.md](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Requisitos.md)
