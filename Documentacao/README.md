@@ -1,7 +1,7 @@
 
 # SysGER - Sistema de Gerenciamento
 
-## Projeto Final do Curso Técnico em Informátic do Colégio Pedro II - Campus Duque de Caxias - 2018
+## Projeto Final do Curso Técnico em Informática do Colégio Pedro II - Campus Duque de Caxias - 2018
 
 ### Integrantes :
 
@@ -15,7 +15,7 @@ Otavio Nathan nº18
 
 ## Sumário
 
-- [Proposta](https://git-scm.com/)
-- [Casos de Uso](http://git-school.github.io/visualizing-git/)
-- [Modelagem](http://git-school.github.io/visualizing-git/)
-- [Manual](http://git-school.github.io/visualizing-git/)
+- [Proposta](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Proposta.md)
+- [Casos de Uso](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/CasosDeUso.md)
+- [Modelagem](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Modelagem.md)
+- [Manual](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/Manual.md)
