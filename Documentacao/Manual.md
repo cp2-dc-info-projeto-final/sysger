@@ -13,9 +13,11 @@
 ![Tela de Listagem dos Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaFuncion%C3%A1rio.PNG)
 
 # Cadastro Funcionários
+
 ![Tela de Cadastro Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroFunc.PNG)
 
 # Cadastrar Clientes
+
 ![Tela de Cadastro Cliente](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroCliente.PNG)
 
 # Cadastrar Novos Contratos Veículo
@@ -27,6 +29,10 @@
 # Cadastrar Novos Contratos Celular
 
 ![Tela de Novos Contratos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaContratoCelular.PNG)
+
+# Cadastrar Pagamentos
+
+![Tela de Pagamentos](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroPag.PNG)
 
 ## Requisitos funcionais e não funcionais.
 
