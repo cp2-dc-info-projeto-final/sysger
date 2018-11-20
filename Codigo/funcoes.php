@@ -243,8 +243,8 @@ function InsereServicos(int $gerente, int $cliente, $dadosServico)
 	$sql = $bd->prepare('INSERT INTO servico (idCliente, idGerenciamento, valor, diaVenc, dataContrato)
 	VALUES (:valIdCliente, :valIdGerenciamento, :valor, :diaVenc, :dataContrato);');
 
-	$sql->bindValue(':valIdCliente', $cliente['idCliente']);
-	$sql->bindValue(':valIdGerenciamento', $gerente['idGerenciamento']);
+	$sql->bindValue(':valIdCliente', $cliente);
+	$sql->bindValue(':valIdGerenciamento', $gerente);
 	$sql->bindValue(':valor', $dadosServico['valor']);
 	$sql->bindValue(':diaVenc', $dadosServico['diaVenc']);
 	$sql->bindValue(':dataContrato', $dadosServico['dataContrato']);
