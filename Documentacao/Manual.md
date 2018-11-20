@@ -3,8 +3,8 @@
 ![Tela de Login](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaLogin.PNG)
 ![Tela do Administrador](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/Tela1Gerenciamento.PNG)
 ![Tela de Listagem dos Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaFuncion%C3%A1rio.PNG)
-![Tela de Cadastro Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaLogin.PNG)
-![Tela de Login](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaLogin.PNG)
+![Tela de Cadastro Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroFunc.PNG)
+![Tela de ](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaLogin.PNG)
 ![Tela de Login](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaLogin.PNG)
 
 
