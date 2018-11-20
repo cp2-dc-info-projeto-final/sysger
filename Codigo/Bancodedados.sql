@@ -51,6 +51,7 @@ CREATE TABLE Servico (
 		valor DOUBLE NOT NULL,
 		diaVenc INT NOT NULL,
 		dataContrato DATE,
+		tiposervico VARCHAR(30),
     IdCliente INT UNSIGNED NOT NULL,
     IdGerenciamento INT UNSIGNED NOT NULL,
 		PRIMARY KEY(IdServico),
@@ -61,13 +62,13 @@ CREATE TABLE Servico (
 
 CREATE TABLE Pagamento (
 
-						idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
-						dataVencimento DATE,
-						dataPago DATE,
-						idServico INT UNSIGNED NOT NULL,
-						valor DOUBLE,
-						FOREIGN KEY (idServico) REFERENCES Servico(idServico),
-						PRIMARY KEY(IdPagamento)
+		idPagamento INT UNSIGNED AUTO_INCREMENT NOT NULL,
+		dataVencimento DATE,
+		dataPago DATE,
+		idServico INT UNSIGNED NOT NULL,
+		valor DOUBLE,
+		FOREIGN KEY (idServico) REFERENCES Servico(idServico),
+		PRIMARY KEY(IdPagamento)
 
 						);
 
@@ -87,7 +88,6 @@ CREATE TABLE Veiculo (
 		idVeiculo INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		marca VARCHAR(30),
 		modelo VARCHAR(30),
-		tiposervico VARCHAR(30),
 		placa VARCHAR(30),
 		cor VARCHAR(30),
 		ano DATE,
