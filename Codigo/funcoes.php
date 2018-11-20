@@ -251,7 +251,7 @@ function InsereServicos(int $gerente, int $cliente, $dadosServico)
 
 	$sql->execute();
 
-	$idServico = $bd->lastInsertedId();
+	$idServico = $bd->lastInsertId();
 
 	if ($dadosServico['numero'] != false)
 	{
