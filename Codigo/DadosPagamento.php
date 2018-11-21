@@ -1,4 +1,5 @@
 <?php
+	require('funcoes.php');
 	session_start();
 
 	/*if(array_key_exists('emailUsuarioLogado', $_SESSION))

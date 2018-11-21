@@ -251,7 +251,7 @@ function InsereServicos(int $gerente, int $cliente, $dadosServico)
 
 	$sql->execute();
 
-	$idServico = $bd->lastInsertId();
+	$idServico = $sql->lastInsertId();
 
 	if ($dadosServico['numero'] != false)
 	{
@@ -527,7 +527,7 @@ function BuscaServico()
 {
 	$bd = FazerLigacao();
 
-	$sql = $bd->query('SELECT idServico, valor, diaVenc, dataContrato,i dCliente, idGerenciamento
+	$sql = $bd->query('SELECT idServico, valor, diaVenc, dataContrato,idCliente, idGerenciamento
 		 									FROM Servico');
 
 	if ($sql->execute())

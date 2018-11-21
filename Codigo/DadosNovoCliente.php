@@ -1,14 +1,14 @@
 <?php
 	session_start();
 
-	/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
+	if(array_key_exists('emailUsuarioLogado', $_SESSION))
 	{
 		header('Location: DadosNovoCliente.php');
 	}
 	else {
 			header('Location: login.php');
 			exit();
-	}*/
+	}
 
 	$erros = null;
 	$sucesso = null;

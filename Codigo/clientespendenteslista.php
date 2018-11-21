@@ -1,7 +1,7 @@
 <?php
 require_once ('funcoes.php');
 
-/*session_start();
+session_start();
 
 if(array_key_exists('emailUsuarioLogado', $_SESSION))
 {
@@ -10,7 +10,7 @@ if(array_key_exists('emailUsuarioLogado', $_SESSION))
 else {
 		header('Location: login.php');
 		exit();
-}*/
+}
 
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(

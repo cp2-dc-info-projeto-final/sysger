@@ -106,7 +106,7 @@ CREATE TABLE Veiculo (
 				(2 , '14785236901');
 				(3 , '14785236900100');
 				INSERT INTO gerenciamento VALUES (1 , 'Beltrano' , '$2y$10$.k0afkzympQV/2fXYmuHh.h3PfE5nFqGbRHTHVqOo5vwGne4DfscK', 'rua qualquer' , '26598741' , '2000-08-30', 'gerente@gmail.com', '14785236902' );
-				INSERT INTO servico VALUES (1 , 140 , 15, '2018-04-15' , 2 , 1);
+				INSERT INTO servico VALUES (1 , 140 , 15, '2018-04-15' ,'veículo', 2 , 1);
 				INSERT INTO pagamento VALUES
 				(1, '2018-05-15', '2018-05-12', 1 ,140),
 				(2, '2018-06-15', '2018-06-17', 1 ,140),
