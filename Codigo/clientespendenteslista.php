@@ -73,6 +73,8 @@ $nomecliente = $request['Pesquisa'];
 
 ?>
 <br><br>
+      <a href ="histPagamentos.php" class="btn btn-outline-dark"><b>Voltar</b></a></br>
+<br><br>
 								</div>
     </div>
   </main>
