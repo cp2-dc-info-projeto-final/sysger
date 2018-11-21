@@ -84,7 +84,9 @@
   ![Casos de Uso](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/DiagramadeClasses.PNG)
 
 
-## Slides da apresentação (.pdf)
+## Slides da apresentação
+
+- [Slides](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/UseCase%20Diagram1.asta)
 
 ## Modelagem do banco de dados (arquivo editável)
 
