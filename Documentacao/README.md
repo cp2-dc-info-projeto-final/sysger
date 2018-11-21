@@ -5,13 +5,13 @@
 
 ### Integrantes :
 
-Brendon Pereira nº02
+Brendon Pereira Bispo da Silva nº02
 
-Esther Paulino nº08
+Esther de Lima Paulino nº08
 
-Mariana Ruiz  nº17
+Mariana Ruiz Machado nº17
 
-Otavio Nathan nº18
+Otavio Nathan Barreto de Lima nº18
 
 ## Sumário
 
