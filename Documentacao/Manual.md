@@ -86,7 +86,7 @@
 
 ## Slides da apresentação
 
-- [Slides](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/UseCase%20Diagram1.asta)
+- [Slides](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/Documentacao/SysGER-%20apresenta%C3%A7%C3%A3o.pdf)
 
 ## Modelagem do banco de dados (arquivo editável)
 
