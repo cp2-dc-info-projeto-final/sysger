@@ -2,14 +2,14 @@
 
 session_start();
 
-if(array_key_exists('emailUsuarioLogado', $_SESSION))
+/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
 {
 	header('Location: DadosNovoContrato.php');
 }
 else {
 		header('Location: login.php');
 		exit();
-}
+}*/
 
 ?>
 <!DOCTYPE html>

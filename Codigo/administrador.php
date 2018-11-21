@@ -3,14 +3,14 @@ require_once ('funcoes.php');
 
 session_start();
 
-if(array_key_exists('emailUsuarioLogado', $_SESSION))
+/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
 {
 	header('Location: administrador.php');
 }
 else {
 		header('Location: login.php');
 		exit();
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html>

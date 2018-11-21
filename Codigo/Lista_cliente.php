@@ -2,14 +2,14 @@
 
 session_start();
 
-if(array_key_exists('emailUsuarioLogado', $_SESSION))
+/*if(array_key_exists('emailUsuarioLogado', $_SESSION))
 {
 	header('Location: Lista_cliente.php');
 }
 else {
 		header('Location: login.php');
 		exit();
-}
+}*/
 
 require_once ('funcoes.php');
 $request = array_map('trim', $_REQUEST);
