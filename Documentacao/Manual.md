@@ -56,7 +56,7 @@
 
 # Status do Cliente Logado
 
-![Tela do Cliente Logado](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCliente1.PNG)
+![Tela do Cliente Logado](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/statusPag.PNG)
 
 
 # 2ª via Boleto
