@@ -14,7 +14,19 @@
 
 # Listagem De Clientes
 
-![Tela de Listagem dos Clientes](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaFuncion%C3%A1rio.PNG)
+![Tela de Listagem dos Clientes](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaCliente.PNG)
+
+# Status dos Clientes
+
+![Tela de Status dos Clientes](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaHistPag.PNG)
+
+# Clientes Pendentes
+
+![Tela de Clientes Pendentes](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaClientesPendentes.PNG)
+
+# Serviço
+
+![Tela de Serviço](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaClientesPendentes.PNG)
 
 # Cadastro Funcionários
 
@@ -41,6 +53,11 @@
 # Área do Cliente
 
 ![Tela do Cliente](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCliente1.PNG)
+
+# Status do Cliente Logado
+
+![Tela do Cliente](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCliente1.PNG)
+
 
 # 2ª via Boleto
 

@@ -41,6 +41,7 @@ else {
 				<a href="DadosNovoCliente.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"> <b> Cadastrar Novos Clientes </b></a><br><br>
 				<a href="DadosNovoContrato.php" class="btn btn-primary btn-lg btn-block btn-outline-dark"><b> Cadastrar Novos Contratos </b></a><br><br>
 				<a href="DadosPagamento.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> <b> Cadastrar Pagamentos </b> </a><br><br>
+				<a href="Servicos.php" class="btn btn-prymary btn-lg btn-block btn-outline-dark"> <b> Serviços Atualizados </b> </a><br><br>
 
 
     </div>
