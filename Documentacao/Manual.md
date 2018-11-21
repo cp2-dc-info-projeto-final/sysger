@@ -6,7 +6,7 @@
 
 # Área do Administrador
 
-![Tela do Administrador](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/Tela1Gerenciamento.PNG)
+![Tela do Administrador](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/Tela2Gerenciamento.PNG)
 
 # Listagem De Funcionários
 
