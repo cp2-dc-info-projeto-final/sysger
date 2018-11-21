@@ -12,6 +12,10 @@
 
 ![Tela de Listagem dos Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaFuncion%C3%A1rio.PNG)
 
+# Listagem De Clientes
+
+![Tela de Listagem dos Clientes](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaListaFuncion%C3%A1rio.PNG)
+
 # Cadastro Funcionários
 
 ![Tela de Cadastro Funcionários](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-sysger/blob/master/FotosTelas/TelaCadastroFunc.PNG)
